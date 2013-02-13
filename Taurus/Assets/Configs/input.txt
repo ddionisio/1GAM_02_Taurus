@@ -1,0 +1,54 @@
+[
+	{
+		"action":"Up",
+		"control":"Button",
+		"keys" : [
+			{ "input":"Up" }
+		]
+	},
+	{
+		"action":"Down",
+		"control":"Button",
+		"keys" : [
+			{ "input":"Down" }
+		]
+	},
+	{
+		"action":"Left",
+		"control":"Button",
+		"keys" : [
+			{ "input":"Left" }
+		]
+	},
+	{
+		"action":"Right",
+		"control":"Button",
+		"keys" : [
+			{ "input":"Right" }
+		]
+	},
+	
+	{
+		"action":"Fire",
+		"control":"Button",
+		"keys" : [
+			{ "input":"Fire" }
+		]
+	},
+	
+	{
+		"action":"Undo",
+		"control":"Button",
+		"keys" : [
+			{ "input":"Undo" }
+		]
+	},
+	
+	{
+		"action":"Menu",
+		"control":"Button",
+		"keys" : [
+			{ "input":"Menu" }
+		]
+	}
+]
