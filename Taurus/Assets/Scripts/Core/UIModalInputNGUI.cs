@@ -5,14 +5,18 @@ using System.Collections;
 /// Allow InputManager to handle input for NGUI.  Put this component along with ui modal manager. Use in conjuction with UIButtonKeys for each item.
 /// </summary>
 
-[RequireComponent(typeof(Collider))]
 public class UIModalInputNGUI : MonoBehaviour {
 
     public InputAction axisX;
     public InputAction axisY;
-    public InputAction[] enter;
-    public InputAction[] cancel;
 
+    public float axisDelay = 0.25f;
+    public float axisThreshold = 0.75f;
+
+    public InputAction enter;
+    public InputAction cancel;
+
+    private UICamera.MouseOrTouch mController = new UICamera.MouseOrTouch();
     private bool mInputActive = false;
 
     void OnEnable() {
@@ -26,36 +30,60 @@ public class UIModalInputNGUI : MonoBehaviour {
     }
 
     void OnInputEnter(InputManager.Info data) {
-        if(UICamera.selectedObject != null) {
-            UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.Return);
+        bool pressed = data.state == InputManager.State.Pressed;
+        bool released = data.state == InputManager.State.Released;
+
+        if(pressed || released) {
+            UICamera.currentTouchID = -666;
+            UICamera.currentTouch = mController;
+            UICamera.currentTouch.current = UICamera.selectedObject;
+            UICamera.eventHandler.ProcessTouch(pressed, released);
+            UICamera.currentTouch.current = null;
+
+            UICamera.currentTouch = null;
         }
+
+        //UICamera.current
+        //mController
+       /* if(data.state == InputManager.State.Pressed && UICamera.selectedObject != null) {
+            UICamera.Notify(UICamera.selectedObject, "OnClick", null);
+        }*/
     }
 
     void OnInputCancel(InputManager.Info data) {
-        if(UICamera.selectedObject != null) {
+        if(data.state == InputManager.State.Pressed && UICamera.selectedObject != null) {
             UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.Escape);
         }
     }
 
     IEnumerator AxisCheck() {
+        float nextTime = 0.0f;
+
         while(mInputActive) {
             if(UICamera.selectedObject != null) {
-                InputManager input = Main.instance.input;
+                float time = Time.realtimeSinceStartup;
+                if(nextTime < time) {
+                    InputManager input = Main.instance.input;
 
-                float x = input.GetAxis(axisX);
-                if(x < 0.0f) {
-                    UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.LeftArrow);
-                }
-                else if(x > 0.0f) {
-                    UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.RightArrow);
-                }
+                    float x = input.GetAxis(axisX);
+                    if(x < -axisThreshold) {
+                        nextTime = time + axisDelay;
+                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.LeftArrow);
+                    }
+                    else if(x > axisThreshold) {
+                        nextTime = time + axisDelay;
+                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.RightArrow);
+                    }
 
-                float y = input.GetAxis(axisY);
-                if(y < 0.0f) {
-                    UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.UpArrow);
-                }
-                else if(y > 0.0f) {
-                    UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.DownArrow);
+                    float y = input.GetAxis(axisY);
+                    if(y < -axisThreshold) {
+                        nextTime = time + axisDelay;
+                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.UpArrow);
+                    }
+                    else if(y > axisThreshold) {
+                        nextTime = time + axisDelay;
+                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.DownArrow);
+                    }
                 }
             }
 
@@ -70,11 +98,11 @@ public class UIModalInputNGUI : MonoBehaviour {
             //bind callbacks
             InputManager input = Main.instance.input;
 
-            foreach(InputAction a in enter)
-                input.AddButtonCall(a, OnInputEnter);
+            if(enter != InputAction.NumAction)
+                input.AddButtonCall(enter, OnInputEnter);
 
-            foreach(InputAction a in cancel)
-                input.AddButtonCall(a, OnInputCancel);
+            if(cancel != InputAction.NumAction)
+                input.AddButtonCall(cancel, OnInputCancel);
 
             mInputActive = true;
 
@@ -86,15 +114,15 @@ public class UIModalInputNGUI : MonoBehaviour {
 
     void OnUIModalInactive() {
         if(mInputActive) {
-            //bind callbacks
+            //unbind callbacks
             InputManager input = Main.instance != null ? Main.instance.input : null;
 
             if(input != null) {
-                foreach(InputAction a in enter)
-                    input.RemoveButtonCall(a, OnInputEnter);
+                if(enter != InputAction.NumAction)
+                    input.RemoveButtonCall(enter, OnInputEnter);
 
-                foreach(InputAction a in cancel)
-                    input.RemoveButtonCall(a, OnInputCancel);
+                if(cancel != InputAction.NumAction)
+                    input.RemoveButtonCall(cancel, OnInputCancel);
             }
 
             mInputActive = false;

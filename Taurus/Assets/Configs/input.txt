@@ -50,5 +50,35 @@
 		"keys" : [
 			{ "input":"Menu" }
 		]
+	},
+	
+	{
+		"action":"MenuHorizontal",
+		"control":"Axis",
+		"keys" : [
+			{ "input":"MenuHorizontal" }
+		]
+	},
+	{
+		"action":"MenuVertical",
+		"control":"Axis",
+		"keys" : [
+			{ "input":"MenuVertical" }
+		]
+	},
+	
+	{
+		"action":"MenuEnter",
+		"control":"Button",
+		"keys" : [
+			{ "input":"MenuEnter" }
+		]
+	},
+	{
+		"action":"MenuEscape",
+		"control":"Button",
+		"keys" : [
+			{ "input":"MenuEscape" }
+		]
 	}
 ]

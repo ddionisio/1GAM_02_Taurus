@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Main : MonoBehaviour {
+    public string initScene = "main"; //initial scene where the main initializes, goes to startScene afterwards
+    public string startScene = "start"; //the scene to load to once initScene is finish
+
     [System.NonSerialized]
     public UserSettings userSettings;
     [System.NonSerialized]
@@ -25,17 +28,25 @@ public class Main : MonoBehaviour {
     }
 
     void OnDestroy() {
-        mInstance = null;
+        if(mInstance == this)
+            mInstance = null;
     }
 
     void OnEnable() {
     }
 
     void OnDisable() {
+        Debug.Log("main disable");
         PlayerPrefs.Save();
     }
 
     void Awake() {
+        //already one exists...
+        if(mInstance != null) {
+            DestroyImmediate(gameObject);
+            return;
+        }
+
         mInstance = this;
 
         DontDestroyOnLoad(gameObject);
@@ -59,9 +70,8 @@ public class Main : MonoBehaviour {
     void Start() {
         //TODO: maybe do other things before starting the game
         //go to start if we are in main scene
-        SceneManager.Scene mainScene = SceneManager.Scene.main;
-        if(Application.loadedLevelName == mainScene.ToString()) {
-            sceneManager.LoadScene(SceneManager.Scene.start);
+        if(Application.loadedLevelName == initScene) {
+            sceneManager.LoadScene(startScene);
         }
         else {
             sceneManager.InitScene();

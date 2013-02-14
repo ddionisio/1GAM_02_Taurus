@@ -33,7 +33,9 @@ public class MusicManager : MonoBehaviour {
 	
 	private MusicData mCurMusic;
 	private MusicData mNextMusic;
-	
+
+    private bool mMusicEnable = false;
+
 	public static MusicManager instance {
 		get {
 			return mInstance;
@@ -45,19 +47,21 @@ public class MusicManager : MonoBehaviour {
 	}
 	
 	public void Play(string name, bool immediate) {
+        mMusicEnable = Main.instance.userSettings.isMusicEnable;
+
 		if(immediate) {
 			Stop(false);
 		}
 		
-		if(mCurMusic != null) {
-			mNextMusic = mMusic[name];
-			SetState(State.Changing);
+		if(mCurMusic == null || immediate) {
+            mCurMusic = mMusic[name];
+            mCurMusic.source.volume = mMusicEnable ? 1.0f : 0.0f;
+            mCurMusic.source.Play();
+            SetState(State.Playing);
 		}
 		else {
-			mCurMusic = mMusic[name];
-			mCurMusic.source.volume = 1.0f;
-			mCurMusic.source.Play();
-			SetState(State.Playing);
+            mNextMusic = mMusic[name];
+            SetState(State.Changing);
 		}
 	}
 	
@@ -93,6 +97,18 @@ public class MusicManager : MonoBehaviour {
 			Play(playOnStart, true);
 		}
 	}
+
+    void UserSettingsChanged(UserSettings us) {
+        mMusicEnable = us.isMusicEnable;
+
+        if(mCurMusic != null) {
+            switch(mState) {
+                case State.Playing:
+                    mCurMusic.source.volume = us.isMusicEnable ? 1.0f : 0.0f;
+                    break;
+            }
+        }
+    }
 	
 	void SetState(State state) {
 		mState = state;
@@ -115,7 +131,7 @@ public class MusicManager : MonoBehaviour {
 				mCurMusic.source.Stop();
 				
 				if(mNextMusic != null) {
-					mCurMusic.source.volume = 1.0f;
+					mCurMusic.source.volume = mMusicEnable ? 1.0f : 0.0f;
 					mNextMusic.source.Play();
 					
 					mCurMusic = mNextMusic;
@@ -128,7 +144,7 @@ public class MusicManager : MonoBehaviour {
 				}
 			}
 			else {
-				mCurMusic.source.volume = 1.0f - mCurTime/changeFadeOutDelay;
+				mCurMusic.source.volume = mMusicEnable ? 1.0f - mCurTime/changeFadeOutDelay : 0.0f;
 			}
 			break;
 		}

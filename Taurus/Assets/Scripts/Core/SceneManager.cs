@@ -4,12 +4,6 @@ using System.Collections.Generic;
 
 public class SceneManager : MonoBehaviour {
 
-    public enum Scene {
-        main,
-        start,
-        test
-    }
-
     public const string levelString = "level";
 
     public ScreenTransition screenTransition;
@@ -43,21 +37,24 @@ public class SceneManager : MonoBehaviour {
     }
 
     public static void RootBroadcastMessage(string methodName, object param, SendMessageOptions options) {
-        if(Main.instance != null)
-            Main.instance.BroadcastMessage(methodName, param, options);
+        if(mRoots.Count == 0) {
+            //refresh roots
+            Transform[] trans = (Transform[])FindObjectsOfType(typeof(Transform));
+            foreach(Transform tran in trans) {
+                if(tran.parent == null) {
+                    mRoots.Add(tran);
+                }
+            }
+        }
 
         foreach(Transform t in mRoots) {
-            t.BroadcastMessage(methodName, param, options);
+            t.BroadcastMessage(methodName, param, options);    
         }
     }
 
     public void SetCheckPoint(SceneCheckpoint check) {
         mCheckPointForScene = mCurSceneStr;
         mCheckPoint = check;
-    }
-
-    public void LoadScene(Scene scene) {
-        LoadScene(scene.ToString());
     }
 
     public void LoadScene(string scene) {
@@ -103,19 +100,13 @@ public class SceneManager : MonoBehaviour {
     /// </summary>
     public void InitScene() {
         if(mSceneController == null) {
+            mCurSceneStr = Application.loadedLevelName;
             mSceneController = (SceneController)Object.FindObjectOfType(typeof(SceneController));
         }
     }
 
     void OnLevelWasLoaded(int sceneInd) {
-        //refresh roots, excluding main
         mRoots.Clear();
-        Transform[] trans = (Transform[])FindObjectsOfType(typeof(Transform));
-        foreach(Transform tran in trans) {
-            if(tran.parent == null && tran != transform) {
-                mRoots.Add(tran);
-            }
-        }
 
         InitScene();
 
@@ -133,7 +124,6 @@ public class SceneManager : MonoBehaviour {
     }
 
     void OnDestroy() {
-        mRoots = null;
     }
 
     void Awake() {

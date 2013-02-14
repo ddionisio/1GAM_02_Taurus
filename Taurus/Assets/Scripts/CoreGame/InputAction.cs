@@ -10,6 +10,11 @@ public enum InputAction {
     Fire,
     Undo,
     Menu,
+
+    MenuHorizontal,
+    MenuVertical,
+    MenuEnter,
+    MenuEscape,
 	
 	NumAction
 }

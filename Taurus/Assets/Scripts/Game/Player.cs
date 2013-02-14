@@ -6,6 +6,8 @@ public class Player : ActorMove {
 
     public LayerMask blockCheck;
 
+    public GameObject onGoalObject;
+
     private bool mDead = false;
     private bool mCrying = false;
     private bool mOnGoal = false;
@@ -34,6 +36,10 @@ public class Player : ActorMove {
             ProcessAct(Act.Cry, Dir.South, true);
             mCrying = true;
         }
+    }
+
+    public void Victory() {
+        ProcessAct(Act.Victory, Dir.South, false);
     }
 
     protected override void OnUndo(Act act, Dir dir) {
@@ -106,6 +112,9 @@ public class Player : ActorMove {
                     break;
             }
         }
+
+        if(onGoalObject != null)
+            onGoalObject.SetActive(mOnGoal);
     }
 
     protected override void OnDestroy() {
@@ -116,5 +125,12 @@ public class Player : ActorMove {
     protected override void Start() {
         base.Start();
 
+    }
+
+    protected override void Awake() {
+        base.Awake();
+
+        if(onGoalObject != null)
+            onGoalObject.SetActive(false);
     }
 }

@@ -9,7 +9,8 @@ public enum Act {
     Kill,
     Die,
     Cry,
-    Teleport
+    Teleport,
+    Victory
 }
 
 public enum Dir {

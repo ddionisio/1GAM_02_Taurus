@@ -1,6 +1,14 @@
 [
 	{
-		"key":"sup",
-		"text":"sup"
+		"key":"level",
+		"text":"LEVEL - {0:00}"
+	},
+	{
+		"key":"empty",
+		"text":"EMPTY"
+	},
+	{
+		"key":"newGameName",
+		"text":"NAME:"
 	}
 ]

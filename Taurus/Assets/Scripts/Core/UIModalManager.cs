@@ -3,30 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class UIModalManager : MonoBehaviour {
-    public enum Modal {
-        Start,
-        GameOptions,
-        HowToPlay,
-        Victory,
-        GameOver,
-        Confirm,
-
-        NumModal
-    }
-
     [System.Serializable]
     public class UIData {
         public string name;
         public UIController ui;
         public bool exclusive = true; //hide modals behind
-
-        [System.NonSerializedAttribute]
-        public Modal type;
     }
 
     public UIData[] uis;
 
-    public Modal openOnStart = Modal.NumModal;
+    public string openOnStart = "";
 
     public static UIModalManager instance {
         get {
@@ -36,12 +22,19 @@ public class UIModalManager : MonoBehaviour {
 
     private static UIModalManager mInstance;
 
-    private Stack<UIData> mModalStack = new Stack<UIData>((int)Modal.NumModal);
+    private Dictionary<string, UIData> mModals;
+    private Stack<UIData> mModalStack;
 
-    public bool ModalIsInStack(Modal modal) {
+    public UIData ModalGetData(string modal) {
+        UIData dat = null;
+        mModals.TryGetValue(modal, out dat);
+        return dat;
+    }
+
+    public bool ModalIsInStack(string modal) {
         bool ret = false;
         foreach(UIData uid in mModalStack) {
-            if(uid.type == modal) {
+            if(uid.name == modal) {
                 ret = true;
                 break;
             }
@@ -49,22 +42,22 @@ public class UIModalManager : MonoBehaviour {
         return ret;
     }
 
-    public Modal ModalGetTop() {
-        Modal ret = Modal.NumModal;
+    public string ModalGetTop() {
+        string ret = "";
         if(mModalStack.Count > 0) {
-            ret = mModalStack.Peek().type;
+            ret = mModalStack.Peek().name;
         }
         return ret;
     }
 
     //closes all modal and open this
-    public void ModalReplace(Modal modal) {
+    public void ModalReplace(string modal) {
         ModalClearStack(false);
         ModalPushToStack(modal, false);
 
     }
 
-    public void ModalOpen(Modal modal) {
+    public void ModalOpen(string modal) {
         ModalPushToStack(modal, true);
     }
 
@@ -72,8 +65,8 @@ public class UIModalManager : MonoBehaviour {
         if(mModalStack.Count > 0) {
             UIData uid = mModalStack.Pop();
             UIController ui = uid.ui;
-            ui.OnShow(false);
-            ui.OnClose();
+            ui._active(false);
+            ui._close();
             ui.gameObject.SetActive(false);
 
             if(mModalStack.Count == 0) {
@@ -85,8 +78,9 @@ public class UIModalManager : MonoBehaviour {
                 UIController prevUI = prevUID.ui;
                 if(!prevUI.gameObject.activeSelf) {
                     prevUI.gameObject.SetActive(true);
-                    prevUI.OnShow(true);
                 }
+
+                prevUI._active(true);
             }
         }
     }
@@ -95,27 +89,27 @@ public class UIModalManager : MonoBehaviour {
         ModalClearStack(true);
     }
 
-    void ModalPushToStack(Modal modal, bool evokeActive) {
+    void ModalPushToStack(string modal, bool evokeActive) {
         if(evokeActive && mModalStack.Count == 0) {
             SceneManager.RootBroadcastMessage("OnUIModalActive", null, SendMessageOptions.DontRequireReceiver);
         }
 
+        UIData uid = mModals[modal];
 
-
-        UIData uid = uis[(int)modal];
-
-        if(uid.exclusive && mModalStack.Count > 0) {
+        if(mModalStack.Count > 0) {
             //hide below
             UIData prevUID = mModalStack.Peek();
             UIController prevUI = prevUID.ui;
-            prevUI.OnShow(false);
-            prevUI.gameObject.SetActive(false);
+            prevUI._active(false);
+
+            if(uid.exclusive)
+                prevUI.gameObject.SetActive(false);
         }
 
         UIController ui = uid.ui;
         ui.gameObject.SetActive(true);
-        ui.OnOpen();
-        ui.OnShow(true);
+        ui._open();
+        ui._active(true);
 
         mModalStack.Push(uid);
     }
@@ -124,8 +118,8 @@ public class UIModalManager : MonoBehaviour {
         if(mModalStack.Count > 0) {
             foreach(UIData uid in mModalStack) {
                 UIController ui = uid.ui;
-                ui.OnShow(false);
-                ui.OnClose();
+                ui._active(false);
+                ui._close();
                 ui.gameObject.SetActive(false);
             }
 
@@ -152,6 +146,9 @@ public class UIModalManager : MonoBehaviour {
     void Awake() {
         mInstance = this;
 
+        mModals = new Dictionary<string, UIData>(uis.Length);
+        mModalStack = new Stack<UIData>(uis.Length);
+
         //setup data and deactivate object
         for(int i = 0; i < uis.Length; i++) {
             UIData uid = uis[i];
@@ -160,12 +157,12 @@ public class UIModalManager : MonoBehaviour {
                 ui.gameObject.SetActive(false);
             }
 
-            uid.type = (Modal)i;//System.Enum.Parse(typeof(Modal), uid.name);
+            mModals.Add(uid.name, uid);
         }
     }
 
     void Start() {
-        if(openOnStart != Modal.NumModal) {
+        if(!string.IsNullOrEmpty(openOnStart)) {
             ModalOpen(openOnStart);
         }
     }
