@@ -36,6 +36,7 @@ public class ModalSlotSelect : UIController {
                 usd.SetSlot(slot, true);
 
                 //level select
+                Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
             }
             else {
                 //start new game, first change the name

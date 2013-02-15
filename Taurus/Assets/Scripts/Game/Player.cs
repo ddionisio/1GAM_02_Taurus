@@ -11,7 +11,9 @@ public class Player : ActorMove {
     private bool mDead = false;
     private bool mCrying = false;
     private bool mOnGoal = false;
+    private bool mSecretTouched = false;
 
+    public bool secretTouched { get { return mSecretTouched; } }
     public bool dead { get { return mDead; } }
     public bool crying { get { return mCrying; } }
 
@@ -54,6 +56,12 @@ public class Player : ActorMove {
 
             case Act.Move:
                 base.OnUndo(act, dir);
+
+                //check if we stepped on secret
+                tk2dRuntime.TileMap.TileInfo dat = tile.tileData;
+                if(dat != null) {
+                    mSecretTouched = (TileType)dat.intVal == TileType.Secret;
+                }
                 break;
         }
     }
@@ -98,6 +106,7 @@ public class Player : ActorMove {
 
     protected override void OnMoveCellFinish() {
         mOnGoal = false;
+        mSecretTouched = false;
 
         //check floor for danger
         tk2dRuntime.TileMap.TileInfo dat = tile.tileData;
@@ -109,6 +118,11 @@ public class Player : ActorMove {
 
                 case TileType.Goal:
                     mOnGoal = true;
+                    break;
+
+                case TileType.Secret:
+                    mSecretTouched = true;
+                    //TODO: some sort of secret que
                     break;
             }
         }

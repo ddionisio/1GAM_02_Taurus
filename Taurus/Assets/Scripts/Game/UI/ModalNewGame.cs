@@ -48,6 +48,7 @@ public class ModalNewGame : UIController {
             PlayerPrefs.Save();
 
             //level select
+            Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
         }
         else {
             //error dialog?

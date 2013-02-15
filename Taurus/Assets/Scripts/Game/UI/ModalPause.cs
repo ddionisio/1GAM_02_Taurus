@@ -34,6 +34,7 @@ public class ModalPause : UIController {
     }
 
     void ExitClick(GameObject go) {
-        Debug.Log("exit?");
+        //return to level select
+        Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
     }
 }

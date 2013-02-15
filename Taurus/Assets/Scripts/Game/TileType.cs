@@ -3,5 +3,6 @@ public enum TileType {
     Wall,
     Slow,
     Goal,
-    Spike
+    Spike,
+    Secret
 }

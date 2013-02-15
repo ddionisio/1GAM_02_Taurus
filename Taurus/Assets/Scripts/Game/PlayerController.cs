@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-    public const string levelVictoryPrefix = "levelwin";
 
     private static Player[] mPlayers;
 
     private bool mVictory = false;
+    private bool mSecretMade = false;
 
     public static Player[] players { get { return mPlayers; } }
 
@@ -161,9 +161,19 @@ public class PlayerController : MonoBehaviour {
 
     private void CheckVictory() {
         int numInGoal = 0;
+        int numSecret = 0;
         foreach(Player p in mPlayers) {
             if(p.onGoal)
                 numInGoal++;
+
+            if(p.secretTouched)
+                numSecret++;
+        }
+
+        if(!mSecretMade && numSecret == mPlayers.Length) {
+            mSecretMade = true;
+
+            //TODO: secret que
         }
 
         //win?
@@ -190,7 +200,7 @@ public class PlayerController : MonoBehaviour {
             }
 
             //save current level progress (note: make sure the level was loaded via scene manager prior to this!)
-            LevelConfig.instance.SaveLevelUnlock(Main.instance.sceneManager.curLevel);
+            LevelConfig.instance.SaveLevelUnlock(Main.instance.sceneManager.curLevel, mSecretMade);
 
             //activate fan-fare crap
         }
