@@ -67,11 +67,13 @@ public class UserSlotData : UserData {
     }
 
     public override void Save() {
-        if(mSlot != -1 && mValueIs != null) {
-            BinaryFormatter bf = new BinaryFormatter();
-            MemoryStream ms = new MemoryStream();
-            bf.Serialize(ms, mValueIs);
-            PlayerPrefs.SetString(PrefixKey + mSlot, Convert.ToBase64String(ms.GetBuffer()));
+        if(mSlot != -1) {
+            if(mValueIs != null) {
+                BinaryFormatter bf = new BinaryFormatter();
+                MemoryStream ms = new MemoryStream();
+                bf.Serialize(ms, mValueIs);
+                PlayerPrefs.SetString(PrefixKey + mSlot + "i", Convert.ToBase64String(ms.GetBuffer()));
+            }
 
             PlayerPrefs.SetString(PrefixKey + mSlot + "name", mName);
         }
@@ -82,7 +84,7 @@ public class UserSlotData : UserData {
     /// </summary>
     public override void Delete() {
         if(mSlot != -1) {
-            PlayerPrefs.DeleteKey(PrefixKey + mSlot);
+            PlayerPrefs.DeleteKey(PrefixKey + mSlot + "i");
             PlayerPrefs.DeleteKey(PrefixKey + mSlot + "name");
             mSlot = -1;
             mValueIs = null;

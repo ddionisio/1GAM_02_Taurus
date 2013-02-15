@@ -130,7 +130,7 @@ public class LevelSelectController : MonoBehaviour {
     }
 
     private void MoveNext() {
-        if(mCurLevelSelect < nodes.Length - 1) {
+        if(mCurLevelSelect < nodes.Length - 1 && nodes[mCurLevelSelect+1].curState != LevelSelectNode.State.locked) {
             mCurMoveTime = 0.0f;
 
             mStartPos = nodes[mCurLevelSelect].transform.position;

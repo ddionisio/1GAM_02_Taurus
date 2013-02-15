@@ -14,8 +14,13 @@ public class LevelSelectNode : MonoBehaviour {
     public Color nextNodeLockColor;
 
     private tk2dBaseSprite[] mNodeSprites = null;
+    private State mCurState;
+
+    public State curState { get { return mCurState; } }
 
     public void SetState(State state, bool secretUnlocked) {
+        mCurState = state;
+
         sprite.Play(state.ToString());
 
         secretGo.SetActive(secretUnlocked);
