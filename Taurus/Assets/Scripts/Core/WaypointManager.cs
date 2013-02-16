@@ -89,8 +89,14 @@ public class WaypointManager : MonoBehaviour {
 
                 for(int i = 1; i < t.childCount; i++) {
                     Vector3 np = t.GetChild(i).position;
-                    Gizmos.DrawLine(p, np);
-                    Gizmos.DrawSphere(np, 1.0f);
+                    Vector3 dir = np - p;
+                    float len = dir.magnitude;
+                    if(len > 0) {
+                        dir /= len;
+                        M8.Gizmo.ArrowFourLine(p, dir, len, 2.0f, 30.0f);
+                        //Gizmos.DrawSphere(np, 1.0f);
+                    }
+
                     p = np;
                 }
             }

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 
     private bool mVictory = false;
     private bool mSecretMade = false;
+    private int mSecretUndoCount = -1; //this is the last count of undo when secret was made
 
     public static Player[] players { get { return mPlayers; } }
 
@@ -101,6 +102,12 @@ public class PlayerController : MonoBehaviour {
 
     void OnInputUndo(InputManager.Info data) {
         if(data.state == InputManager.State.Pressed) {
+            //undo the secret that was made
+            if(mSecretMade && mSecretUndoCount == ActionManager.instance.undoCount) {
+                mSecretMade = false;
+                Debug.Log("secret undo");
+            }
+
             ActionManager.instance.InputUndo();
         }
     }
@@ -172,7 +179,8 @@ public class PlayerController : MonoBehaviour {
 
         if(!mSecretMade && numSecret == mPlayers.Length) {
             mSecretMade = true;
-
+            mSecretUndoCount = ActionManager.instance.inputDownCounter == 0 ? ActionManager.instance.undoCount : ActionManager.instance.undoCount + 1;
+            Debug.Log("secret!");
             //TODO: secret que
         }
 

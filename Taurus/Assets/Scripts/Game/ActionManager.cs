@@ -115,25 +115,37 @@ public class ActionManager : MonoBehaviour {
 
     private List<ActData> mCurActProcess = null;
 
+    private int mInputDownCounter = 0;
+
     public static ActionManager instance { get { return mInstance; } }
+
+    public int undoCount { get { return mActs.Count; } }
+    public int inputDownCounter { get { return mInputDownCounter; } }
 
     //this will notify listeners about an act performed via input
     public void InputAct(InputAction input, bool down) {
         if(down) {
             if(mCurActProcess == null)
                 mCurActProcess = new List<ActData>();
+
+            mInputDownCounter++;
         }
         else {
-            if(mCurActProcess != null) {
-                if(mCurActProcess.Count > 0) {
-                    if(mActs.Count == maxStack) {
-                        mActs.RemoveAt(0);
+            mInputDownCounter--;
+            if(mInputDownCounter <= 0) {
+                if(mCurActProcess != null) {
+                    if(mCurActProcess.Count > 0) {
+                        if(mActs.Count == maxStack) {
+                            mActs.RemoveAt(0);
+                        }
+
+                        mActs.Add(mCurActProcess);
                     }
 
-                    mActs.Add(mCurActProcess);
+                    mCurActProcess = null;
                 }
 
-                mCurActProcess = null;
+                mInputDownCounter = 0;
             }
         }
         
