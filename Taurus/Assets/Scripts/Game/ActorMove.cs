@@ -22,6 +22,8 @@ public abstract class ActorMove : Actor {
     public event MoveCallback moveStartCallback;
     public event MoveCallback moveFinishCallback;
 
+    protected object mMoveDat = null;
+
     private bool mMoveActive;
     private State mCurState = State.None;
     private Dir mCurDir = Dir.South;
@@ -116,7 +118,7 @@ public abstract class ActorMove : Actor {
         return ret;
     }
 
-    protected override void OnUndo(Act act, Dir dir) {
+    protected override void OnUndo(Act act, Dir dir, object dat) {
         if(act == Act.Move) {
             //finish up current move
             StopMove();
@@ -233,7 +235,7 @@ public abstract class ActorMove : Actor {
 
         if(faceDelay > 0) {
             mCurMoveTime = 0.0f;
-            ProcessAct(Act.Face, toDir, false);
+            ProcessAct(Act.Face, toDir, null, false);
         }
         else {
             DoCurMove();
@@ -309,7 +311,7 @@ public abstract class ActorMove : Actor {
     private void ProcessMove() {
         mSlowCounter = 0;
 
-        ProcessAct(Act.Move, mCurDir, true);
+        ProcessAct(Act.Move, mCurDir, mMoveDat, true);
 
         OnMoveCellStart();
 

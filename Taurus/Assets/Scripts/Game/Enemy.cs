@@ -14,6 +14,11 @@ public class Enemy : ActorMove {
     public Player copyPlayerMove;
     public bool copyReverseVertical;
 
+    private class WaypointDat {
+        public int ind;
+        public bool isReverse=false;
+    }
+
     private List<Transform> mWaypoints;
     private int mCurWaypointInd;
     private TileAlign mCurWaypointTile;
@@ -28,14 +33,14 @@ public class Enemy : ActorMove {
         if(!mDead) {
             Debug.Log("enemy dead");
             StopMove();
-            ProcessAct(Act.Die, fromDir, true);
+            ProcessAct(Act.Die, fromDir, null, true);
             mDead = true;
 
             DetachPlayerMoveListen();
         }
     }
 
-    protected override void OnUndo(Act act, Dir dir) {
+    protected override void OnUndo(Act act, Dir dir, object dat) {
         switch(act) {
             case Act.Die:
                 mDead = false;
@@ -43,55 +48,30 @@ public class Enemy : ActorMove {
                 break;
 
             case Act.Move:
-                base.OnUndo(act, dir);
+                StopMove();
 
-                //determine if we need to update current waypoint...
-                //check backwards from current
-                bool wpReverse = mWaypointReverse;
-                for(int i = 0, wpInd = mCurWaypointInd+(wpReverse ? 1 : -1); i < mWaypoints.Count; i++, wpInd = wpReverse ? wpInd+1 : wpInd-1) {
-                    //check bounds
-                    if(wpInd < 0) {
-                        switch(waypointMode) {
-                            case WaypointMode.Loop:
-                                wpInd = mWaypoints.Count - 1;
-                                break;
+                base.OnUndo(act, dir, dat);
 
-                            case WaypointMode.PingPong:
-                                wpInd = 1;
-                                wpReverse = !wpReverse;
-                                break;
-                        }
-                    }
-                    else if(wpInd >= mWaypoints.Count) {
-                        switch(waypointMode) {
-                            case WaypointMode.Loop:
-                                wpInd = 0;
-                                break;
-
-                            case WaypointMode.PingPong:
-                                wpInd = mWaypoints.Count - 1;
-                                wpReverse = !wpReverse;
-                                break;
-                        }
-                    }
-
-                    Transform wp = mWaypoints[wpInd];
-                    TileAlign ta = wp.GetComponent<TileAlign>();
-
-                    int dCol = ta.col - tile.col;
-                    int dRow = ta.row - tile.row;
-
-                    if(dCol == 0 && dRow == 0) {
-                        mCurWaypointInd = wpInd;
-
-                        Transform node = mWaypoints[mCurWaypointInd];
-                        mCurWaypointTile = node.GetComponent<TileAlign>();
-
-                        SetWaypointDir();
-
-                        break;
-                    }
+                int wpInd;
+                if(dat != null) {
+                    WaypointDat wdat = (WaypointDat)dat;
+                    wpInd = wdat.ind;
+                    mWaypointReverse = wdat.isReverse;
+                    mMoveDat = dat;
                 }
+                else {
+                    wpInd = 0;
+                    mWaypointReverse = false;
+                }
+
+                if(mCurWaypointInd != wpInd) {
+                    mCurWaypointInd = wpInd;
+
+                    Transform node = mWaypoints[mCurWaypointInd];
+                    mCurWaypointTile = node.GetComponent<TileAlign>();
+                }
+
+                SetWaypointDir();
                 break;
         }
     }
@@ -138,7 +118,7 @@ public class Enemy : ActorMove {
 
     void OnPlayerMoveStart(ActorMove mover) {
         //move when player moves
-        if(state != State.Move || state != State.PauseMove) {
+        if(state != State.Move && state != State.PauseMove) {
             if(mover == copyPlayerMove) {
                 Dir moveTo = mover.curDir;
 
@@ -159,9 +139,15 @@ public class Enemy : ActorMove {
                 if(mWaypoints != null && mCurWaypointTile == null)
                     InitWaypoint();
 
-                if(CheckWaypointReached())
+                if(CheckWaypointReached()) {
                     SetNextWaypointNode();
 
+                    WaypointDat newWPDat = new WaypointDat();
+                    newWPDat.ind = mCurWaypointInd;
+                    newWPDat.isReverse = mWaypointReverse;
+                    mMoveDat = (object)newWPDat;
+                }
+                                
                 DoMove();
             }
         }
@@ -169,11 +155,13 @@ public class Enemy : ActorMove {
 
     void OnPlayerMoveFinish(ActorMove mover) {
         //check if we can eat the player
-        /*Player p = mover as Player;
-        Dir d;
-        if(IsPlayerNeighbor(p, out d)) {
-            DoKill(p, d);
-        }*/
+        if(state != State.Move && state != State.PauseMove) {
+            Player p = mover as Player;
+            Dir d;
+            if(IsPlayerNeighbor(p, out d)) {
+                DoKill(p, d);
+            }
+        }
     }
 
     private bool IsPlayerNeighbor(Player p, out Dir d) {
@@ -215,7 +203,7 @@ public class Enemy : ActorMove {
     private void DoKill(Player p, Dir d) {
         PlayerController.KillPlayer(p, d);
 
-        ProcessAct(Act.Kill, d, true);
+        ProcessAct(Act.Kill, d, null, true);
     }
 
 
@@ -229,11 +217,9 @@ public class Enemy : ActorMove {
     }
 
     private void DetachPlayerMoveListen() {
-        if(PlayerController.players != null) {
-            foreach(Player p in PlayerController.players) {
-                p.moveStartCallback -= OnPlayerMoveStart;
-                p.moveFinishCallback -= OnPlayerMoveFinish;
-            }
+        foreach(Player p in PlayerController.players) {
+            p.moveStartCallback -= OnPlayerMoveStart;
+            p.moveFinishCallback -= OnPlayerMoveFinish;
         }
     }
 

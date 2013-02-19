@@ -23,10 +23,10 @@ public class Block : Actor {
             }
         }
 
-        ProcessAct(Act.Teleport, teleDir, true);
+        ProcessAct(Act.Teleport, teleDir, null, true);
     }
 
-    protected override void OnUndo(Act act, Dir dir) {
+    protected override void OnUndo(Act act, Dir dir, object dat) {
         switch(act) {
             case Act.Teleport:
                 SetTelePosition();

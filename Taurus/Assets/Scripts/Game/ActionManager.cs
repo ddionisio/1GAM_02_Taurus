@@ -23,13 +23,13 @@ public enum Dir {
 }
 
 public abstract class Actor : MonoBehaviour {
-    public delegate void OnAct(Act act, Dir dir);
+    public delegate void ActCallback(Act act, Dir dir);
 
     public bool inputListen = true;
     public bool undo = true;
 
-    public event OnAct actCallback;
-    public event OnAct undoCallback;
+    public event ActCallback actCallback;
+    public event ActCallback undoCallback;
 
     private TileAlign mTileAlign;
 
@@ -40,9 +40,9 @@ public abstract class Actor : MonoBehaviour {
     /// <summary>
     /// Called by ActionManager when undo'ing an action.
     /// </summary>
-    public void Undo(Act act, Dir dir) {
+    public void Undo(Act act, Dir dir, object dat) {
         if(undo) {
-            OnUndo(act, dir);
+            OnUndo(act, dir, dat);
 
             if(undoCallback != null)
                 undoCallback(act, dir);
@@ -50,12 +50,14 @@ public abstract class Actor : MonoBehaviour {
     }
         
     /// <summary>
-    /// Call this to process an action. This will send out the event to actCallback and optionally add to action undo.
+    /// Call this to process an action. This will send out the event to actCallback and optionally add to action undo. Returns act index
     /// </summary>
-    protected void ProcessAct(Act act, Dir dir, bool canUndo) {
+    protected void ProcessAct(Act act, Dir dir, object dat, bool canUndo) {
         if(canUndo) {
-            ActionManager.instance.ActAdd(this, act, dir);
+            ActionManager.instance.ActAdd(this, act, dir, dat);
         }
+
+        OnAct(act, dir);
 
         if(actCallback != null)
             actCallback(act, dir);
@@ -63,15 +65,19 @@ public abstract class Actor : MonoBehaviour {
 
     //Implements:
 
+    protected virtual void OnAct(Act act, Dir dir) {
+    }
+
     /// <summary>
     /// Called by Undo to process what needs to be undone.
     /// </summary>
-    protected abstract void OnUndo(Act act, Dir dir);
+    protected abstract void OnUndo(Act act, Dir dir, object dat);
 
     /// <summary>
     /// Called by ActionManager when input of act and dir occurs. Actor will act accordingly and call ActionManager.ActAdd if needed.
     /// </summary>
-    protected abstract void OnInputAct(InputAction input, bool down);
+    protected virtual void OnInputAct(InputAction input, bool down) {
+    }
 
     protected virtual void OnDestroy() {
         if(inputListen && ActionManager.instance != null) {
@@ -101,11 +107,13 @@ public class ActionManager : MonoBehaviour {
         public Actor actor;
         public Act act;
         public Dir dir;
+        public object dat;
 
-        public ActData(Actor aActor, Act aAct, Dir aDir) {
+        public ActData(Actor aActor, Act aAct, Dir aDir, object aDat) {
             actor = aActor;
             act = aAct;
             dir = aDir;
+            dat = aDat;
         }
     }
 
@@ -163,9 +171,10 @@ public class ActionManager : MonoBehaviour {
 
                 Debug.Log("num undo acts: " + acts.Count);
 
-                foreach(ActData act in acts) {
+                for(int i = acts.Count-1; i >= 0; i--) {
+                    ActData act = acts[i];
                     if(act.actor != null) {
-                        act.actor.Undo(act.act, act.dir);
+                        act.actor.Undo(act.act, act.dir, act.dat);
                     }
                 }
 
@@ -177,15 +186,15 @@ public class ActionManager : MonoBehaviour {
     }
 
     //add to the current stack
-    public void ActAdd(Actor actor, Act act, Dir dir) {
+    public void ActAdd(Actor actor, Act act, Dir dir, object dat) {
         if(mCurActProcess != null) {
             Debug.Log("process: " + act + " dir: " + dir + " count: " + mCurActProcess.Count);
-            mCurActProcess.Add(new ActData(actor, act, dir));
+            mCurActProcess.Add(new ActData(actor, act, dir, dat));
         }
         else if(mActs.Count > 0) {
             List<ActData> acts = mActs[mActs.Count - 1];
             Debug.Log("stack process: " + act + " dir: " + dir + " count: " + acts.Count);
-            acts.Add(new ActData(actor, act, dir));
+            acts.Add(new ActData(actor, act, dir, dat));
         }
     }
 

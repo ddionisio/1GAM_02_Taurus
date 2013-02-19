@@ -27,7 +27,7 @@ public class Player : ActorMove {
         if(!mDead) {
             Debug.Log("dead");
             StopMove();
-            ProcessAct(Act.Die, fromDir, true);
+            ProcessAct(Act.Die, fromDir, null, true);
             mDead = true;
         }
     }
@@ -35,16 +35,16 @@ public class Player : ActorMove {
     public void Cry() {
         if(!(mDead || mCrying)) {
             StopMove();
-            ProcessAct(Act.Cry, Dir.South, true);
+            ProcessAct(Act.Cry, Dir.South, null, true);
             mCrying = true;
         }
     }
 
     public void Victory() {
-        ProcessAct(Act.Victory, Dir.South, false);
+        ProcessAct(Act.Victory, Dir.South, null, false);
     }
 
-    protected override void OnUndo(Act act, Dir dir) {
+    protected override void OnUndo(Act act, Dir dir, object undoDat) {
         switch(act) {
             case Act.Die:
                 mDead = false;
@@ -55,7 +55,7 @@ public class Player : ActorMove {
                 break;
 
             case Act.Move:
-                base.OnUndo(act, dir);
+                base.OnUndo(act, dir, undoDat);
 
                 //check if we stepped on secret
                 tk2dRuntime.TileMap.TileInfo dat = tile.tileData;
@@ -96,7 +96,7 @@ public class Player : ActorMove {
                             Block b = hit.transform.GetComponent<Block>();
                             b.Teleport();
 
-                            ProcessAct(Act.Fire, curDir, false);
+                            ProcessAct(Act.Fire, curDir, null, false);
                         }
                     }
                     break;
