@@ -170,8 +170,8 @@ public class Enemy : ActorMove {
 
                 ProcessDir(moveTo);
             }
-            else {
-                if(mWaypoints != null && mCurWaypointTile == null)
+            else if(mWaypoints != null) {
+                if(mCurWaypointTile == null)
                     InitWaypoint();
 
                 if(CheckWaypointReached()) {
@@ -182,7 +182,7 @@ public class Enemy : ActorMove {
                     newWPDat.isReverse = mWaypointReverse;
                     mMoveDat = (object)newWPDat;
                 }
-                                
+
                 DoMove();
             }
         }
