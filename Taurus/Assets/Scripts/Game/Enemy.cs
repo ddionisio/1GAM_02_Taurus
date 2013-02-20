@@ -217,9 +217,13 @@ public class Enemy : ActorMove {
     }
 
     private void DetachPlayerMoveListen() {
-        foreach(Player p in PlayerController.players) {
-            p.moveStartCallback -= OnPlayerMoveStart;
-            p.moveFinishCallback -= OnPlayerMoveFinish;
+        if(PlayerController.players != null) {
+            foreach(Player p in PlayerController.players) {
+                if(p != null) {
+                    p.moveStartCallback -= OnPlayerMoveStart;
+                    p.moveFinishCallback -= OnPlayerMoveFinish;
+                }
+            }
         }
     }
 

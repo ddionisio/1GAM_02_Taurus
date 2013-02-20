@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Block : Actor {
     public LayerMask teleCheck;
+    public bool isVertical = false; //go up/down instead
 
     private Mirror mMirror;
 

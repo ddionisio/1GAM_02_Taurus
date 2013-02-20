@@ -93,6 +93,8 @@ public class Player : ActorMove {
 
                         RaycastHit hit;
                         if(Physics.Raycast(new Vector3(checkPos.x, checkPos.y, -1000), Vector3.forward, out hit, Mathf.Infinity, blockCheck.value)) {
+                            StopMove();
+
                             Block b = hit.transform.GetComponent<Block>();
                             b.Teleport();
 

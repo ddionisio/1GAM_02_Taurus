@@ -9,9 +9,24 @@ public class TileInfo : MonoBehaviour {
 
     private tk2dTileMap mMap;
 
-    public tk2dTileMap map { get { return mMap; } }
+    public tk2dTileMap map {
+        get {
+            if(mMap == null)
+                SetTileMap();
 
-    public static TileInfo instance { get { return mInstance; } }
+            return mMap; 
+        } 
+    }
+
+    public static TileInfo instance { 
+        get {
+            if(mInstance == null) {
+                mInstance = (TileInfo)Object.FindObjectOfType(typeof(TileInfo));
+            }
+
+            return mInstance; 
+        } 
+    }
 
     void OnDestroy() {
         mInstance = null;
@@ -20,6 +35,10 @@ public class TileInfo : MonoBehaviour {
     void Awake() {
         mInstance = this;
 
+        SetTileMap();
+    }
+
+    private void SetTileMap() {
         GameObject mapObj = GameObject.FindGameObjectWithTag(Layers.tagMap);
 
         if(mapObj != null)
