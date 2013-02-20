@@ -26,6 +26,7 @@ public class Player : ActorMove {
     public void Die(Dir fromDir) {
         if(!mDead) {
             Debug.Log("dead");
+            moveActive = false;
             StopMove();
             ProcessAct(Act.Die, fromDir, null, true);
             mDead = true;
@@ -34,6 +35,7 @@ public class Player : ActorMove {
 
     public void Cry() {
         if(!(mDead || mCrying)) {
+            moveActive = false;
             StopMove();
             ProcessAct(Act.Cry, Dir.South, null, true);
             mCrying = true;

@@ -13,6 +13,9 @@ public class Enemy : ActorMove {
 
     public Player copyPlayerMove;
     public bool copyReverseVertical;
+    public bool copyReverseHorizontal;
+
+    public bool dieOnKillFloor;
 
     private class WaypointDat {
         public int ind;
@@ -37,12 +40,16 @@ public class Enemy : ActorMove {
             mDead = true;
 
             DetachPlayerMoveListen();
+
+            //TODO: temp, disappear
+            gameObject.SetActive(false);
         }
     }
 
     protected override void OnUndo(Act act, Dir dir, object dat) {
         switch(act) {
             case Act.Die:
+                gameObject.SetActive(true);
                 mDead = false;
                 AttachPlayerMoveListen();
                 break;
@@ -101,11 +108,28 @@ public class Enemy : ActorMove {
     }
 
     protected override void OnMoveCellFinish() {
-        foreach(Player p in PlayerController.players) {
-            Dir d;
-            if(p.state != State.Move && IsPlayerNeighbor(p, out d)) {
-                DoKill(p, d);
-                break;
+        bool processPlayerCheck = true;
+
+        //check floor for danger
+        if(dieOnKillFloor) {
+            tk2dRuntime.TileMap.TileInfo dat = tile.tileData;
+            if(dat != null) {
+                switch((TileType)dat.intVal) {
+                    case TileType.Spike:
+                        Die(Dir.NumDir);
+                        processPlayerCheck = false;
+                        break;
+                }
+            }
+        }
+
+        if(processPlayerCheck) {
+            foreach(Player p in PlayerController.players) {
+                Dir d;
+                if(p.state != State.Move && IsPlayerNeighbor(p, out d)) {
+                    DoKill(p, d);
+                    break;
+                }
             }
         }
     }
@@ -118,7 +142,7 @@ public class Enemy : ActorMove {
 
     void OnPlayerMoveStart(ActorMove mover) {
         //move when player moves
-        if(state != State.Move && state != State.PauseMove) {
+        if(!mDead && state != State.Move && state != State.PauseMove) {
             if(mover == copyPlayerMove) {
                 Dir moveTo = mover.curDir;
 
@@ -129,6 +153,17 @@ public class Enemy : ActorMove {
                             break;
                         case Dir.South:
                             moveTo = Dir.North;
+                            break;
+                    }
+                }
+
+                if(copyReverseHorizontal) {
+                    switch(moveTo) {
+                        case Dir.West:
+                            moveTo = Dir.East;
+                            break;
+                        case Dir.East:
+                            moveTo = Dir.West;
                             break;
                     }
                 }
@@ -155,7 +190,7 @@ public class Enemy : ActorMove {
 
     void OnPlayerMoveFinish(ActorMove mover) {
         //check if we can eat the player
-        if(state != State.Move && state != State.PauseMove) {
+        if(!mDead && state != State.Move && state != State.PauseMove) {
             Player p = mover as Player;
             Dir d;
             if(IsPlayerNeighbor(p, out d)) {
