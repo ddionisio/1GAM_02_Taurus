@@ -13,6 +13,8 @@ public abstract class ActorMove : Actor {
 
     public const int slowMaxCount = 1;
 
+    public bool ignoreWalls = false;
+
     public float moveDelay = 0.3f;
     public float pauseMoveDelay = 0.15f;
     public float faceDelay = 1.0f;
@@ -106,7 +108,7 @@ public abstract class ActorMove : Actor {
 
         if(tile != null) {
             tk2dRuntime.TileMap.TileInfo ti = tile.GetTileInfo(mCurDir);
-            if(ti != null && ti.intVal == (int)TileType.Wall)
+            if(!ignoreWalls && ti != null && ti.intVal == (int)TileType.Wall)
                 ret = true;
             else {
                 Vector2 checkPos = GetTilePos(dir);
