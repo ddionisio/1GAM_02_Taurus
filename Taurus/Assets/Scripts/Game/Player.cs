@@ -28,7 +28,7 @@ public class Player : ActorMove {
             Debug.Log("dead");
             moveActive = false;
             StopMove();
-            ProcessAct(Act.Die, fromDir, null, true);
+            ProcessAct(Act.Die, fromDir, null, true, true);
             mDead = true;
         }
     }
@@ -37,7 +37,7 @@ public class Player : ActorMove {
         if(!(mDead || mCrying)) {
             moveActive = false;
             StopMove();
-            ProcessAct(Act.Cry, Dir.South, null, true);
+            ProcessAct(Act.Cry, Dir.South, null, true, true);
             mCrying = true;
         }
     }

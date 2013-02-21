@@ -207,6 +207,8 @@ public abstract class ActorMove : Actor {
 
                     if(moveFinishCallback != null)
                         moveFinishCallback(this);
+
+                    ProcessAct(Act.MoveEnd, mCurDir, mMoveDat, false);
                 }
                 else {
                     Vector2 curPos = Vector2.Lerp(mMoveStartPos, mMoveEndPos, mCurMoveTime / moveDelay);

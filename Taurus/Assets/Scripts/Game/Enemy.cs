@@ -17,6 +17,8 @@ public class Enemy : ActorMove {
 
     public bool dieOnKillFloor;
 
+    public bool fireImmune = false;
+
     private class WaypointDat {
         public int ind;
         public bool isReverse=false;
@@ -36,7 +38,7 @@ public class Enemy : ActorMove {
         if(!mDead) {
             Debug.Log("enemy dead");
             StopMove();
-            ProcessAct(Act.Die, fromDir, null, true);
+            ProcessAct(Act.Die, fromDir, null, true, true);
             mDead = true;
 
             DetachPlayerMoveListen();
@@ -238,7 +240,7 @@ public class Enemy : ActorMove {
     private void DoKill(Player p, Dir d) {
         PlayerController.KillPlayer(p, d);
 
-        ProcessAct(Act.Kill, d, null, true);
+        ProcessAct(Act.Kill, d, null, false);
     }
 
 

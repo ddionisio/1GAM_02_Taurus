@@ -10,7 +10,8 @@ public enum Act {
     Die,
     Cry,
     Teleport,
-    Victory
+    Victory,
+    MoveEnd
 }
 
 public enum Dir {
@@ -52,10 +53,8 @@ public abstract class Actor : MonoBehaviour {
     /// <summary>
     /// Call this to process an action. This will send out the event to actCallback and optionally add to action undo. Returns act index
     /// </summary>
-    protected void ProcessAct(Act act, Dir dir, object dat, bool canUndo) {
-        if(canUndo) {
-            ActionManager.instance.ActAdd(this, act, dir, dat);
-        }
+    protected void ProcessAct(Act act, Dir dir, object dat, bool canUndo, bool forceAddToLast=false) {
+        ActionManager.instance.ActAdd(this, act, dir, dat, canUndo, forceAddToLast);
 
         OnAct(act, dir);
 
@@ -100,8 +99,11 @@ public class ActionManager : MonoBehaviour {
     public const int maxStack = 128;
 
     public delegate void InputCallback(InputAction input, bool down);
+    public delegate void ActAddCallback(Actor actor, Act act, Dir dir, object dat);
 
     public event InputCallback actCallback;
+    public event ActAddCallback actAddCallback;
+    public event ActAddCallback actUndoCallback;
 
     private struct ActData {
         public Actor actor;
@@ -175,6 +177,9 @@ public class ActionManager : MonoBehaviour {
                     ActData act = acts[i];
                     if(act.actor != null) {
                         act.actor.Undo(act.act, act.dir, act.dat);
+
+                        if(actUndoCallback != null)
+                            actUndoCallback(act.actor, act.act, act.dir, act.dat);
                     }
                 }
 
@@ -186,16 +191,21 @@ public class ActionManager : MonoBehaviour {
     }
 
     //add to the current stack
-    public void ActAdd(Actor actor, Act act, Dir dir, object dat) {
-        if(mCurActProcess != null) {
-            Debug.Log("process: " + act + " dir: " + dir + " count: " + mCurActProcess.Count);
-            mCurActProcess.Add(new ActData(actor, act, dir, dat));
+    public void ActAdd(Actor actor, Act act, Dir dir, object dat, bool isUndo, bool forceAddToLast=false) {
+        if(isUndo) {
+            if(mCurActProcess != null && (!forceAddToLast || mActs.Count == 0 || mCurActProcess.Count > 0)) {
+                Debug.Log("process: " + act + " dir: " + dir + " count: " + mCurActProcess.Count);
+                mCurActProcess.Add(new ActData(actor, act, dir, dat));
+            }
+            else if(mActs.Count > 0) {
+                List<ActData> acts = mActs[mActs.Count - 1];
+                Debug.Log("stack process: " + act + " dir: " + dir + " count: " + acts.Count);
+                acts.Add(new ActData(actor, act, dir, dat));
+            }
         }
-        else if(mActs.Count > 0) {
-            List<ActData> acts = mActs[mActs.Count - 1];
-            Debug.Log("stack process: " + act + " dir: " + dir + " count: " + acts.Count);
-            acts.Add(new ActData(actor, act, dir, dat));
-        }
+
+        if(actAddCallback != null)
+            actAddCallback(actor, act, dir, dat);
     }
 
     void OnDestroy() {
