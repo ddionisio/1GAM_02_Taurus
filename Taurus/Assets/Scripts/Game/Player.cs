@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Player : ActorMove {
     public bool opposite = false;
+    public bool oppositeVert = false;
 
     public LayerMask blockCheck;
 
@@ -56,6 +57,10 @@ public class Player : ActorMove {
                 mCrying = false;
                 break;
 
+            case Act.MoveDelayed:
+                base.OnUndo(act, dir, undoDat);
+                break;
+
             case Act.Move:
                 base.OnUndo(act, dir, undoDat);
 
@@ -74,11 +79,11 @@ public class Player : ActorMove {
         if(!mDead && !mCrying && down) {
             switch(input) {
                 case InputAction.Up:
-                    ProcessDir(Dir.North);
+                    ProcessDir(oppositeVert ? Dir.South : Dir.North);
                     break;
 
                 case InputAction.Down:
-                    ProcessDir(Dir.South);
+                    ProcessDir(oppositeVert ? Dir.North : Dir.South);
                     break;
 
                 case InputAction.Left:

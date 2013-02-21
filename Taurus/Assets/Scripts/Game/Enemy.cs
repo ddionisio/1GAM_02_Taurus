@@ -19,6 +19,8 @@ public class Enemy : ActorMove {
 
     public bool fireImmune = false;
 
+    public bool harmless = false;
+
     private class WaypointDat {
         public int ind;
         public bool isReverse=false;
@@ -56,6 +58,7 @@ public class Enemy : ActorMove {
                 AttachPlayerMoveListen();
                 break;
 
+            case Act.MoveDelayed:
             case Act.Move:
                 StopMove();
 
@@ -212,24 +215,26 @@ public class Enemy : ActorMove {
             if(dCol == 0 && dRow == 0) { //on top?
                 doKill = true;
             }
-            else if(dCol == 0) { //up or down
-                if(dRow == -1) {
-                    d = Dir.South;
-                    doKill = true;
+            else if(!harmless) {
+                if(dCol == 0) { //up or down
+                    if(dRow == -1) {
+                        d = Dir.South;
+                        doKill = true;
+                    }
+                    else if(dRow == 1) {
+                        d = Dir.North;
+                        doKill = true;
+                    }
                 }
-                else if(dRow == 1) {
-                    d = Dir.North;
-                    doKill = true;
-                }
-            }
-            else if(dRow == 0) { //left or right
-                if(dCol == -1) {
-                    d = Dir.West;
-                    doKill = true;
-                }
-                else if(dCol == 1) {
-                    d = Dir.East;
-                    doKill = true;
+                else if(dRow == 0) { //left or right
+                    if(dCol == -1) {
+                        d = Dir.West;
+                        doKill = true;
+                    }
+                    else if(dCol == 1) {
+                        d = Dir.East;
+                        doKill = true;
+                    }
                 }
             }
         }

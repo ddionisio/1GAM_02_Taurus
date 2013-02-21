@@ -125,8 +125,6 @@ public abstract class ActorMove : Actor {
             //finish up current move
             StopMove();
 
-            mSlowCounter = 0;
-
             switch(dir) {
                 case Dir.North:
                     SetPosByDir(Dir.South);
@@ -144,6 +142,19 @@ public abstract class ActorMove : Actor {
                     SetPosByDir(Dir.East);
                     break;
             }
+
+            //check if we are standing on a slow tile
+            tk2dRuntime.TileMap.TileInfo tileInf = tile.tileData;
+            if(tileInf != null && tileInf.intVal == (int)TileType.Slow && mSlowCounter < slowMaxCount) {
+                mSlowCounter++;
+            }
+            else {
+                mSlowCounter = 0;
+            }
+        }
+        else if(act == Act.MoveDelayed) {
+            StopMove();
+            mSlowCounter=0;
         }
     }
 
@@ -268,6 +279,8 @@ public abstract class ActorMove : Actor {
                     mNextRow = tile.row;
 
                     mCurState = State.Move;
+
+                    ProcessAct(Act.MoveDelayed, mCurDir, mMoveDat, true);
                 }
                 else {
                     mCurState = mCurState == State.None || mCurState == State.Face || pauseMoveDelay == 0.0f ? State.Move : State.PauseMove;

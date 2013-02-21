@@ -11,7 +11,8 @@ public enum Act {
     Cry,
     Teleport,
     Victory,
-    MoveEnd
+    MoveEnd,
+    MoveDelayed
 }
 
 public enum Dir {

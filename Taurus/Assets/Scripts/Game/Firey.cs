@@ -140,6 +140,16 @@ public class Firey : MonoBehaviour {
 
         RefreshLine();
 
+        //check if we hit a player
+        if(PlayerController.players != null) {
+            foreach(Player player in PlayerController.players) {
+                if(player != null && !player.dead && CheckCollision(player)) {
+                    PlayerController.KillPlayer(player, dir);
+                    break;
+                }
+            }
+        }
+
         yield break;
     }
 
