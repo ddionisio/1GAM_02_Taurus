@@ -285,14 +285,18 @@ public class Firey : MonoBehaviour {
         }
 
         //set end cap
+        Vector3 endCapPos;
+
         if(childInd > 0) {
             int endInd = childInd - 1;
 
-            endCap.position = container.GetChild(endInd).position;
+            endCapPos = container.GetChild(endInd).position;
         }
         else {
-            endCap.position = transform.position;
+            endCapPos = transform.position;
         }
+
+        endCap.position = new Vector3(endCapPos.x, endCapPos.y, endCap.position.z);
 
         //deactivate the rest of lines
         for(int max = container.GetChildCount(); childInd < max; childInd++) {

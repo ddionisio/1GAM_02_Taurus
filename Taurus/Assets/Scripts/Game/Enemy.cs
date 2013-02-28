@@ -44,16 +44,12 @@ public class Enemy : ActorMove {
             mDead = true;
 
             DetachPlayerMoveListen();
-
-            //TODO: temp, disappear
-            gameObject.SetActive(false);
         }
     }
 
     protected override void OnUndo(Act act, Dir dir, object dat) {
         switch(act) {
             case Act.Die:
-                gameObject.SetActive(true);
                 mDead = false;
                 AttachPlayerMoveListen();
                 break;
@@ -102,10 +98,21 @@ public class Enemy : ActorMove {
 
             //put the enemy at the first node
             if(mWaypoints != null) {
-                transform.position = mWaypoints[0].position;
+                Vector3 pos = mWaypoints[0].position;
+                transform.position = new Vector3(pos.x, pos.y, transform.position.z);
+
+                StartCoroutine(InitWaypointDelayed());
             }
         }
     }
+	
+	IEnumerator InitWaypointDelayed() {
+		yield return new WaitForFixedUpdate();
+		
+		InitWaypoint();
+		
+		yield break;
+	}
 
     // Update is called once per frame
     protected override void Update() {
@@ -113,6 +120,9 @@ public class Enemy : ActorMove {
     }
 
     protected override void OnMoveCellFinish() {
+        if(mWaypoints != null)
+            RefreshFaceToWaypoint();
+
         bool processPlayerCheck = true;
 
         //check floor for danger
@@ -176,9 +186,6 @@ public class Enemy : ActorMove {
                 ProcessDir(moveTo);
             }
             else if(mWaypoints != null) {
-                if(mCurWaypointTile == null)
-                    InitWaypoint();
-
                 if(CheckWaypointReached()) {
                     SetNextWaypointNode();
 
@@ -201,6 +208,36 @@ public class Enemy : ActorMove {
             if(IsPlayerNeighbor(p, out d)) {
                 DoKill(p, d);
             }
+        }
+    }
+
+    void OnPlayerCopyAct(Act act, Dir dir) {
+        if(act == Act.Face) {
+            Dir faceTo = dir;
+
+            if(copyReverseVertical) {
+                switch(faceTo) {
+                    case Dir.North:
+                        faceTo = Dir.South;
+                        break;
+                    case Dir.South:
+                        faceTo = Dir.North;
+                        break;
+                }
+            }
+
+            if(copyReverseHorizontal) {
+                switch(faceTo) {
+                    case Dir.West:
+                        faceTo = Dir.East;
+                        break;
+                    case Dir.East:
+                        faceTo = Dir.West;
+                        break;
+                }
+            }
+
+            ProcessAct(Act.Face, faceTo, mMoveDat, false);
         }
     }
 
@@ -256,6 +293,9 @@ public class Enemy : ActorMove {
                 p.moveFinishCallback += OnPlayerMoveFinish;
             }
         }
+
+        if(copyPlayerMove != null)
+            copyPlayerMove.actCallback += OnPlayerCopyAct;
     }
 
     private void DetachPlayerMoveListen() {
@@ -267,25 +307,35 @@ public class Enemy : ActorMove {
                 }
             }
         }
+
+        if(copyPlayerMove != null)
+            copyPlayerMove.actCallback -= OnPlayerCopyAct;
+    }
+
+    private Dir GetDirTo(TileAlign toTile) {
+        Dir ret = Dir.South;
+
+        int dCol = toTile.col - tile.col;
+        int dRow = toTile.row - tile.row;
+
+        if(dCol < 0) {
+            ret = Dir.West;
+        }
+        else if(dCol > 0) {
+            ret = Dir.East;
+        }
+        else if(dRow > 0) {
+            ret = Dir.North;
+        }
+
+        return ret;
     }
 
     private void SetWaypointDir() {
         if(mCurWaypointTile != null) {
-            int dCol = mCurWaypointTile.col - tile.col;
-            int dRow = mCurWaypointTile.row - tile.row;
+            mWaypointDir = GetDirTo(mCurWaypointTile);
 
-            if(dCol < 0) {
-                mWaypointDir = Dir.West;
-            }
-            else if(dCol > 0) {
-                mWaypointDir = Dir.East;
-            }
-            else if(dRow < 0) {
-                mWaypointDir = Dir.South;
-            }
-            else if(dRow > 0) {
-                mWaypointDir = Dir.North;
-            }
+            ProcessAct(Act.Face, mWaypointDir, mMoveDat, false);
         }
     }
 
@@ -298,7 +348,8 @@ public class Enemy : ActorMove {
 
         tile.Align();
 
-        SetWaypointDir();
+        RefreshFaceToWaypoint();
+		ProcessAct(Act.Face, curDir, mMoveDat, false);
     }
 
     private bool CheckWaypointReached() {
@@ -314,7 +365,7 @@ public class Enemy : ActorMove {
         return ret;
     }
 
-    private void SetNextWaypointNode() {
+    private int GetNextWaypointInd() {
         //determine next node depending on waypoint mode
         int nextInd = mWaypointReverse ? mCurWaypointInd - 1 : mCurWaypointInd + 1;
         if(nextInd == mWaypoints.Count) {
@@ -340,6 +391,13 @@ public class Enemy : ActorMove {
             }
         }
 
+        return nextInd;
+    }
+
+    private void SetNextWaypointNode() {
+        //determine next node depending on waypoint mode
+        int nextInd = GetNextWaypointInd();
+
         //make sure it's still valid
         if(nextInd >= 0 && nextInd < mWaypoints.Count) {
             mCurWaypointInd = nextInd;
@@ -348,6 +406,21 @@ public class Enemy : ActorMove {
         }
 
         SetWaypointDir();
+    }
+
+    private void RefreshFaceToWaypoint() {
+        Dir d = mWaypointDir;
+
+        if(CheckWaypointReached()) {
+            int nextInd = GetNextWaypointInd();
+            if(nextInd >= 0 && nextInd < mWaypoints.Count) {
+                Transform node = mWaypoints[nextInd];
+                TileAlign nextWpTile = node.GetComponent<TileAlign>();
+                d = GetDirTo(nextWpTile);
+            }
+        }
+
+        SetCurDir(d);
     }
 
     private void DoMove() {

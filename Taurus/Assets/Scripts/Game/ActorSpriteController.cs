@@ -4,19 +4,27 @@ using System.Collections;
 public class ActorSpriteController : MonoBehaviour {
     public Actor actor;
     public tk2dAnimatedSprite sprite;
+    public bool disableAfterDieEnd = false;
 
     private int[] mFaceStateIds = new int[(int)Dir.NumDir-1];
     private int[] mMoveStateIds = new int[(int)Dir.NumDir-1];
     private int[] mKillStateIds = new int[(int)Dir.NumDir-1];
+    private int mKillOnSpotId;
 
     private int mDieStateId;
     private int mCryStateId;
     private int mVictoryStateId;
 
+    private Act mPrevAct = Act.Face;
+
     void OnDestroy() {
         if(actor != null) {
             actor.actCallback -= OnAct;
             actor.undoCallback -= OnUndoAct;
+        }
+
+        if(sprite != null) {
+            sprite.animationCompleteDelegate -= AnimationComplete;
         }
     }
 
@@ -32,11 +40,14 @@ public class ActorSpriteController : MonoBehaviour {
         mDieStateId = sprite.GetClipIdByName(Act.Die.ToString());
         mCryStateId = sprite.GetClipIdByName(Act.Cry.ToString());
         mVictoryStateId = sprite.GetClipIdByName(Act.Victory.ToString());
+        mKillOnSpotId = sprite.GetClipIdByName(Act.Kill.ToString());
     }
 
     void Awake() {
         actor.actCallback += OnAct;
         actor.undoCallback += OnUndoAct;
+
+        sprite.animationCompleteDelegate += AnimationComplete;
     }
 
     void OnAct(Act act, Dir dir) {
@@ -58,15 +69,20 @@ public class ActorSpriteController : MonoBehaviour {
                 playId = mMoveStateIds[dirInd];
                 break;
 
-            case Act.MoveDelayed:
             case Act.MoveEnd:
+                if(mPrevAct == Act.Move || mPrevAct == Act.MoveDelayed)
+                    playId = mFaceStateIds[dirInd];
+                break;
+
+            case Act.MoveDelayed:
             case Act.Face:
             case Act.Fire:
-                playId = mFaceStateIds[dirInd];
+                if(mPrevAct != Act.Kill)
+                    playId = mFaceStateIds[dirInd];
                 break;
 
             case Act.Kill:
-                playId = mKillStateIds[dirInd];
+                playId = dir == Dir.NumDir ? mKillOnSpotId : mKillStateIds[dirInd];
                 break;
 
             case Act.Die:
@@ -89,6 +105,8 @@ public class ActorSpriteController : MonoBehaviour {
             s.x = hflip ? -Mathf.Abs(s.x) : Mathf.Abs(s.x);
             sprite.scale = s;
         }
+
+        mPrevAct = act;
     }
 
     void OnUndoAct(Act act, Dir dir) {
@@ -113,6 +131,13 @@ public class ActorSpriteController : MonoBehaviour {
                 break;
 
             case Act.Die:
+                playId = mFaceStateIds[(int)Dir.South];
+
+                if(disableAfterDieEnd) {
+                    actor.gameObject.SetActive(true);
+                }
+                break;
+
             case Act.Cry:
                 playId = mFaceStateIds[(int)Dir.South];
                 break;
@@ -124,6 +149,16 @@ public class ActorSpriteController : MonoBehaviour {
             Vector3 s = sprite.scale;
             s.x = hflip ? -Mathf.Abs(s.x) : Mathf.Abs(s.x);
             sprite.scale = s;
+        }
+
+        mPrevAct = Act.Face;
+    }
+
+    void AnimationComplete(tk2dAnimatedSprite sprite, int clipId) {
+        if(clipId == mDieStateId) {
+            if(disableAfterDieEnd) {
+                actor.gameObject.SetActive(false);
+            }
         }
     }
 }

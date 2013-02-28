@@ -244,6 +244,10 @@ public abstract class ActorMove : Actor {
         }
     }
 
+    protected void SetCurDir(Dir toDir) {
+        mCurDir = toDir;
+    }
+
     private void DoFace(Dir toDir) {
         mCurState = State.Face;
         mCurDir = toDir;
@@ -263,6 +267,8 @@ public abstract class ActorMove : Actor {
         if(tile != null) {
             //check if there's a wall to the next position
             if(CheckSolid(mCurDir)) {
+                ProcessAct(Act.Face, mCurDir, null, false);
+
                 mCurState = State.None;
                 //sound?
             }
