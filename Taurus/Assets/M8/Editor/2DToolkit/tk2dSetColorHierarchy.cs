@@ -31,7 +31,8 @@ namespace M8.Editor {
             mIncludeInactive = GUILayout.Toggle(mIncludeInactive, "Include Inactive");
 
             if(GUILayout.Button("Apply")) {
-                foreach(GameObject go in objs) {
+                foreach(Object obj in objs) {
+                    GameObject go = obj as GameObject;
                     if(go != null)
                         ApplyColorHierarchy(go);
                 }
@@ -46,7 +47,8 @@ namespace M8.Editor {
 
             mScrollPos = GUILayout.BeginScrollView(mScrollPos);
 
-            foreach(GameObject go in objs) {
+            foreach(Object obj in objs) {
+                GameObject go = obj as GameObject;
                 if(go != null)
                     GUILayout.Label(go.name);
             }
