@@ -67,6 +67,9 @@ public class LevelSelectController : MonoBehaviour {
         InputManager input = Main.instance.input;
         input.AddButtonCall(InputAction.MenuEnter, OnInputEnter);
         input.AddButtonCall(InputAction.MenuEscape, OnInputExit);
+
+        //preserve the music play throughout
+        Object.DontDestroyOnLoad(MusicManager.instance.gameObject);
 	}
 	
 	// Update is called once per frame
@@ -110,9 +113,13 @@ public class LevelSelectController : MonoBehaviour {
 
     void OnInputExit(InputManager.Info data) {
         if(data.state == InputManager.State.Pressed) {
-            //return to main
-            Main.instance.sceneManager.LoadScene(Main.instance.startScene);
+            ReturnToMain();
         }
+    }
+
+    private void ReturnToMain() {
+        Object.Destroy(MusicManager.instance.gameObject);
+        Main.instance.sceneManager.LoadScene(Main.instance.startScene);
     }
 
     private void MovePrev() {

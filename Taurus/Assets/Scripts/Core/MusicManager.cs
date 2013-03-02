@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MusicManager : MonoBehaviour {
+    public enum AutoPlayType {
+        None,
+        Order,
+        Shuffled
+    }
+
 	[System.Serializable]
 	public class MusicData {
 		public string name;
@@ -15,6 +21,8 @@ public class MusicManager : MonoBehaviour {
 	public float changeFadeOutDelay;
 	
 	public string playOnStart;
+
+    public AutoPlayType autoPlay = AutoPlayType.None;
 	
 	private static MusicManager mInstance = null;
 	
@@ -35,6 +43,7 @@ public class MusicManager : MonoBehaviour {
 	private MusicData mNextMusic;
 
     private bool mMusicEnable = false;
+    private int mCurAutoplayInd = -1;
 
 	public static MusicManager instance {
 		get {
@@ -63,6 +72,16 @@ public class MusicManager : MonoBehaviour {
             mNextMusic = mMusic[name];
             SetState(State.Changing);
 		}
+
+        //determine index for auto playlist
+        if(autoPlay != AutoPlayType.None) {
+            for(int i = 0; i < music.Length; i++) {
+                if(music[i].name == name) {
+                    mCurAutoplayInd = i;
+                    break;
+                }
+            }
+        }
 	}
 	
 	public void Stop(bool fade) {
@@ -77,25 +96,52 @@ public class MusicManager : MonoBehaviour {
 			}
 		}
 	}
+
+    private void AutoPlaylistNext() {
+        mMusicEnable = Main.instance.userSettings.isMusicEnable;
+
+        Stop(false);
+
+        mCurAutoplayInd++;
+        if(mCurAutoplayInd >= music.Length)
+            mCurAutoplayInd = 0;
+
+        mCurMusic = music[mCurAutoplayInd];
+        mCurMusic.source.volume = mMusicEnable ? 1.0f : 0.0f;
+        mCurMusic.source.Play();
+        SetState(State.Playing);
+    }
 	
 	void OnDestroy() {
-		mInstance = null;
+        if(mInstance == this)
+		    mInstance = null;
 	}
 	
 	void Awake() {
-		mInstance = this;
-		
-		mMusic = new Dictionary<string, MusicData>(music.Length);
-		foreach(MusicData dat in music) {
-			mMusic.Add(dat.name, dat);
-		}
+        if(mInstance == null) {
+            mInstance = this;
+
+            mMusic = new Dictionary<string, MusicData>(music.Length);
+            foreach(MusicData dat in music) {
+                mMusic.Add(dat.name, dat);
+            }
+
+            if(autoPlay == AutoPlayType.Shuffled)
+                M8.ArrayUtil.Shuffle(music);
+        }
+        else
+            DestroyImmediate(gameObject);
 	}
 
 	// Use this for initialization
 	void Start () {
-		if(!string.IsNullOrEmpty(playOnStart)) {
-			Play(playOnStart, true);
-		}
+        if(!string.IsNullOrEmpty(playOnStart)) {
+            Play(playOnStart, true);
+        }
+        else if(autoPlay != AutoPlayType.None) {
+            mCurAutoplayInd = -1;
+            AutoPlaylistNext();
+        }
 	}
 
     void UserSettingsChanged(UserSettings us) {
@@ -122,7 +168,10 @@ public class MusicManager : MonoBehaviour {
 			break;
 		case State.Playing:
 			if(!(mCurMusic.source.loop || mCurMusic.source.isPlaying)) {
-				mCurMusic.source.Play((ulong)System.Math.Round(rate*((double)mCurMusic.loopDelay)));
+                if(autoPlay != AutoPlayType.None)
+                    AutoPlaylistNext();
+                else //loop
+				    mCurMusic.source.Play((ulong)System.Math.Round(rate*((double)mCurMusic.loopDelay)));
 			}
 			break;
 		case State.Changing:

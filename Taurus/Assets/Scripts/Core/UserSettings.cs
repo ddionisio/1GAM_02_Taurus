@@ -2,20 +2,18 @@ using UnityEngine;
 using System.Collections;
 
 public class UserSettings {
-    public const string muteKey = "m";
     public const string volumeKey = "v";
+    public const string soundEnableKey = "snd";
     public const string musicEnableKey = "mus";
     public const string languageKey = "l";
 
-    public bool isMute {
-        get { return mMute; }
+    public bool isSoundEnable {
+        get { return mSoundEnabled; }
 
         set {
-            if(mMute != value) {
-                mMute = value;
-                PlayerPrefs.SetInt(muteKey, mMute ? 1 : 0);
-
-                ApplyAudioSettings();
+            if(mSoundEnabled != value) {
+                mSoundEnabled = value;
+                PlayerPrefs.SetInt(soundEnableKey, mSoundEnabled ? 1 : 0);
 
                 RelaySettingsChanged();
             }
@@ -43,7 +41,7 @@ public class UserSettings {
                 mVolume = value;
                 PlayerPrefs.SetFloat(volumeKey, mVolume);
 
-                ApplyAudioSettings();
+                AudioListener.volume = mVolume;
             }
         }
     }
@@ -60,15 +58,13 @@ public class UserSettings {
 
     //need to debug while listening to music
 #if UNITY_EDITOR
-    private const int muteDefault = 1;
+    private const int enableDefault = 1;
 #else
-	private const int muteDefault = 0;
+	private const int enableDefault = 1;
 #endif
 
-    private const int musicEnableDefault = 1;
-
-    private bool mMute;
     private float mVolume;
+    private bool mSoundEnabled;
     private bool mMusicEnabled;
     private GameLanguage mLanguage = GameLanguage.English;
 
@@ -77,17 +73,13 @@ public class UserSettings {
         //load settings
         mVolume = PlayerPrefs.GetFloat(volumeKey, 1.0f);
 
-        mMute = PlayerPrefs.GetInt(muteKey, muteDefault) > 0;
+        mSoundEnabled = PlayerPrefs.GetInt(soundEnableKey, enableDefault) > 0;
 
-        mMusicEnabled = PlayerPrefs.GetInt(musicEnableKey, musicEnableDefault) > 0;
+        mMusicEnabled = PlayerPrefs.GetInt(musicEnableKey, enableDefault) > 0;
 
-        ApplyAudioSettings();
+        AudioListener.volume = mVolume;
 
         mLanguage = (GameLanguage)PlayerPrefs.GetInt(languageKey, (int)GameLanguage.English);
-    }
-
-    private void ApplyAudioSettings() {
-        AudioListener.volume = mMute ? 0.0f : mVolume;
     }
 
     private void RelaySettingsChanged() {
