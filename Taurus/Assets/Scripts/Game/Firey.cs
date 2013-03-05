@@ -129,7 +129,7 @@ public class Firey : MonoBehaviour {
                 Player player = actor as Player;
                 if(player != null) {
                     if(!player.dead && CheckCollision(actor))
-                        PlayerController.KillPlayer(player, dir);
+                        PlayerController.KillPlayer(player);
                 }
             }
         }
@@ -144,7 +144,7 @@ public class Firey : MonoBehaviour {
         if(PlayerController.players != null) {
             foreach(Player player in PlayerController.players) {
                 if(player != null && !player.dead && CheckCollision(player)) {
-                    PlayerController.KillPlayer(player, dir);
+                    PlayerController.KillPlayer(player);
                     break;
                 }
             }

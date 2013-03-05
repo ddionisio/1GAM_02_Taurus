@@ -21,6 +21,8 @@ public abstract class ActorMove : Actor {
 
     public LayerMask solidCheck;
 
+    public GameObject onSlowObject;
+
     public event MoveCallback moveStartCallback;
     public event MoveCallback moveFinishCallback;
 
@@ -147,14 +149,23 @@ public abstract class ActorMove : Actor {
             tk2dRuntime.TileMap.TileInfo tileInf = tile.tileData;
             if(tileInf != null && tileInf.intVal == (int)TileType.Slow && mSlowCounter < slowMaxCount) {
                 mSlowCounter++;
+
+                if(onSlowObject != null)
+                    onSlowObject.SetActive(mSlowCounter < slowMaxCount);
             }
             else {
                 mSlowCounter = 0;
+
+                if(onSlowObject != null)
+                    onSlowObject.SetActive(false);
             }
         }
         else if(act == Act.MoveDelayed) {
             StopMove();
             mSlowCounter=0;
+
+            if(onSlowObject != null)
+                onSlowObject.SetActive(true);
         }
     }
 
@@ -163,6 +174,13 @@ public abstract class ActorMove : Actor {
         moveFinishCallback = null;
 
         base.OnDestroy();
+    }
+
+    protected override void Awake() {
+        base.Awake();
+
+        if(onSlowObject != null)
+            onSlowObject.SetActive(false);
     }
 
     protected override void Start() {
@@ -212,6 +230,16 @@ public abstract class ActorMove : Actor {
                             tile.Set(mNextCol, mNextRow);
 
                         mCurState = State.None;
+                    }
+
+                    //check if we are standing on a slow tile
+                    if(onSlowObject != null) {
+                        tk2dRuntime.TileMap.TileInfo dat = tile.tileData;
+                        if(dat != null && dat.intVal == (int)TileType.Slow)
+                            onSlowObject.SetActive(mSlowCounter < slowMaxCount);
+                        else {
+                            onSlowObject.SetActive(false);
+                        }
                     }
 
                     OnMoveCellFinish();
@@ -278,6 +306,9 @@ public abstract class ActorMove : Actor {
                 if(dat != null && dat.intVal == (int)TileType.Slow && mSlowCounter < slowMaxCount) {
                     mSlowCounter++;
 
+                    if(onSlowObject != null)
+                        onSlowObject.SetActive(mSlowCounter < slowMaxCount);
+                                        
                     mMoveStartPos = transform.position;
                     mMoveEndPos = mMoveStartPos;
 

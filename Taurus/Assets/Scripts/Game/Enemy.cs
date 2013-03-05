@@ -280,7 +280,7 @@ public class Enemy : ActorMove {
     }
 
     private void DoKill(Player p, Dir d) {
-        PlayerController.KillPlayer(p, d);
+        PlayerController.KillPlayer(p);
 
         ProcessAct(Act.Kill, d, null, false);
     }

@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour {
     /// <summary>
     /// Set given player to die, others will cry.
     /// </summary>
-    public static void KillPlayer(Player p, Dir fromDir) {
-        p.Die(fromDir);
+    public static void KillPlayer(Player p) {
+        p.Die();
 
         //tell other players to cry
         foreach(Player other in mPlayers) {
@@ -125,7 +125,14 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnPlayerMoveFinish(ActorMove mover) {
-        CheckVictory();
+        int numDoneMove = 0;
+        foreach(Player p in mPlayers) {
+            if(p.state == ActorMove.State.None)
+                numDoneMove++;
+        }
+
+        if(numDoneMove == mPlayers.Length)
+            CheckVictory();
     }
         
     private void InputSetup(bool attach) {
@@ -181,7 +188,11 @@ public class PlayerController : MonoBehaviour {
             mSecretMade = true;
             mSecretUndoCount = ActionManager.instance.inputDownCounter == 0 ? ActionManager.instance.undoCount : ActionManager.instance.undoCount + 1;
             Debug.Log("secret!");
-            //TODO: secret que
+
+            foreach(Player p in mPlayers) {
+                if(p.onSecretMadeObject != null)
+                    p.onSecretMadeObject.SetActive(true);
+            }
         }
 
         //win?
@@ -189,6 +200,9 @@ public class PlayerController : MonoBehaviour {
 
         if(mVictory) {
             Debug.Log("victory");
+
+            if(mSecretMade)
+                Debug.Log("secret made");
 
             InputManager input = Main.instance != null ? Main.instance.input : null;
 

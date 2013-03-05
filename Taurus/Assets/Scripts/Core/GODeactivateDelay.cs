@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class DeactivateDelay : MonoBehaviour {
+public class GODeactivateDelay : MonoBehaviour {
 	public float delay;
 	
 	void OnEnable() {

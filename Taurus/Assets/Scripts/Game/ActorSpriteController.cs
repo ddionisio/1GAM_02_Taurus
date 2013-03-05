@@ -77,7 +77,7 @@ public class ActorSpriteController : MonoBehaviour {
             case Act.MoveDelayed:
             case Act.Face:
             case Act.Fire:
-                if(mPrevAct != Act.Kill)
+                if(mPrevAct != Act.Kill && mPrevAct != Act.Die && mPrevAct != Act.Cry)
                     playId = mFaceStateIds[dirInd];
                 break;
 
@@ -127,19 +127,16 @@ public class ActorSpriteController : MonoBehaviour {
             case Act.Move:
             case Act.MoveEnd:
             case Act.Kill:
+            case Act.Cry:
                 playId = mFaceStateIds[dirInd];
                 break;
 
             case Act.Die:
-                playId = mFaceStateIds[(int)Dir.South];
+                playId = mFaceStateIds[dirInd];
 
                 if(disableAfterDieEnd) {
                     actor.gameObject.SetActive(true);
                 }
-                break;
-
-            case Act.Cry:
-                playId = mFaceStateIds[(int)Dir.South];
                 break;
         }
 

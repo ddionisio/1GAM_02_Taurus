@@ -10,13 +10,21 @@ public class Block : Actor {
     public void Teleport() {
         Dir teleDir = SetTelePosition();
 
+        ProcessAct(Act.Teleport, teleDir, null, true);
+
         //check if we drop on top of something
+        StartCoroutine(TeleFragDelay());
+    }
+
+    private IEnumerator TeleFragDelay() {
+        yield return new WaitForFixedUpdate();
+
         RaycastHit hit;
         Vector3 pos = transform.position;
         if(Physics.Raycast(new Vector3(pos.x, pos.y, -1000), Vector3.forward, out hit, Mathf.Infinity, teleCheck.value)) {
             if(hit.transform.CompareTag(Layers.tagPlayer)) {
                 Player p = hit.transform.GetComponent<Player>();
-                PlayerController.KillPlayer(p, Dir.NumDir);
+                PlayerController.KillPlayer(p);
             }
             else if(hit.transform.CompareTag(Layers.tagEnemy)) {
                 Enemy e = hit.transform.GetComponent<Enemy>();
@@ -24,7 +32,7 @@ public class Block : Actor {
             }
         }
 
-        ProcessAct(Act.Teleport, teleDir, null, true);
+        yield break;
     }
 
     protected override void OnUndo(Act act, Dir dir, object dat) {
