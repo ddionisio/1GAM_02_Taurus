@@ -3,17 +3,20 @@ using System.Collections;
 
 public class ModalPause : UIController {
     public UIEventListener restart;
+    public UIEventListener help;
     public UIEventListener options;
     public UIEventListener exit;
 
     protected override void OnActive(bool active) {
         if(active) {
             restart.onClick = RestartClick;
+            help.onClick = HelpClick;
             options.onClick = OptionsClick;
             exit.onClick = ExitClick;
         }
         else {
             restart.onClick = null;
+            help.onClick = null;
             options.onClick = null;
             exit.onClick = null;
         }
@@ -30,7 +33,11 @@ public class ModalPause : UIController {
     }
 
     void OptionsClick(GameObject go) {
-        Debug.Log("options?");
+        UIModalManager.instance.ModalOpen(Modals.options);
+    }
+
+    void HelpClick(GameObject go) {
+        UIModalManager.instance.ModalOpen(Modals.help);
     }
 
     void ExitClick(GameObject go) {

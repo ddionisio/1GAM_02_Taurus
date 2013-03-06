@@ -10,5 +10,29 @@
 	{
 		"key":"newGameName",
 		"text":"NAME:"
+	},
+	{
+		"key":"helpMovement",
+		"text":"MOVEMENT: Arrow Keys or WASD"
+	},
+	{
+		"key":"helpUndo",
+		"text":"UNDO: Z or Right Ctrl"
+	},
+	{
+		"key":"helpFire",
+		"text":"SWITCH BLOCK: Space or Right Shift"
+	},
+	{
+		"key":"helpControls",
+		"text":"CONTROLS"
+	},
+	{
+		"key":"helpGoal",
+		"text":"GOAL"
+	},
+	{
+		"key":"helpGoalDetails",
+		"text":"Move both characters to the golden tile"
 	}
 ]
