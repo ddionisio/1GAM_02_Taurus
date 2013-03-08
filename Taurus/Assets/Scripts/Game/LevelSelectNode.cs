@@ -8,38 +8,74 @@ public class LevelSelectNode : MonoBehaviour {
         complete
     }
 
-    public tk2dAnimatedSprite sprite;
-    public GameObject nextNode;
-    public GameObject secretGo;
-    public Color nextNodeLockColor;
+    public tk2dBaseSprite image;
+    
+    public GameObject highlight;
+    public GameObject secret;
+    public GameObject complete;
 
-    private tk2dBaseSprite[] mNodeSprites = null;
+    public GameObject cursorLeft;
+    public GameObject cursorRight;
+
+    public Color lockedColor;
+    
     private State mCurState;
 
     public State curState { get { return mCurState; } }
 
-    public void SetState(State state, bool secretUnlocked) {
-        mCurState = state;
+    public bool highlightActive {
+        get { return highlight != null ? highlight.activeSelf : false; }
 
-        sprite.Play(state.ToString());
-
-        secretGo.SetActive(secretUnlocked);
-
-        if(mNodeSprites != null) {
-            if(state == State.complete) {
-                foreach(tk2dBaseSprite spr in mNodeSprites)
-                    spr.color = Color.white;
-            }
-            else {
-                foreach(tk2dBaseSprite spr in mNodeSprites)
-                    spr.color = nextNodeLockColor;
-            }
+        set {
+            if(highlight != null)
+                highlight.SetActive(value);
         }
     }
 
+    public void SetState(State state, bool secretUnlocked) {
+        mCurState = state;
+
+        Color imageClr = Color.white;
+        bool completeActive = false;
+                
+        switch(state) {
+            case State.unlocked:
+                break;
+
+            case State.locked:
+                imageClr = lockedColor;
+                break;
+
+            case State.complete:
+                completeActive = true;
+                break;
+        }
+
+        image.color = imageClr;
+
+        if(complete != null)
+            complete.SetActive(completeActive);
+
+        if(secret != null)
+            secret.SetActive(secretUnlocked);
+    }
+
+    public void SetCursor(bool left, bool right) {
+        if(cursorLeft != null)
+            cursorLeft.SetActive(left);
+        if(cursorRight != null)
+            cursorRight.SetActive(right);
+    }
+
     void Awake() {
-        if(nextNode != null)
-            mNodeSprites = nextNode.GetComponentsInChildren<tk2dBaseSprite>();
+        if(highlight != null)
+            highlight.SetActive(false);
+        if(secret != null)
+            secret.SetActive(false);
+        if(cursorLeft != null)
+            cursorLeft.SetActive(false);
+        if(cursorRight != null)
+            cursorRight.SetActive(false);
     }
 
 }

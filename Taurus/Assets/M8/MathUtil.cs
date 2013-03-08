@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace M8 {
-    public struct Math {
+    public struct MathUtil {
         public enum Side {
             None,
             Left,

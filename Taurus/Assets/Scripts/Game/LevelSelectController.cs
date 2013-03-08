@@ -1,13 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
-public class LevelSelectController : MonoBehaviour {
+public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> {
     public enum State {
         None,
         Moving
     }
 
-    public LevelSelectNode[] nodes;
+    public GameObject nodesHolder;
     public GameObject selector;
     public float moveDelay;
 
@@ -17,6 +19,8 @@ public class LevelSelectController : MonoBehaviour {
     private float mCurMoveTime;
     private int mCurLevelSelect;
 
+    private LevelSelectNode[] mNodes;
+
     void OnDestroy() {
         InputManager input = Main.instance != null ? Main.instance.input : null;
         if(input != null) {
@@ -25,11 +29,23 @@ public class LevelSelectController : MonoBehaviour {
         }
     }
 
+    public int Compare(LevelSelectNode x, LevelSelectNode y) {
+        string xNumStr = Regex.Match(x.gameObject.name, @"\d+").Value;
+        string yNumStr = Regex.Match(y.gameObject.name, @"\d+").Value;
+
+        return int.Parse(xNumStr) - int.Parse(yNumStr);
+    }
+
+    void Awake() {
+        mNodes = nodesHolder.GetComponentsInChildren<LevelSelectNode>(true);
+        System.Array.Sort<LevelSelectNode>(mNodes, this);
+    }
+
 	// Use this for initialization
 	void Start () {
         int availableLevel = 0;
-        for(int i = 0; i < nodes.Length; i++) {
-            LevelSelectNode node = nodes[i];
+        for(int i = 0; i < mNodes.Length; i++) {
+            LevelSelectNode node = mNodes[i];
 
             if(LevelConfig.instance.CheckLevelUnlock(i)) {
                 bool secret = LevelConfig.instance.CheckLevelSecretUnlock(i);
@@ -43,25 +59,28 @@ public class LevelSelectController : MonoBehaviour {
             }
         }
 
-        if(availableLevel < nodes.Length) {
-            nodes[availableLevel].SetState(LevelSelectNode.State.unlocked, false);
+        if(availableLevel < mNodes.Length) {
+            mNodes[availableLevel].SetState(LevelSelectNode.State.unlocked, false);
 
             //set the rest as locked
-            for(int j = availableLevel + 1; j < nodes.Length; j++) {
-                LevelSelectNode node = nodes[j];
+            for(int j = availableLevel + 1; j < mNodes.Length; j++) {
+                LevelSelectNode node = mNodes[j];
                 node.SetState(LevelSelectNode.State.locked, false);
             }
         }
         else {
             //everything is complete
-            availableLevel = nodes.Length - 1;
+            availableLevel = mNodes.Length - 1;
         }
 
         //set selector to available level
-        Vector3 nodePos = nodes[availableLevel].transform.position;
+        Vector3 nodePos = mNodes[availableLevel].transform.position;
         selector.transform.position = new Vector3(nodePos.x, nodePos.y, selector.transform.position.z);
 
         mCurLevelSelect = availableLevel;
+
+        mNodes[mCurLevelSelect].highlightActive = true;
+        mNodes[mCurLevelSelect].SetCursor(mCurLevelSelect > 0, false);
 
         //bind input
         InputManager input = Main.instance.input;
@@ -89,8 +108,13 @@ public class LevelSelectController : MonoBehaviour {
             case State.Moving:
                 mCurMoveTime += Time.deltaTime;
                 if(mCurMoveTime >= moveDelay) {
-                    Vector3 nodePos = nodes[mCurLevelSelect].transform.position;
+                    Vector3 nodePos = mNodes[mCurLevelSelect].transform.position;
                     selector.transform.position = new Vector3(nodePos.x, nodePos.y, selector.transform.position.z);
+
+                    mNodes[mCurLevelSelect].highlightActive = true;
+                    mNodes[mCurLevelSelect].SetCursor(
+                        mCurLevelSelect > 0 && mNodes[mCurLevelSelect - 1].curState != LevelSelectNode.State.locked,
+                        mCurLevelSelect < mNodes.Length - 1 && mNodes[mCurLevelSelect + 1].curState != LevelSelectNode.State.locked);
 
                     mState = State.None;
                 }
@@ -124,27 +148,33 @@ public class LevelSelectController : MonoBehaviour {
 
     private void MovePrev() {
         if(mCurLevelSelect > 0) {
+            mNodes[mCurLevelSelect].highlightActive = false;
+            mNodes[mCurLevelSelect].SetCursor(false, false);
+
             mCurMoveTime = 0.0f;
 
-            mStartPos = nodes[mCurLevelSelect].transform.position;
+            mStartPos = mNodes[mCurLevelSelect].transform.position;
 
             mCurLevelSelect--;
 
-            mEndPos = nodes[mCurLevelSelect].transform.position;
+            mEndPos = mNodes[mCurLevelSelect].transform.position;
 
             mState = State.Moving;
         }
     }
 
     private void MoveNext() {
-        if(mCurLevelSelect < nodes.Length - 1 && nodes[mCurLevelSelect+1].curState != LevelSelectNode.State.locked) {
+        if(mCurLevelSelect < mNodes.Length - 1 && mNodes[mCurLevelSelect+1].curState != LevelSelectNode.State.locked) {
+            mNodes[mCurLevelSelect].highlightActive = false;
+            mNodes[mCurLevelSelect].SetCursor(false, false);
+
             mCurMoveTime = 0.0f;
 
-            mStartPos = nodes[mCurLevelSelect].transform.position;
+            mStartPos = mNodes[mCurLevelSelect].transform.position;
 
             mCurLevelSelect++;
 
-            mEndPos = nodes[mCurLevelSelect].transform.position;
+            mEndPos = mNodes[mCurLevelSelect].transform.position;
 
             mState = State.Moving;
         }

@@ -70,7 +70,7 @@ public class LevelConfig : MonoBehaviour {
         if(secretUnlocked) {
             string _key = secretPrefix + sub;
             int _flags = UserData.instance.GetInt(_key, 0);
-            UserData.instance.SetInt(key, _flags | mask);
+            UserData.instance.SetInt(_key, _flags | mask);
         }
                 
         UserData.instance.Save();

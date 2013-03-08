@@ -9,9 +9,13 @@ public class SpriteColorPulse : MonoBehaviour {
 	private tk2dBaseSprite mSprite;
 	
 	private float mCurPulseTime = 0;
+    private bool mStarted = false;
 	
 	void OnEnable() {
-		mCurPulseTime = 0;
+        if(mStarted) {
+            mCurPulseTime = 0;
+            mSprite.color = startColor;
+        }
 	}
 	
 	void Awake() {
@@ -20,6 +24,8 @@ public class SpriteColorPulse : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+        mStarted = true;
+        mSprite.color = startColor;
 	}
 	
 	// Update is called once per frame
