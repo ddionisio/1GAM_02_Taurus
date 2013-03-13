@@ -123,7 +123,7 @@ public class Firey : MonoBehaviour {
                     StartCoroutine(RefreshLineDelay());
                 }
                 else if(!enemy.dead && CheckCollision(actor))
-                    enemy.Die(dir);
+                    enemy.Die();
             }
             else {
                 Player player = actor as Player;

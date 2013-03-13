@@ -5,9 +5,34 @@ public class UISlot : MonoBehaviour {
     public UILabel nameLabel;
     public UILabel countLabel;
     public int slot = 0;
-    public string countFormat = "{0:000}";
+    public string countFormat = "{0:000}%";
 
     private bool mStarted = false;
+
+    public void RefreshLabels() {
+        //check if slot is available
+        string name = UserSlotData.GetSlotName(slot);
+        if(!string.IsNullOrEmpty(name)) {
+            StopAllCoroutines();
+            StartCoroutine(SetNameDelay(name));
+
+            //determine level count
+            float c = (float)UserSlotData.GetSlotValueInt(slot, LevelConfig.levelCountKey, 0);
+            float sc = (float)UserSlotData.GetSlotValueInt(slot, LevelConfig.secretCountKey, 0);
+            float cMax = (float)LevelConfig.instance.numLevels;
+
+            int percent = Mathf.RoundToInt(((c+sc)/(cMax*2.0f))*100.0f);
+
+            countLabel.text = string.Format(countFormat, percent);
+            countLabel.gameObject.SetActive(true);
+        }
+        else {
+            StopAllCoroutines();
+            StartCoroutine(SetNameDelay(null));
+
+            countLabel.gameObject.SetActive(false);
+        }
+    }
 
     void OnEnable() {
         if(mStarted) {
@@ -25,24 +50,15 @@ public class UISlot : MonoBehaviour {
     IEnumerator SetNameDelay(string name) {
         yield return new WaitForFixedUpdate();
 
-        nameLabel.text = name;
-
-        yield break;
-    }
-
-    private void RefreshLabels() {
-        //check if slot is available
-        string name = UserSlotData.GetSlotName(slot);
-        if(!string.IsNullOrEmpty(name)) {
-            StartCoroutine(SetNameDelay(name));
-
-            //determine level count
-            int c = UserSlotData.GetSlotValueInt(slot, LevelConfig.levelCountKey, 0);
-            countLabel.text = string.Format(countFormat, c);
-            countLabel.gameObject.SetActive(true);
+        if(name == null) {
+            NGUIGameLocalize localizer = nameLabel.GetComponent<NGUIGameLocalize>();
+            if(localizer != null)
+                localizer.Localize();
         }
         else {
-            countLabel.gameObject.SetActive(false);
+            nameLabel.text = name;
         }
+
+        yield break;
     }
 }

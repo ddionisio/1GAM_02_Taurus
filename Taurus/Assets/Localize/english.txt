@@ -1,7 +1,7 @@
 [
 	{
-		"key":"level",
-		"text":"LEVEL - {0:00}"
+		"key":"title",
+		"text":"ABBIGALE and the MONSTER"
 	},
 	{
 		"key":"empty",
@@ -9,7 +9,7 @@
 	},
 	{
 		"key":"newGameName",
-		"text":"NAME:"
+		"text":"WHAT'S YOUR NAME?"
 	},
 	{
 		"key":"helpMovement",
@@ -34,5 +34,25 @@
 	{
 		"key":"helpGoalDetails",
 		"text":"Move both characters to the golden tile"
+	},
+	{
+		"key":"eraseSlotTitle",
+		"text":"ERASE \"{0}\""
+	},
+	{
+		"key":"yes",
+		"text":"YES"
+	},
+	{
+		"key":"no",
+		"text":"NO"
+	},
+	{
+		"key":"creditsTitle",
+		"text":"CREDITS"
+	},
+	{
+		"key":"creditsBody",
+		"text":""
 	}
 ]

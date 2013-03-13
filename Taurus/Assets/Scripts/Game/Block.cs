@@ -13,10 +13,10 @@ public class Block : Actor {
         ProcessAct(Act.Teleport, teleDir, null, true);
 
         //check if we drop on top of something
-        StartCoroutine(TeleFragDelay());
+        StartCoroutine(TeleRefresh());
     }
 
-    private IEnumerator TeleFragDelay() {
+    private IEnumerator TeleRefresh() {
         yield return new WaitForFixedUpdate();
 
         RaycastHit hit;
@@ -28,9 +28,13 @@ public class Block : Actor {
             }
             else if(hit.transform.CompareTag(Layers.tagEnemy)) {
                 Enemy e = hit.transform.GetComponent<Enemy>();
-                e.Die(Dir.NumDir);
+                e.Die();
             }
         }
+
+        //update highlight for player nearby
+        foreach(Player player in PlayerController.players)
+            player.HighlightBlockInFront();
 
         yield break;
     }

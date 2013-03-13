@@ -15,6 +15,7 @@ public enum InputAction {
     MenuVertical,
     MenuEnter,
     MenuEscape,
+    MenuDelete,
 	
 	NumAction
 }

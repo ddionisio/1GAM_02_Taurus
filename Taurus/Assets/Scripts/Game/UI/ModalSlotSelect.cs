@@ -5,16 +5,22 @@ public class ModalSlotSelect : UIController {
 
     public UIEventListener[] slots;
 
+    private UISlot mSlotSelected;
+
     protected override void OnActive(bool active) {
         if(active) {
             foreach(UIEventListener slot in slots) {
                 slot.onClick = SelectSlotClick;
             }
+
+            Main.instance.input.AddButtonCall(InputAction.MenuDelete, OnDeleteButton);
         }
         else {
             foreach(UIEventListener slot in slots) {
                 slot.onClick = null;
             }
+
+            Main.instance.input.RemoveButtonCall(InputAction.MenuDelete, OnDeleteButton);
         }
     }
 
@@ -46,6 +52,32 @@ public class ModalSlotSelect : UIController {
 
                 UIModalManager.instance.ModalOpen(Modals.newGame);
             }
+        }
+    }
+
+    void OnDeleteButton(InputManager.Info data) {
+        if(UICamera.selectedObject != null) {
+            mSlotSelected = UICamera.selectedObject.GetComponentInChildren<UISlot>();
+            if(mSlotSelected != null) {
+                int slot = mSlotSelected.slot;
+
+                if(UserSlotData.IsSlotAvailable(slot)) {
+                    string title = GameLocalize.GetText("eraseSlotTitle");
+                    title = string.Format(title, mSlotSelected.nameLabel.text);
+
+                    UIModalConfirm.Open(title, null, OnConfirm);
+                }
+            }
+        }
+    }
+
+    void OnConfirm(bool yes) {
+        if(yes) {
+            UserSlotData.DeleteSlot(mSlotSelected.slot);
+            UserSlotData.SetSlotValueInt(mSlotSelected.slot, LevelConfig.levelCountKey, 0);
+            UserSlotData.SetSlotValueInt(mSlotSelected.slot, LevelConfig.secretCountKey, 0);
+
+            mSlotSelected.RefreshLabels();
         }
     }
 }

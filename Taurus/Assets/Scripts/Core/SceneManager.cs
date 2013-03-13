@@ -48,7 +48,8 @@ public class SceneManager : MonoBehaviour {
         }
 
         foreach(Transform t in mRoots) {
-            t.BroadcastMessage(methodName, param, options);    
+            if(t != null)
+                t.BroadcastMessage(methodName, param, options);    
         }
     }
 

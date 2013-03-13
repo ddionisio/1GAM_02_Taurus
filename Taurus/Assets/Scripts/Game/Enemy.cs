@@ -36,11 +36,11 @@ public class Enemy : ActorMove {
 
     public bool dead { get { return mDead; } }
 
-    public void Die(Dir fromDir) {
+    public void Die() {
         if(!mDead) {
             Debug.Log("enemy dead");
             StopMove();
-            ProcessAct(Act.Die, fromDir, null, true, true);
+            ProcessAct(Act.Die, curDir, mMoveDat, true, true);
             mDead = true;
 
             DetachPlayerMoveListen();
@@ -52,6 +52,11 @@ public class Enemy : ActorMove {
             case Act.Die:
                 mDead = false;
                 AttachPlayerMoveListen();
+                break;
+
+            case Act.Kill:
+                if(dir == Dir.NumDir)
+                    ProcessAct(Act.Face, curDir, mMoveDat, false);
                 break;
 
             case Act.MoveDelayed:
@@ -131,7 +136,7 @@ public class Enemy : ActorMove {
             if(dat != null) {
                 switch((TileType)dat.intVal) {
                     case TileType.Spike:
-                        Die(Dir.NumDir);
+                        Die();
                         processPlayerCheck = false;
                         break;
                 }
@@ -282,7 +287,7 @@ public class Enemy : ActorMove {
     private void DoKill(Player p, Dir d) {
         PlayerController.KillPlayer(p);
 
-        ProcessAct(Act.Kill, d, null, false);
+        ProcessAct(Act.Kill, d, mMoveDat, true);
     }
 
 

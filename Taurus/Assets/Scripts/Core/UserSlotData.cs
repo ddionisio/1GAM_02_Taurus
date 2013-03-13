@@ -66,6 +66,11 @@ public class UserSlotData : UserData {
         PlayerPrefs.SetInt(PrefixKey + slot + "_" + key, val);
     }
 
+    public static void DeleteSlot(int slot) {
+        PlayerPrefs.DeleteKey(PrefixKey + slot + "i");
+        PlayerPrefs.DeleteKey(PrefixKey + slot + "name");
+    }
+
     public override void Save() {
         if(mSlot != -1) {
             if(mValueIs != null) {
@@ -84,8 +89,7 @@ public class UserSlotData : UserData {
     /// </summary>
     public override void Delete() {
         if(mSlot != -1) {
-            PlayerPrefs.DeleteKey(PrefixKey + mSlot + "i");
-            PlayerPrefs.DeleteKey(PrefixKey + mSlot + "name");
+            DeleteSlot(mSlot);
             mSlot = -1;
             mValueIs = null;
         }

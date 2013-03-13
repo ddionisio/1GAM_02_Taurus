@@ -114,7 +114,10 @@ public class ActorSpriteController : MonoBehaviour {
         bool hflip;
         int dirInd;
 
-        if(dir == Dir.West) {
+        if(dir == Dir.NumDir) {
+            return;
+        }
+        else if(dir == Dir.West) {
             hflip = true;
             dirInd = (int)Dir.East;
         }

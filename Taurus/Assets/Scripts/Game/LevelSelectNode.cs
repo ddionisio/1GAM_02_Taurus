@@ -21,6 +21,8 @@ public class LevelSelectNode : MonoBehaviour {
     
     private State mCurState;
 
+    private tk2dBaseSprite[] mCompleteSprites;
+
     public State curState { get { return mCurState; } }
 
     public bool highlightActive {
@@ -53,8 +55,10 @@ public class LevelSelectNode : MonoBehaviour {
 
         image.color = imageClr;
 
-        if(complete != null)
-            complete.SetActive(completeActive);
+        if(mCompleteSprites != null && !completeActive) {
+            foreach(tk2dBaseSprite spr in mCompleteSprites)
+                spr.color = lockedColor;
+        }
 
         if(secret != null)
             secret.SetActive(secretUnlocked);
@@ -76,6 +80,9 @@ public class LevelSelectNode : MonoBehaviour {
             cursorLeft.SetActive(false);
         if(cursorRight != null)
             cursorRight.SetActive(false);
+
+        if(complete != null)
+            mCompleteSprites = complete.GetComponentsInChildren<tk2dBaseSprite>();
     }
 
 }

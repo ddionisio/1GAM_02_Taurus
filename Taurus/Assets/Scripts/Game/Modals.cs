@@ -5,4 +5,5 @@
     public const string slots = "slots";
     public const string newGame = "newGame";
     public const string help = "help";
+    public const string credits = "credits";
 }

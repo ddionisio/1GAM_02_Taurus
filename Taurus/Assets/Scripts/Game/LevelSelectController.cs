@@ -21,12 +21,10 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
 
     private LevelSelectNode[] mNodes;
 
+    private bool mActive = false;
+
     void OnDestroy() {
-        InputManager input = Main.instance != null ? Main.instance.input : null;
-        if(input != null) {
-            input.RemoveButtonCall(InputAction.MenuEnter, OnInputEnter);
-            input.RemoveButtonCall(InputAction.MenuEscape, OnInputExit);
-        }
+        InputSetup(false);
     }
 
     public int Compare(LevelSelectNode x, LevelSelectNode y) {
@@ -83,9 +81,7 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         mNodes[mCurLevelSelect].SetCursor(mCurLevelSelect > 0, false);
 
         //bind input
-        InputManager input = Main.instance.input;
-        input.AddButtonCall(InputAction.MenuEnter, OnInputEnter);
-        input.AddButtonCall(InputAction.MenuEscape, OnInputExit);
+        InputSetup(true);
 
         //preserve the music play throughout
         Object.DontDestroyOnLoad(MusicManager.instance.gameObject);
@@ -95,13 +91,15 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
 	void Update () {
         switch(mState) {
             case State.None:
-                InputManager input = Main.instance.input;
-                float axis = input.GetAxis(InputAction.MenuHorizontal);
-                if(axis < 0.0f) {
-                    MovePrev();
-                }
-                else if(axis > 0.0f) {
-                    MoveNext();
+                if(mActive) {
+                    InputManager input = Main.instance.input;
+                    float axis = input.GetAxis(InputAction.MenuHorizontal);
+                    if(axis < 0.0f) {
+                        MovePrev();
+                    }
+                    else if(axis > 0.0f) {
+                        MoveNext();
+                    }
                 }
                 break;
 
@@ -128,6 +126,30 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         }
 	}
 
+    void OnUIModalActive() {
+        InputSetup(false);
+    }
+
+    void OnUIModalInactive() {
+        InputSetup(true);
+    }
+
+    void InputSetup(bool activate) {
+        InputManager input = Main.instance != null ? Main.instance.input : null;
+        if(input != null) {
+            if(activate) {
+                input.AddButtonCall(InputAction.MenuEnter, OnInputEnter);
+                input.AddButtonCall(InputAction.MenuEscape, OnInputExit);
+            }
+            else {
+                input.RemoveButtonCall(InputAction.MenuEnter, OnInputEnter);
+                input.RemoveButtonCall(InputAction.MenuEscape, OnInputExit);
+            }
+        }
+
+        mActive = activate;
+    }
+
     void OnInputEnter(InputManager.Info data) {
         if(data.state == InputManager.State.Pressed && mState == State.None) {
             //start level
@@ -137,13 +159,8 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
 
     void OnInputExit(InputManager.Info data) {
         if(data.state == InputManager.State.Pressed) {
-            ReturnToMain();
+            UIModalManager.instance.ModalOpen(Modals.pause);
         }
-    }
-
-    private void ReturnToMain() {
-        Object.Destroy(MusicManager.instance.gameObject);
-        Main.instance.sceneManager.LoadScene(Main.instance.startScene);
     }
 
     private void MovePrev() {

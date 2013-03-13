@@ -5,17 +5,20 @@ public class ModalMain : UIController {
     public UIEventListener start;
     public UIEventListener howto;
     public UIEventListener options;
+    public UIEventListener credits;
 
     protected override void OnActive(bool active) {
         if(active) {
             start.onClick = StartClick;
             howto.onClick = HowToClick;
             options.onClick = OptionsClick;
+            credits.onClick = CreditsClick;
         }
         else {
             start.onClick = null;
             howto.onClick = null;
             options.onClick = null;
+            credits.onClick = null;
         }
     }
 
@@ -30,10 +33,14 @@ public class ModalMain : UIController {
     }
 
     void HowToClick(GameObject go) {
-        Debug.Log("how to?");
+        UIModalManager.instance.ModalOpen(Modals.help);
     }
 
     void OptionsClick(GameObject go) {
-        Debug.Log("options?");
+        UIModalManager.instance.ModalOpen(Modals.options);
+    }
+
+    void CreditsClick(GameObject go) {
+        UIModalManager.instance.ModalOpen(Modals.credits);
     }
 }

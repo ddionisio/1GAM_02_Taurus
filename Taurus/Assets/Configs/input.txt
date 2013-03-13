@@ -80,5 +80,12 @@
 		"keys" : [
 			{ "input":"MenuEscape" }
 		]
+	},
+	{
+		"action":"MenuDelete",
+		"control":"Button",
+		"keys" : [
+			{ "input":"MenuDelete" }
+		]
 	}
 ]

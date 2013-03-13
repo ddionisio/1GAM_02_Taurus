@@ -37,6 +37,9 @@ public class Player : ActorMove {
             StopMove();
             ProcessAct(Act.Die, curDir, null, true, true);
             mDead = true;
+
+            if(teleBlockHighlighterObject != null)
+                teleBlockHighlighterObject.SetActive(false);
         }
     }
 
@@ -46,11 +49,17 @@ public class Player : ActorMove {
             StopMove();
             ProcessAct(Act.Cry, curDir, null, true, true);
             mCrying = true;
+
+            if(teleBlockHighlighterObject != null)
+                teleBlockHighlighterObject.SetActive(false);
         }
     }
 
     public void Victory() {
         ProcessAct(Act.Victory, Dir.South, null, false);
+
+        if(teleBlockHighlighterObject != null)
+            teleBlockHighlighterObject.SetActive(false);
     }
 
     protected override void OnUndo(Act act, Dir dir, object undoDat) {
@@ -177,7 +186,7 @@ public class Player : ActorMove {
         yield break;
     }
 
-    private void HighlightBlockInFront() {
+    public void HighlightBlockInFront() {
         if(teleBlockHighlighterObject != null) {
             Transform bTrans = GetBlockInFront();
             if(bTrans != null) {
