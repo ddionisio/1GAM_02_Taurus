@@ -21,7 +21,7 @@ public abstract class UserData : MonoBehaviour {
         mInstance = null;
     }
 
-    void Awake() {
+    protected virtual void Awake() {
         mInstance = this;
     }
 }

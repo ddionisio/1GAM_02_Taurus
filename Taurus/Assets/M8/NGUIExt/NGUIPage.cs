@@ -1,37 +1,57 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
-public class NGUIPage : MonoBehaviour {
+/// <summary>
+/// Make sure to put a number on each page within the pages holder.
+/// </summary>
+public class NGUIPage : MonoBehaviour, IComparer<GameObject> {
 
     public UIButton prevButton;
     public UIButton nextButton;
 
-    public GameObject[] pages;
+    public Transform pagesHolder;
 
     private int mCurPageInd = 0;
+    private GameObject[] mPages;
+
+    public int Compare(GameObject x, GameObject y) {
+        string xNumStr = Regex.Match(x.name, @"\d+").Value;
+        string yNumStr = Regex.Match(y.name, @"\d+").Value;
+
+        return int.Parse(xNumStr) - int.Parse(yNumStr);
+    }
 
     void Awake() {
+        mPages = new GameObject[pagesHolder.GetChildCount()];
+        for(int i = 0; i < mPages.Length; i++) {
+            mPages[i] = pagesHolder.GetChild(i).gameObject;
+        }
+
+        System.Array.Sort<GameObject>(mPages, this);
+
         if(prevButton != null)
             UIEventListener.Get(prevButton.gameObject).onClick += PrevClick;
 
         if(nextButton != null)
             UIEventListener.Get(nextButton.gameObject).onClick += NextClick;
     }
-
+        
     // Use this for initialization
     void Start() {
         if(prevButton != null)
             prevButton.isEnabled = false;
 
         //for dynamic pages or for some reason there's just one page
-        if(pages.Length <= 1 && nextButton != null)
+        if(mPages.Length <= 1 && nextButton != null)
             nextButton.isEnabled = false;
 
-        if(pages.Length >= 1) {
-            pages[0].SetActive(true);
+        if(mPages.Length >= 1) {
+            mPages[0].SetActive(true);
 
-            for(int i = 1; i < pages.Length; i++) {
-                pages[i].SetActive(false);
+            for(int i = 1; i < mPages.Length; i++) {
+                mPages[i].SetActive(false);
             }
         }
     }
@@ -44,11 +64,11 @@ public class NGUIPage : MonoBehaviour {
     void PrevClick(GameObject go) {
         if(mCurPageInd > 0) {
             //TODO: fancy transition
-            pages[mCurPageInd].SetActive(false);
+            mPages[mCurPageInd].SetActive(false);
 
             mCurPageInd--;
 
-            pages[mCurPageInd].SetActive(true);
+            mPages[mCurPageInd].SetActive(true);
 
             if(mCurPageInd == 0 && prevButton != null) {
                 prevButton.isEnabled = false;
@@ -60,15 +80,15 @@ public class NGUIPage : MonoBehaviour {
     }
 
     void NextClick(GameObject go) {
-        if(mCurPageInd < pages.Length-1) {
+        if(mCurPageInd < mPages.Length - 1) {
             //TODO: fancy transition
-            pages[mCurPageInd].SetActive(false);
+            mPages[mCurPageInd].SetActive(false);
 
             mCurPageInd++;
 
-            pages[mCurPageInd].SetActive(true);
+            mPages[mCurPageInd].SetActive(true);
 
-            if(mCurPageInd == pages.Length-1 && nextButton != null)
+            if(mCurPageInd == mPages.Length - 1 && nextButton != null)
                 nextButton.isEnabled = false;
 
             if(prevButton != null && !prevButton.isEnabled) {

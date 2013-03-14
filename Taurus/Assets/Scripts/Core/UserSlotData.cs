@@ -7,6 +7,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 public class UserSlotData : UserData {
+    public const string LocalizeParamUserName = "username";
+
     public const int MaxNameLength = 16;
     public const string PrefixKey = "usd";
 
@@ -111,9 +113,19 @@ public class UserSlotData : UserData {
         mValueIs[name] = value;
     }
 
+    protected override void Awake() {
+        base.Awake();
+
+        GameLocalize.RegisterParam(LocalizeParamUserName, OnGameLocalizeParamName);
+    }
+
     void Start() {
         if(loadSlotOnStart != -1) {
             SetSlot(loadSlotOnStart, false);
         }
+    }
+
+    string OnGameLocalizeParamName() {
+        return slotName;
     }
 }

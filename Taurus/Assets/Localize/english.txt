@@ -53,6 +53,83 @@
 	},
 	{
 		"key":"creditsBody",
-		"text":""
+		"text":"~ MUSIC ~\n\nComposers\nFranz Schubert, Frederic Chopin\n\nPerformers\nMaurizio Machella (Serenade)\nDonald Betts (Nocture No. 2 in E Flat Major; Op. 55, 62)\nPaul Pitman (Sonata A Major, D. 664 - I, II; E Flat Major, D. 568 - II)\n\n[NOTE: All music composed and performed are Public Domain]\n\n~DEVELOPED BY~\n\nDavid Dionisio"
+	},
+	{
+		"key":"intro_1",
+		"text":"This is Abbigale.\n\nAfter a long splendid day of epic awesomeness, she's finally back home."
+	},
+	{
+		"key":"intro_2",
+		"text":"Abbigale looks at herself in the mirror, contemplating how much more awesome can the day get before dawn."
+	},
+	{
+		"key":"intro_3",
+		"text":"\"What say you, {0}? A glorious meal sounds just about right!\", Abbigale said, as if talking to someone other than herself.",
+		"param":["username"]
+	},
+	{
+		"key":"intro_4",
+		"text":"Abbigale sallies forth to the kitchen and prepares all the ingredients needed for a glorious meal."
+	},
+	{
+		"key":"intro_5",
+		"text":"A couple of legendary tomatoes, a stellar eggplant fish, and a conspicuously colossal mandrake root far too big for display."
+	},
+	{
+		"key":"intro_6",
+		"text":"An amalgamation of such epic proportion is sure to paint the entire town green with envy. Abbigale prepares herself to indulge in such delight."
+	},
+	{
+		"key":"intro_7",
+		"text":"No words can describe the taste Abbigale experienced as she takes a bite."
+	},
+	{
+		"key":"intro_8",
+		"text":"Abbigale collapses on the floor unconscious. Perhaps this meal has proven itself to be far too glorious for mere humans."
+	},
+	{
+		"key":"intro_9",
+		"text":"It wasn't too long before Abbigale snaps back into consciousness."
+	},
+	{
+		"key":"intro_10",
+		"text":"Abbigale slowly pulls herself back up to her feet. Everything around her appears to be slightly out of the ordinary."
+	},
+	{
+		"key":"intro_11",
+		"text":"Abbigale looks about and turns to see the same mirror a while ago."
+	},
+	{
+		"key":"intro_12",
+		"text":"There she sees an incredibly hideous monster greeting her with such malicious grin."
+	},
+	{
+		"key":"intro_13",
+		"text":"\"Hey! Who are you!?\", Abbigale exclaims as what lies before her is totally not herself."
+	},
+	{
+		"key":"intro_14",
+		"text":"\"Who am I? Well, who are you!?\", the monster retorts."
+	},
+	{
+		"key":"intro_15",
+		"text":"\"Well, I'm Abbigale. Is this some kind of a dream? So when do I get to wake up?\", Abbigale asked hoping it to all be true."
+	},
+	{
+		"key":"intro_16",
+		"text":"\"Whether this is a dream or not is up to you. But in order to move on, we must journey into the recesses of your mind! There we shall interweave the good and the bad into a solid cohesion.\""
+	},
+	{
+		"key":"intro_17",
+		"text":"\"That doesn't make sense, but oh well!\", said Abbigale."
+	},
+	{
+		"key":"intro_18",
+		"text":"The monster waves its hands about as strange sounds begin to emit.\n\n*bzzt* *wobble* *wobble* *pow* *pow* *shazam*"
+	},
+	{
+		"key":"intro_19",
+		"text":"Abbigale is sucked into the portal that appeared before her.\n\nAnd so the journey begins!"
 	}
 ]

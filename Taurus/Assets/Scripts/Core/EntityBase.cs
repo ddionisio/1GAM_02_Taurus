@@ -1,6 +1,12 @@
+//#define PLAYMAKER
+//#define POOLMANAGER
+
 using UnityEngine;
 using System.Collections;
+
+#if PLAYMAKER
 using HutongGames.PlayMaker;
+#endif
 
 public class EntityBase : MonoBehaviour {
     public delegate void OnSetState(EntityBase ent, EntityState state);
@@ -19,7 +25,10 @@ public class EntityBase : MonoBehaviour {
     private EntityState mState = EntityState.NumState;
     private EntityState mPrevState = EntityState.NumState;
 
+#if PLAYMAKER
     private PlayMakerFSM mFSM;
+#endif
+
     private EntityActivator mActivator = null;
 
     private float mBlinkCurTime = 0;
@@ -30,7 +39,10 @@ public class EntityBase : MonoBehaviour {
     private string mSpawnGroup = null; //set this after being spawned via pool manager
 
     public static T Spawn<T>(string spawnGroup, string typeName, Vector3 position) where T : EntityBase {
+        //TODO: use ours if no 3rd party pool manager
+#if POOLMANAGER
         SpawnPool pool = PoolManager.Pools[spawnGroup];
+
         Transform spawned = pool.Spawn(pool.prefabs[typeName]);
         T ent = spawned != null ? spawned.GetComponent<T>() : null;
 
@@ -40,6 +52,9 @@ public class EntityBase : MonoBehaviour {
         }
 
         return ent;
+#else
+        return null;
+#endif
     }
 
     /// <summary>
@@ -54,9 +69,11 @@ public class EntityBase : MonoBehaviour {
         get { return mDoSpawnOnWake; }
     }
 
+#if PLAYMAKER
     public PlayMakerFSM FSM {
         get { return mFSM; }
     }
+#endif
 
     public EntityState state {
         get { return mState; }
@@ -86,7 +103,12 @@ public class EntityBase : MonoBehaviour {
             if(string.IsNullOrEmpty(mSpawnGroup))
                 return false;
 
+            //TODO: our pool manager
+#if POOLMANAGER
             return !PoolManager.Pools[mSpawnGroup].IsSpawned(transform);
+#else
+            return false;
+#endif
         }
     }
 
@@ -110,8 +132,13 @@ public class EntityBase : MonoBehaviour {
     public void Release() {
         //EntityManager.instance.Release(this);
         if(!string.IsNullOrEmpty(mSpawnGroup)) {
+            //TODO: our pool manager
+#if POOLMANAGER
             transform.parent = PoolManager.Pools[mSpawnGroup].group;
             PoolManager.Pools[mSpawnGroup].Despawn(transform);
+#else
+            StartCoroutine(DestroyDelay());
+#endif
         }
         else {
             StartCoroutine(DestroyDelay());
@@ -125,9 +152,11 @@ public class EntityBase : MonoBehaviour {
     }
 
     protected virtual void OnDespawned() {
+#if PLAYMAKER
         if(mFSM != null) {
             mFSM.enabled = false;
         }
+#endif
 
         if(mActivator != null) {
             mActivator.Release(false);
@@ -147,16 +176,20 @@ public class EntityBase : MonoBehaviour {
             mDoSpawnOnWake = false;
             StartCoroutine(DoSpawn());
         }
+#if PLAYMAKER
         else if(mFSM != null) {
             //resume FSM
             mFSM.Fsm.Event(EntityEvent.Wake);
         }
+#endif
     }
 
     protected virtual void ActivatorSleep() {
+#if PLAYMAKER
         if(mFSM != null) {
             mFSM.Fsm.Event(EntityEvent.Sleep);
         }
+#endif
     }
 
     protected virtual void OnDestroy() {
@@ -177,12 +210,14 @@ public class EntityBase : MonoBehaviour {
             mActivator.sleepCallback += ActivatorSleep;
         }
 
+#if PLAYMAKER
         //only start once we spawn
         mFSM = GetComponentInChildren<PlayMakerFSM>();
         if(mFSM != null) {
             mFSM.Fsm.RestartOnEnable = false; //not when we want to sleep/wake
             mFSM.enabled = false;
         }
+#endif
     }
 
     // Use this for initialization
@@ -191,8 +226,10 @@ public class EntityBase : MonoBehaviour {
 
         //for when putting entities on scene, skip the spawning state
         if(activateOnStart) {
+#if PLAYMAKER
             if(mFSM != null)
                 mFSM.enabled = true;
+#endif
 
             StartCoroutine(DoStart());
         }
@@ -254,9 +291,11 @@ public class EntityBase : MonoBehaviour {
 
         SpawnStart();
 
+#if PLAYMAKER
         if(mFSM != null) {
             mFSM.SendEvent(EntityEvent.Start);
         }
+#endif
 
         yield break;
     }
@@ -271,6 +310,7 @@ public class EntityBase : MonoBehaviour {
             spawnCallback(this);
         }
 
+#if PLAYMAKER
         //start up
         if(mFSM != null) {
             //restart
@@ -287,6 +327,11 @@ public class EntityBase : MonoBehaviour {
 
             SpawnFinish();
         }
+#else
+        yield return new WaitForSeconds(spawnDelay);
+
+        SpawnFinish();
+#endif
 
         yield break;
     }

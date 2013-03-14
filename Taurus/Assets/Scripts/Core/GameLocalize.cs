@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GameLocalize : MonoBehaviour {
+    public delegate string ParameterCallback();
+
     [System.Serializable]
     public class TableDataPlatform {
         public GamePlatform.Type platform;
@@ -19,12 +21,26 @@ public class GameLocalize : MonoBehaviour {
     public class Entry {
         public string key;
         public string text;
+        public string[] param;
     }
 
     public TableData[] tables; //table info for each language
 
     private static Dictionary<string, string> mTable;
+    private static Dictionary<string, string[]> mTableParams;
     private static bool mLoaded = false;
+
+    private static Dictionary<string, ParameterCallback> mParams = null;
+
+    /// <summary>
+    /// Register during Awake such that GetText will be able to fill params correctly
+    /// </summary>
+    public static void RegisterParam(string paramKey, ParameterCallback cb) {
+        if(mParams == null)
+            mParams = new Dictionary<string, ParameterCallback>();
+
+        mParams.Add(paramKey, cb);
+    }
 
     /// <summary>
     /// Only call this after Load.
@@ -33,7 +49,29 @@ public class GameLocalize : MonoBehaviour {
         string ret = "";
 
         if(mTable != null) {
-            if(!mTable.TryGetValue(key, out ret)) {
+            if(mTable.TryGetValue(key, out ret)) {
+                //see if there's params
+                string[] keyParams;
+
+                if(mTableParams.TryGetValue(key, out keyParams)) {
+                    if(mParams != null) {
+                        //convert parameters
+                        string[] textParams = new string[keyParams.Length];
+                        for(int i = 0; i < keyParams.Length; i++) {
+                            ParameterCallback cb;
+                            if(mParams.TryGetValue(keyParams[i], out cb)) {
+                                textParams[i] = cb();
+                            }
+                        }
+
+                        ret = string.Format(ret, textParams);
+                    }
+                    else {
+                        Debug.LogWarning("Parameters not initialized for: " + key);
+                    }
+                }
+            }
+            else {
                 Debug.LogWarning("String table key not found: " + key);
             }
         }
@@ -56,9 +94,13 @@ public class GameLocalize : MonoBehaviour {
         List<Entry> tableEntries = fastJSON.JSON.Instance.ToObject<List<Entry>>(dat.file.text);
 
         mTable = new Dictionary<string, string>(tableEntries.Count);
+        mTableParams = new Dictionary<string, string[]>(tableEntries.Count);
 
         foreach(Entry entry in tableEntries) {
             mTable.Add(entry.key, entry.text);
+
+            if(entry.param != null && entry.param.Length > 0)
+                mTableParams.Add(entry.key, entry.param);
         }
 
         //append platform specific entries
