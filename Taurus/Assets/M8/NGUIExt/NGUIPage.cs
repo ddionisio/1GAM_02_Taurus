@@ -7,11 +7,14 @@ using System.Text.RegularExpressions;
 /// Make sure to put a number on each page within the pages holder.
 /// </summary>
 public class NGUIPage : MonoBehaviour, IComparer<GameObject> {
+    public delegate void OnPageEnd();
 
     public UIButton prevButton;
     public UIButton nextButton;
 
     public Transform pagesHolder;
+
+    public OnPageEnd pageEndCallback;
 
     private int mCurPageInd = 0;
     private GameObject[] mPages;
@@ -80,7 +83,9 @@ public class NGUIPage : MonoBehaviour, IComparer<GameObject> {
     }
 
     void NextClick(GameObject go) {
-        if(mCurPageInd < mPages.Length - 1) {
+        int endInd = mPages.Length - 1;
+
+        if(mCurPageInd < endInd) {
             //TODO: fancy transition
             mPages[mCurPageInd].SetActive(false);
 
@@ -88,12 +93,15 @@ public class NGUIPage : MonoBehaviour, IComparer<GameObject> {
 
             mPages[mCurPageInd].SetActive(true);
 
-            if(mCurPageInd == mPages.Length - 1 && nextButton != null)
+            if(mCurPageInd == endInd && pageEndCallback == null && nextButton != null)
                 nextButton.isEnabled = false;
 
             if(prevButton != null && !prevButton.isEnabled) {
                 prevButton.isEnabled = true;
             }
+        }
+        else if(mCurPageInd == endInd && pageEndCallback != null) {
+            pageEndCallback();
         }
     }
 }

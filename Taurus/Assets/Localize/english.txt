@@ -61,16 +61,15 @@
 	},
 	{
 		"key":"intro_2",
-		"text":"Abbigale looks at herself in the mirror, contemplating how much more awesome can the day get before dawn."
+		"text":"Abbigale looks at herself in the mirror, contemplating how much more awesome the day can get before dawn."
 	},
 	{
 		"key":"intro_3",
-		"text":"\"What say you, {0}? A glorious meal sounds just about right!\", Abbigale said, as if talking to someone other than herself.",
-		"param":["username"]
+		"text":"\"A glorious meal sounds just about right!\", Abbigale thought excitedly."
 	},
 	{
 		"key":"intro_4",
-		"text":"Abbigale sallies forth to the kitchen and prepares all the ingredients needed for a glorious meal."
+		"text":"Abbigale sallies forth to the kitchen and prepares the necessary ingredients for a glorious meal."
 	},
 	{
 		"key":"intro_5",
@@ -82,11 +81,11 @@
 	},
 	{
 		"key":"intro_7",
-		"text":"No words can describe the taste Abbigale experienced as she takes a bite."
+		"text":"No words can describe the taste that Abbigale experienced as she takes a bite."
 	},
 	{
 		"key":"intro_8",
-		"text":"Abbigale collapses on the floor unconscious. Perhaps this meal has proven itself to be far too glorious for mere humans."
+		"text":"Abbigale instantly falls on the floor unconscious. Perhaps the meal has proven itself to be far too glorious for mere humans."
 	},
 	{
 		"key":"intro_9",
@@ -98,23 +97,23 @@
 	},
 	{
 		"key":"intro_11",
-		"text":"Abbigale looks about and turns to see the same mirror a while ago."
+		"text":"She turns to face the mirror she was looking at a while ago."
 	},
 	{
 		"key":"intro_12",
-		"text":"There she sees an incredibly hideous monster greeting her with such malicious grin."
+		"text":"What lies before her is not quite the Abbigale she is accustomed to, but an incredibly hideous monster with such a malicious grin."
 	},
 	{
 		"key":"intro_13",
-		"text":"\"Hey! Who are you!?\", Abbigale exclaims as what lies before her is totally not herself."
+		"text":"\"Hey! That's not me is it? Who are you!?\", Abbigale exclaims as what lies before her is totally not herself."
 	},
 	{
 		"key":"intro_14",
-		"text":"\"Who am I? Well, who are you!?\", the monster retorts."
+		"text":"\"Who am I!? Well, who are you!?\""
 	},
 	{
 		"key":"intro_15",
-		"text":"\"Well, I'm Abbigale. Is this some kind of a dream? So when do I get to wake up?\", Abbigale asked hoping it to all be true."
+		"text":"\"I'm clearly not you! So is this some kind of a dream? When do I get to wake up?\", Abbigale asked hoping it to all be true."
 	},
 	{
 		"key":"intro_16",
@@ -122,14 +121,14 @@
 	},
 	{
 		"key":"intro_17",
-		"text":"\"That doesn't make sense, but oh well!\", said Abbigale."
+		"text":"\"That doesn't make sense, but I'll play along!\", said Abbigale."
 	},
 	{
 		"key":"intro_18",
-		"text":"The monster waves its hands about as strange sounds begin to emit.\n\n*bzzt* *wobble* *wobble* *pow* *pow* *shazam*"
+		"text":"\"Okay then!\"\n\n*bzzt* *wobble* *wobble* *pow* *pow* *shazam*"
 	},
 	{
 		"key":"intro_19",
-		"text":"Abbigale is sucked into the portal that appeared before her.\n\nAnd so the journey begins!"
+		"text":"A portal appears in front of Abbigale and it sucks her right in.\n\nThus the journey begins!"
 	}
 ]

@@ -5,6 +5,8 @@ using System.Collections;
 public class ModalNewGame : UIController {
     public UIInput input;
 
+    public NGUIPage intro;
+
     [System.NonSerialized]
     public int slot;
 
@@ -47,11 +49,28 @@ public class ModalNewGame : UIController {
             usd.Save();
             PlayerPrefs.Save();
 
-            //level select
-            Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
+            //play cheesy intro
+            if(intro != null) {
+                UIModalManager.instance.ModalCloseAll();
+                intro.gameObject.SetActive(true);
+            }
+            else
+                Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
         }
         else {
             //error dialog?
+        }
+    }
+
+    void OnIntroPageEnd() {
+        //once intro is done, enter the level select
+        Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
+    }
+
+    void Awake() {
+        if(intro != null) {
+            intro.gameObject.SetActive(false);
+            intro.pageEndCallback = OnIntroPageEnd;
         }
     }
 }
