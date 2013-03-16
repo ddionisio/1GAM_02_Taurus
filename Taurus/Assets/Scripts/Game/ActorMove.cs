@@ -41,6 +41,7 @@ public abstract class ActorMove : Actor {
     public State state { get { return mCurState; } }
     public Dir curDir { get { return mCurDir; } }
     public bool moveActive { get { return mMoveActive; } set { mMoveActive = value; } }
+    public bool isSlown { get { return mSlowCounter < slowMaxCount; } }
 
     public void StopMove() {
         if(mCurState == State.Move) {

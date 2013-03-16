@@ -28,7 +28,7 @@ public class SoundPlayerGlobal : MonoBehaviour {
 
     public static SoundPlayerGlobal instance { get { return mInstance; } }
 
-    public GameObject Play(string name) {
+    public GameObject Play(string name, OnSoundEnd onEndCallback = null, object onEndParam = null) {
         SoundData dat;
 
         GameObject ret = null;
@@ -47,7 +47,7 @@ public class SoundPlayerGlobal : MonoBehaviour {
                 sp.Play();
 
                 if(!dat.loop)
-                    sp.StartCoroutine(OnSoundPlayFinish(dat.clip.length + dat.delay, ret));
+                    sp.StartCoroutine(OnSoundPlayFinish(dat.clip.length + dat.delay, ret, onEndCallback, onEndParam));
 
                 ret.SetActive(true);
             }
@@ -97,12 +97,13 @@ public class SoundPlayerGlobal : MonoBehaviour {
         go.SetActive(false);
     }
 
-    IEnumerator OnSoundPlayFinish(float delay, GameObject go) {
+    IEnumerator OnSoundPlayFinish(float delay, GameObject go, OnSoundEnd endCallback, object endParam) {
         yield return new WaitForSeconds(delay);
 
         Stop(go);
 
-        //TODO: callback
+        if(endCallback != null)
+            endCallback(endParam);
     }
 
     void OnDestroy() {

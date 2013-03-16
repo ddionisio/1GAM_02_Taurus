@@ -23,6 +23,21 @@ public class PlayerController : MonoBehaviour {
                 other.Cry();
             }
         }
+
+        //open ui thing
+        if(UIModalManager.instance.ModalGetTop() != Modals.gameover) {
+            UIModalManager.instance.ModalOpen(Modals.gameover);
+        }
+    }
+
+    public void Undo() {
+        //undo the secret that was made
+        if(mSecretMade && mSecretUndoCount == ActionManager.instance.undoCount) {
+            mSecretMade = false;
+            Debug.Log("secret undo");
+        }
+
+        ActionManager.instance.InputUndo();
     }
     
     void OnDestroy() {
@@ -102,13 +117,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnInputUndo(InputManager.Info data) {
         if(data.state == InputManager.State.Pressed) {
-            //undo the secret that was made
-            if(mSecretMade && mSecretUndoCount == ActionManager.instance.undoCount) {
-                mSecretMade = false;
-                Debug.Log("secret undo");
-            }
-
-            ActionManager.instance.InputUndo();
+            Undo();
         }
     }
 
@@ -140,35 +149,24 @@ public class PlayerController : MonoBehaviour {
 
         if(input != null) {
             if(attach) {
-                if(!mVictory) {
-                    input.AddButtonCall(InputAction.Up, OnInputUp);
-                    input.AddButtonCall(InputAction.Down, OnInputDown);
-                    input.AddButtonCall(InputAction.Left, OnInputLeft);
-                    input.AddButtonCall(InputAction.Right, OnInputRight);
-                    input.AddButtonCall(InputAction.Fire, OnInputFire);
-                    input.AddButtonCall(InputAction.Undo, OnInputUndo);
-                }
-                else {
-                    input.AddButtonCall(InputAction.MenuEnter, OnInputLevelProgress);
-                }
+                input.AddButtonCall(InputAction.Up, OnInputUp);
+                input.AddButtonCall(InputAction.Down, OnInputDown);
+                input.AddButtonCall(InputAction.Left, OnInputLeft);
+                input.AddButtonCall(InputAction.Right, OnInputRight);
+                input.AddButtonCall(InputAction.Fire, OnInputFire);
+                input.AddButtonCall(InputAction.Undo, OnInputUndo);
 
                 input.AddButtonCall(InputAction.Menu, OnInputMenu);
             }
             else {
-                if(!mVictory) {
-                    input.RemoveButtonCall(InputAction.Up, OnInputUp);
-                    input.RemoveButtonCall(InputAction.Down, OnInputDown);
-                    input.RemoveButtonCall(InputAction.Left, OnInputLeft);
-                    input.RemoveButtonCall(InputAction.Right, OnInputRight);
-                    input.RemoveButtonCall(InputAction.Fire, OnInputFire);
-                    input.RemoveButtonCall(InputAction.Undo, OnInputUndo);
-                }
-                else {
-                    input.RemoveButtonCall(InputAction.MenuEnter, OnInputLevelProgress);
-                }
+                input.RemoveButtonCall(InputAction.Up, OnInputUp);
+                input.RemoveButtonCall(InputAction.Down, OnInputDown);
+                input.RemoveButtonCall(InputAction.Left, OnInputLeft);
+                input.RemoveButtonCall(InputAction.Right, OnInputRight);
+                input.RemoveButtonCall(InputAction.Fire, OnInputFire);
+                input.RemoveButtonCall(InputAction.Undo, OnInputUndo);
 
                 input.RemoveButtonCall(InputAction.Menu, OnInputMenu);
-                input.RemoveButtonCall(InputAction.MenuEnter, OnInputLevelProgress);
             }
         }
     }
@@ -204,19 +202,6 @@ public class PlayerController : MonoBehaviour {
             if(mSecretMade)
                 Debug.Log("secret made");
 
-            InputManager input = Main.instance != null ? Main.instance.input : null;
-
-            if(input != null) {
-                input.RemoveButtonCall(InputAction.Up, OnInputUp);
-                input.RemoveButtonCall(InputAction.Down, OnInputDown);
-                input.RemoveButtonCall(InputAction.Left, OnInputLeft);
-                input.RemoveButtonCall(InputAction.Right, OnInputRight);
-                input.RemoveButtonCall(InputAction.Fire, OnInputFire);
-                input.RemoveButtonCall(InputAction.Undo, OnInputUndo);
-
-                input.AddButtonCall(InputAction.MenuEnter, OnInputLevelProgress);
-            }
-
             foreach(Player p in mPlayers) {
                 p.Victory();
             }
@@ -225,6 +210,11 @@ public class PlayerController : MonoBehaviour {
             LevelConfig.instance.SaveLevelUnlock(Main.instance.sceneManager.curLevel, mSecretMade);
 
             //activate fan-fare crap
+
+            //open ui thing
+            if(UIModalManager.instance.ModalGetTop() != Modals.victory) {
+                UIModalManager.instance.ModalOpen(Modals.victory);
+            }
         }
     }
 

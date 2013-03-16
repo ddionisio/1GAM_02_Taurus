@@ -6,4 +6,6 @@
     public const string newGame = "newGame";
     public const string help = "help";
     public const string credits = "credits";
+    public const string gameover = "gameover";
+    public const string victory = "victory";
 }

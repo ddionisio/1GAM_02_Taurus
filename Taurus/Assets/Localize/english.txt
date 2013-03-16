@@ -52,8 +52,48 @@
 		"text":"CREDITS"
 	},
 	{
+		"key":"bable0",
+		"text":"Hurray for victory!"
+	},
+	{
+		"key":"bable1",
+		"text":"Super awesome victory!"
+	},
+	{
+		"key":"bable2",
+		"text":"A victory for the ages!"
+	},
+	{
+		"key":"bable3",
+		"text":"It's all about the victory!"
+	},
+	{
+		"key":"bable4",
+		"text":"How do I know this is a victory? Because someone else lost!"
+	},
+	{
+		"key":"bable5",
+		"text":"To the victor goes the spoils!"
+	},
+	{
+		"key":"bable6",
+		"text":"Success in a struggle against all difficulties and obstactles! That is indeed victory! Yay!"
+	},
+	{
+		"key":"bable7",
+		"text":"No words can describe the epicness of this victory!"
+	},
+	{
 		"key":"creditsBody",
-		"text":"~ MUSIC ~\n\nComposers\nFranz Schubert, Frederic Chopin\n\nPerformers\nMaurizio Machella (Serenade)\nDonald Betts (Nocture No. 2 in E Flat Major; Op. 55, 62)\nPaul Pitman (Sonata A Major, D. 664 - I, II; E Flat Major, D. 568 - II)\n\n[NOTE: All music composed and performed are Public Domain]\n\n~DEVELOPED BY~\n\nDavid Dionisio"
+		"text":"~ MUSIC ~\n\nComposers\nFranz Schubert, Frederic Chopin\n\nPerformers\nMaurizio Machella (Serenade)\nDonald Betts (Nocture No. 2 in E Flat Major; Op. 55, 62)\nPaul Pitman (Sonata A Major, D. 664 - I, II; E Flat Major, D. 568 - II)\n\n[NOTE: All music composed and performed are Public Domain]\n\n~ DEVELOPED BY ~\n\nDavid Dionisio"
+	},
+	{
+		"key":"gameover_inst",
+		"text":"PRESS 'Z'/'R.CTRL' TO UNDO REGRET"
+	},
+	{
+		"key":"victory_inst",
+		"text":"PRESS 'SPACE'/'ENTER' TO CONTINUE"
 	},
 	{
 		"key":"intro_1",

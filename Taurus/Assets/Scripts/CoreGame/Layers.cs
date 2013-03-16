@@ -7,6 +7,7 @@ public class Layers : MonoBehaviour {
     public const string tagMirror = "mirror";
     public const string tagMap = "map";
     public const string tagEnemy = "enemy";
+    public const string tagController = "GameController";
 
     //only use these after awake
     public static int ignoreRaycast;

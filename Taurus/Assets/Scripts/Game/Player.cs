@@ -2,6 +2,12 @@
 using System.Collections;
 
 public class Player : ActorMove {
+    public const string soundDeath = "death";
+    public const string soundTele = "tele";
+    public const string soundSecret = "secret";
+    public const string soundVictory = "victory";
+    public const string soundSlow = "slow";
+
     public bool opposite = false;
     public bool oppositeVert = false;
 
@@ -37,6 +43,8 @@ public class Player : ActorMove {
             StopMove();
             ProcessAct(Act.Die, curDir, null, true, true);
             mDead = true;
+
+            SoundPlayerGlobal.instance.Play(soundDeath);
 
             if(teleBlockHighlighterObject != null)
                 teleBlockHighlighterObject.SetActive(false);
@@ -79,7 +87,7 @@ public class Player : ActorMove {
             case Act.Move:
                 base.OnUndo(act, dir, undoDat);
 
-                TileCheck();
+                TileCheck(false);
 
                 if(onSecretMadeObject != null)
                     onSecretMadeObject.SetActive(false);
@@ -130,7 +138,9 @@ public class Player : ActorMove {
 
                             b.Teleport();
 
-                            ProcessAct(Act.Fire, curDir, null, true);    
+                            ProcessAct(Act.Fire, curDir, null, true);
+
+                            SoundPlayerGlobal.instance.Play(soundTele);
 
                             if(teleBlockHighlighterObject != null)
                                 teleBlockHighlighterObject.SetActive(false);
@@ -147,7 +157,7 @@ public class Player : ActorMove {
     }
 
     protected override void OnMoveCellFinish() {
-        TileCheck();
+        TileCheck(true);
 
         HighlightBlockInFront();
     }
@@ -218,7 +228,7 @@ public class Player : ActorMove {
         return ret;
     }
 
-    private void TileCheck() {
+    private void TileCheck(bool playSound) {
         mOnGoal = false;
         mSecretTouched = false;
 
@@ -230,12 +240,23 @@ public class Player : ActorMove {
                     PlayerController.KillPlayer(this);
                     break;
 
+                case TileType.Slow:
+                    if(playSound && isSlown)
+                        SoundPlayerGlobal.instance.Play(soundSlow);
+                    break;
+
                 case TileType.Goal:
                     mOnGoal = true;
+
+                    if(playSound)
+                        SoundPlayerGlobal.instance.Play(soundVictory);
                     break;
 
                 case TileType.Secret:
                     mSecretTouched = true;
+
+                    if(playSound)
+                        SoundPlayerGlobal.instance.Play(soundSecret);
                     break;
             }
         }
