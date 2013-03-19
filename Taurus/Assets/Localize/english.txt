@@ -40,6 +40,14 @@
 		"text":"ERASE \"{0}\""
 	},
 	{
+		"key":"restart",
+		"text":"RESTART"
+	},
+	{
+		"key":"exit",
+		"text":"EXIT"
+	},
+	{
 		"key":"yes",
 		"text":"YES"
 	},
@@ -69,7 +77,7 @@
 	},
 	{
 		"key":"bable4",
-		"text":"How do I know this is a victory? Because someone else lost!"
+		"text":"Now that's what I call a victory!"
 	},
 	{
 		"key":"bable5",
@@ -77,7 +85,7 @@
 	},
 	{
 		"key":"bable6",
-		"text":"Success in a struggle against all difficulties and obstactles! That is indeed victory! Yay!"
+		"text":"That is indeed a victory! Yay!"
 	},
 	{
 		"key":"bable7",
@@ -145,7 +153,7 @@
 	},
 	{
 		"key":"intro_13",
-		"text":"\"Hey! That's not me is it? Who are you!?\", Abbigale exclaims as what lies before her is totally not herself."
+		"text":"\"Hey! Who are you!?\", Abbigale exclaims as what lies before her is totally not herself."
 	},
 	{
 		"key":"intro_14",
@@ -153,22 +161,22 @@
 	},
 	{
 		"key":"intro_15",
-		"text":"\"I'm clearly not you! So is this some kind of a dream? When do I get to wake up?\", Abbigale asked hoping it to all be true."
+		"text":"\"I'm clearly not you! So is this some kind of a dream? When do I get to wake up?\", Abbigale asked hoping for the best."
 	},
 	{
 		"key":"intro_16",
-		"text":"\"Whether this is a dream or not is up to you. But in order to move on, we must journey into the recesses of your mind! There we shall interweave the good and the bad into a solid cohesion.\""
+		"text":"\"Perhaps you will enjoy this realm, you never know! But if you must insist, then onward we shall go!\""
 	},
 	{
 		"key":"intro_17",
-		"text":"\"That doesn't make sense, but I'll play along!\", said Abbigale."
+		"text":"\"Yes please!\", Abbigale insists."
 	},
 	{
 		"key":"intro_18",
-		"text":"\"Okay then!\"\n\n*bzzt* *wobble* *wobble* *pow* *pow* *shazam*"
+		"text":"\"Okay then! Off into the recesses of your mind we go!\"\n\n*bzzt* *wobble* *wobble* *pow* *pow* *shazam*"
 	},
 	{
 		"key":"intro_19",
-		"text":"A portal appears in front of Abbigale and it sucks her right in.\n\nThus the journey begins!"
+		"text":"A portal appears and sucks Abbigale right in.\n\nThus the journey begins!"
 	}
 ]

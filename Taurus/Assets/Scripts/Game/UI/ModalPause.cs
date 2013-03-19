@@ -29,7 +29,13 @@ public class ModalPause : UIController {
     }
 
     void RestartClick(GameObject go) {
-        Main.instance.sceneManager.Reload();
+        UIModalConfirm.Open(GameLocalize.GetText("restart"), null,
+            delegate(bool yes) {
+                if(yes) {
+                    UIModalManager.instance.ModalCloseAll();
+                    Main.instance.sceneManager.Reload();
+                }
+            });
     }
 
     void OptionsClick(GameObject go) {
@@ -41,7 +47,14 @@ public class ModalPause : UIController {
     }
 
     void ExitClick(GameObject go) {
-        //return to level select
-        Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
+        UIModalConfirm.Open(GameLocalize.GetText("exit"), null,
+            delegate(bool yes) {
+                //return to level select
+                if(yes) {
+                    UIModalManager.instance.ModalCloseAll();
+                    Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
+                }
+            });
+        
     }
 }
