@@ -127,12 +127,6 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void OnInputLevelProgress(InputManager.Info data) {
-        if(data.state == InputManager.State.Pressed) {
-            DoNextLevel();
-        }
-    }
-
     void OnPlayerMoveFinish(ActorMove mover) {
         int numDoneMove = 0;
         foreach(Player p in mPlayers) {
@@ -218,7 +212,4 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void DoNextLevel() {
-        LevelConfig.instance.LoadLevel(Main.instance.sceneManager.curLevel + 1);
-    }
 }

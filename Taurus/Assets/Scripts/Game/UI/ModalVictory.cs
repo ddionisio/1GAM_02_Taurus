@@ -35,7 +35,11 @@ public class ModalVictory : UIController {
     }
 
     void OnInputProceed(InputManager.Info data) {
-        if(data.state == InputManager.State.Pressed)
-            LevelConfig.instance.LoadLevel(Main.instance.sceneManager.curLevel + 1);
+        if(data.state == InputManager.State.Pressed) {
+            if(LevelConfig.instance.LoadLevel(Main.instance.sceneManager.curLevel + 1)) {
+                //remove music manager, ending has its own
+                Object.Destroy(MusicManager.instance.gameObject);
+            }
+        }
     }
 }

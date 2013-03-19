@@ -178,5 +178,53 @@
 	{
 		"key":"intro_19",
 		"text":"A portal appears and sucks Abbigale right in.\n\nThus the journey begins!"
+	},
+	{
+		"key":"end_1",
+		"text":"Mystery Block:\n\n\"Congradulations! You have reached the end!\""
+	},
+	{
+		"key":"end_2",
+		"text":"Abbigale:\n\n\"Oh! I suppose that is pretty awesome!\""
+	},
+	{
+		"key":"end_3",
+		"text":"Mystery Block:\n\n\"Yes, yes indeed!\""
+	},
+	{
+		"key":"end_4",
+		"text":"Abbigale:\n\n\"So...what now?\""
+	},
+	{
+		"key":"end_5",
+		"text":"Mystery Block:\n\n\"Well, perhaps you can re-examine your thoughts and find all the secrets!\""
+	},
+	{
+		"key":"end_6",
+		"text":"Abbigale:\n\n\"Oh! Those flowers! Right, totally forgot to catch all of them! Got it!\""
+	},
+	{
+		"key":"end_7",
+		"text":"Abbigale:\n\n\"Well, it's been fun! So, how much more awesome can this not-quite-100-percent ending get?\""
+	},
+	{
+		"key":"end_8",
+		"text":"Inner-Monster-Abbigale:\n\n\"By cavorting in The Emerald Fields of Sappiness!\""
+	},
+	{
+		"key":"end_9",
+		"text":"Thus Abbigale and the monster set forth into The Emerald Fields of Sappiness."
+	},
+	{
+		"key":"end_10",
+		"text":"\"What a peculiar adventure this has been, I've grown to like it!\", Abbigale thought as she keeps up with the monster."
+	},
+	{
+		"key":"end_11",
+		"text":"However, it seems that there is more to this end of the journey. But for now, Abbigale enjoys the tranquility it brings."
+	},
+	{
+		"key":"end_12",
+		"text":"THE END!\n\nUntil next time!"
 	}
 ]

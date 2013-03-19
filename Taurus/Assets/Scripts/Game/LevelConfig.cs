@@ -100,7 +100,8 @@ public class LevelConfig : MonoBehaviour {
         }
     }
 
-    public void LoadLevel(int level) {
+    //returns true if ending
+    public bool LoadLevel(int level) {
         if(level < mLevels.Count) {
             mLevelToLoad = level;
 
@@ -110,9 +111,13 @@ public class LevelConfig : MonoBehaviour {
             else {
                 Main.instance.sceneManager.LoadLevel(mLevelToLoad);
             }
+
+            return false;
         }
         else {
             Ending();
+
+            return true;
         }
     }
 
