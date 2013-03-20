@@ -1,9 +1,7 @@
-1GAM_02_Taurus
-==============
-
-Title
-=====
 Abbigale and the Monster
+========================
+
+![Hey! It's me!](https://github.com/ddionisio/1GAM_02_Taurus/blob/master/Taurus/Screenshots/main.png)
 
 Synopsis
 ========
