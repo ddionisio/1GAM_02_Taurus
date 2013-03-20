@@ -16,6 +16,13 @@ Top-down puzzle game where you control both Abbigale and the monster. Abbigale m
 
 One must not forget nor run away in order to banish the monster. For the monster is in need of a good hug.
 
+##Controls
+* Arrows or WASD to move.
+* Z or Right CTRL to undo.
+* Space or Right Shift to interact.
+
+Move both characters to the golden tile to complete the level.
+
 ##Screenshots
 ![01](Taurus/Screenshots/screenshot_1.png) ![02](Taurus/Screenshots/screenshot_2.png)
 ![03](Taurus/Screenshots/screenshot_3.png) ![04](Taurus/Screenshots/screenshot_4.png)
