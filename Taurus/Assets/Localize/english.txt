@@ -93,7 +93,7 @@
 	},
 	{
 		"key":"creditsBody",
-		"text":"~ MUSIC ~\n\nComposers\nFranz Schubert, Frederic Chopin, Claude Debussy\n\nPerformers\nMaurizio Machella, Donald Betts, Paul Pitman\n\n[NOTE: All music composed and performed are Public Domain]\n\n~ DEVELOPED BY ~\n\nDavid Dionisio"
+		"text":"~ MUSIC ~\n\nComposers\nFranz Schubert, Frederic Chopin, Claude Debussy\n\nPerformers\nMaurizio Machella, Donald Betts, Paul Pitman\n\n~ SPECIAL THANKS ~\n\n[heart]You![heart]\n\n~ DEVELOPED BY ~\n\nDavid Dionisio"
 	},
 	{
 		"key":"gameover_inst",
@@ -298,6 +298,6 @@
 	},
 	{
 		"key":"end_s_18",
-		"text":"\n~FIN~"
+		"text":"~FIN~\n\nThank you for playing![heart]"
 	}
 ]

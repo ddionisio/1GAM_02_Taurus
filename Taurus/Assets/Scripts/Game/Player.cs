@@ -248,8 +248,8 @@ public class Player : ActorMove {
                 case TileType.Goal:
                     mOnGoal = true;
 
-                    if(playSound)
-                        SoundPlayerGlobal.instance.Play(soundVictory);
+                    /*if(playSound)
+                        SoundPlayerGlobal.instance.Play(soundVictory);*/
                     break;
 
                 case TileType.Secret:
