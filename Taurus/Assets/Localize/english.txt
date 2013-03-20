@@ -93,7 +93,7 @@
 	},
 	{
 		"key":"creditsBody",
-		"text":"~ MUSIC ~\n\nComposers\nFranz Schubert, Frederic Chopin\n\nPerformers\nMaurizio Machella (Serenade)\nDonald Betts (Nocture No. 2 in E Flat Major; Op. 55, 62)\nPaul Pitman (Sonata A Major, D. 664 - I, II; E Flat Major, D. 568 - II)\n\n[NOTE: All music composed and performed are Public Domain]\n\n~ DEVELOPED BY ~\n\nDavid Dionisio"
+		"text":"~ MUSIC ~\n\nComposers\nFranz Schubert, Frederic Chopin, Claude Debussy\n\nPerformers\nMaurizio Machella, Donald Betts, Paul Pitman\n\n[NOTE: All music composed and performed are Public Domain]\n\n~ DEVELOPED BY ~\n\nDavid Dionisio"
 	},
 	{
 		"key":"gameover_inst",
@@ -197,11 +197,11 @@
 	},
 	{
 		"key":"end_5",
-		"text":"Mystery Block:\n\n\"Well, perhaps you can re-examine your thoughts and find all the secrets!\""
+		"text":"Mystery Block:\n\n\"Well, that is up to you. I would highly recommend finding all the secrets!\""
 	},
 	{
 		"key":"end_6",
-		"text":"Abbigale:\n\n\"Oh! Those flowers! Right, totally forgot to catch all of them! Got it!\""
+		"text":"Abbigale:\n\n\"Oh! Those flowers! Right, totally forgot to catch them all!\""
 	},
 	{
 		"key":"end_7",
@@ -209,11 +209,11 @@
 	},
 	{
 		"key":"end_8",
-		"text":"Inner-Monster-Abbigale:\n\n\"By cavorting in The Emerald Fields of Sappiness!\""
+		"text":"Monster:\n\n\"By cavorting in The Emerald Field of Sappiness!\""
 	},
 	{
 		"key":"end_9",
-		"text":"Thus Abbigale and the monster set forth into The Emerald Fields of Sappiness."
+		"text":"Thus Abbigale and the monster set forth into The Emerald Field of Sappiness."
 	},
 	{
 		"key":"end_10",
@@ -226,5 +226,78 @@
 	{
 		"key":"end_12",
 		"text":"THE END!\n\nUntil next time!"
+	},
+	{
+		"key":"end_s_1",
+		"text":"Mystery Block:\n\n\"Congradulations! You have reached the end!\""
+	},
+	{
+		"key":"end_s_2",
+		"text":"Abbigale:\n\n\"And I manage to get all the flowers! Ha-HA!\""
+	},
+	{
+		"key":"end_s_3",
+		"text":"Mystery Block:\n\n\"Right you are! Good on you!\""
+	},
+	{
+		"key":"end_s_4",
+		"text":"Abbigale:\n\n\"Well, I guess this is it. Super 100-percent ending unlocked.\""
+	},
+	{
+		"key":"end_s_5",
+		"text":"Abbigale:\n\n\"I ought to take a breather and absorb the awesomeness!\""
+	},
+	{
+		"key":"end_s_6",
+		"text":"*Deep Breath*"
+	},
+	{
+		"key":"end_s_7",
+		"text":"Abbigale:\n\n\"Okay, I'm good to go!\""
+	},
+	{
+		"key":"end_s_8",
+		"text":"Monster:\n\n\"Anything clever to say for the player who got the complete ending?\""
+	},
+	{
+		"key":"end_s_9",
+		"text":"Abbigale:\n\n\"Be excellent to each other, and party on!\""
+	},
+	{
+		"key":"end_s_10",
+		"text":"Thus Abbigale and the monster set forth into The Emerald Field of Sappiness."
+	},
+	{
+		"key":"end_s_11",
+		"text":"Congradulations {0}, you have helped Abbigale complete her journey 100-percent!",
+		"param":["username"]
+	},
+	{
+		"key":"end_s_12",
+		"text":"Abbigale:\n\n\"As much as I'd like to stay, however it is time to leave.\""
+	},
+	{
+		"key":"end_s_13",
+		"text":"Abbigale:\n\n\"Back to the other reality!\""
+	},
+	{
+		"key":"end_s_14",
+		"text":"*bzzt* *wobble* *wobble* *pow* *pow* *shazam*"
+	},
+	{
+		"key":"end_s_15",
+		"text":"Abbigale snaps back into consciousness."
+	},
+	{
+		"key":"end_s_16",
+		"text":"Abbigale slowly pulls herself back up to her feet. Everything around her appears to be the ordinary."
+	},
+	{
+		"key":"end_s_17",
+		"text":"Abbigale decides to go outside for a bit of fresh air.\n\nAnd that's that."
+	},
+	{
+		"key":"end_s_18",
+		"text":"\n~FIN~"
 	}
 ]

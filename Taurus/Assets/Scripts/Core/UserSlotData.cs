@@ -126,6 +126,6 @@ public class UserSlotData : UserData {
     }
 
     string OnGameLocalizeParamName() {
-        return slotName;
+        return mName;
     }
 }

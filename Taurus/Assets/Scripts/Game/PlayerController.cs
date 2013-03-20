@@ -62,6 +62,19 @@ public class PlayerController : MonoBehaviour {
         InputSetup(true);
     }
 
+#if UNITY_EDITOR
+    void Update() {
+        if(Input.GetKey(KeyCode.LeftControl)) {
+            if(Input.GetKeyDown(KeyCode.F5)) {
+                CheatVictory(false);
+            }
+            else if(Input.GetKeyDown(KeyCode.F6)) {
+                CheatVictory(true);
+            }
+        }
+    }
+#endif
+
     void OnUIModalActive() {
         InputSetup(false);
     }
@@ -162,6 +175,15 @@ public class PlayerController : MonoBehaviour {
 
                 input.RemoveButtonCall(InputAction.Menu, OnInputMenu);
             }
+        }
+    }
+
+    private void CheatVictory(bool secretInclude) {
+        LevelConfig.instance.SaveLevelUnlock(Main.instance.sceneManager.curLevel, secretInclude);
+
+        //open ui thing
+        if(UIModalManager.instance.ModalGetTop() != Modals.victory) {
+            UIModalManager.instance.ModalOpen(Modals.victory);
         }
     }
 
