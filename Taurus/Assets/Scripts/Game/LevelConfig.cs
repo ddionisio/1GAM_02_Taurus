@@ -72,6 +72,8 @@ public class LevelConfig : MonoBehaviour {
             int _flags = UserData.instance.GetInt(_key, 0);
             UserData.instance.SetInt(_key, _flags | mask);
         }
+
+        UserData.instance.SetInt(LevelSelectController.lastLevelKey, level);
                 
         UserData.instance.Save();
 

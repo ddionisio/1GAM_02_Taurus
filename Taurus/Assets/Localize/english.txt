@@ -13,7 +13,7 @@
 	},
 	{
 		"key":"helpMovement",
-		"text":"MOVEMENT: Arrow Keys or WASD"
+		"text":"MOVEMENT: Arrows/WASD or Mouse Click"
 	},
 	{
 		"key":"helpUndo",
@@ -21,7 +21,7 @@
 	},
 	{
 		"key":"helpFire",
-		"text":"SWITCH BLOCK: Space or Right Shift"
+		"text":"SWITCH BLOCK: Space/R.Shift or Mouse Click"
 	},
 	{
 		"key":"helpControls",
@@ -80,6 +80,14 @@
 		"text":"UNDO (Z)"
 	},
 	{
+		"key":"skip_btn",
+		"text":"Skip"
+	},
+	{
+		"key":"next_btn",
+		"text":"Next"
+	},
+	{
 		"key":"creditsTitle",
 		"text":"CREDITS"
 	},
@@ -125,7 +133,7 @@
 	},
 	{
 		"key":"victory_inst",
-		"text":"PRESS 'SPACE'/'ENTER' TO CONTINUE"
+		"text":"PRESS 'SPACE' OR CLICK HERE TO CONTINUE"
 	},
 	{
 		"key":"intro_1",

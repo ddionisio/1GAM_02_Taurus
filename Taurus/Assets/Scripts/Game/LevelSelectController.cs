@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> {
+    public const string lastLevelKey = "llvl";
+
     public enum State {
         None,
         Moving
@@ -43,6 +45,8 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
 
 	// Use this for initialization
 	void Start () {
+        int lastLevel = UserData.instance.GetInt(lastLevelKey, -1);
+
         int availableLevel = 0;
         for(int i = 0; i < mNodes.Length; i++) {
             LevelSelectNode node = mNodes[i];
@@ -77,6 +81,9 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
             availableLevel = mNodes.Length - 1;
         }
 
+        if(lastLevel >= 0)
+            availableLevel = lastLevel;
+
         //set selector to available level
         Vector3 nodePos = mNodes[availableLevel].transform.position;
         selector.transform.position = new Vector3(nodePos.x, nodePos.y, selector.transform.position.z);
@@ -84,7 +91,9 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         mCurLevelSelect = availableLevel;
 
         mNodes[mCurLevelSelect].highlightActive = true;
-        mNodes[mCurLevelSelect].SetCursor(mCurLevelSelect > 0, false);
+        mNodes[mCurLevelSelect].SetCursor(
+            mCurLevelSelect > 0 && mNodes[mCurLevelSelect - 1].curState != LevelSelectNode.State.locked,
+            mCurLevelSelect < mNodes.Length - 1 && mNodes[mCurLevelSelect + 1].curState != LevelSelectNode.State.locked);
 
         //bind input
         InputSetup(true);
@@ -174,6 +183,8 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
     }
 
     private void EnterLevel() {
+        UserData.instance.SetInt(lastLevelKey, mCurLevelSelect);
+
         Main.instance.sceneManager.LoadLevel(mCurLevelSelect);
     }
 
