@@ -89,9 +89,6 @@ public class Enemy : ActorMove {
         }
     }
 
-    protected override void OnInputAct(InputAction input, bool down) {
-    }
-
     // Use this for initialization
     protected override void Start() {
         base.Start();

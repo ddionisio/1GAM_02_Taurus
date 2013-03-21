@@ -9,6 +9,8 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         Moving
     }
 
+    public UICamera gameCameraInput;
+
     public GameObject nodesHolder;
     public GameObject selector;
     public float moveDelay;
@@ -44,6 +46,10 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         int availableLevel = 0;
         for(int i = 0; i < mNodes.Length; i++) {
             LevelSelectNode node = mNodes[i];
+
+            node.cursorLeftOnClick = MovePrev;
+            node.cursorRightOnClick = MoveNext;
+            node.levelOnClick = EnterLevel;
 
             if(LevelConfig.instance.CheckLevelUnlock(i)) {
                 bool secret = LevelConfig.instance.CheckLevelSecretUnlock(i);
@@ -128,10 +134,14 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
 
     void OnUIModalActive() {
         InputSetup(false);
+
+        gameCameraInput.enabled = false;
     }
 
     void OnUIModalInactive() {
         InputSetup(true);
+
+        gameCameraInput.enabled = true;
     }
 
     void InputSetup(bool activate) {
@@ -153,7 +163,7 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
     void OnInputEnter(InputManager.Info data) {
         if(data.state == InputManager.State.Pressed && mState == State.None) {
             //start level
-            Main.instance.sceneManager.LoadLevel(mCurLevelSelect);
+            EnterLevel();
         }
     }
 
@@ -161,6 +171,10 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         if(data.state == InputManager.State.Pressed) {
             UIModalManager.instance.ModalOpen(Modals.pause);
         }
+    }
+
+    private void EnterLevel() {
+        Main.instance.sceneManager.LoadLevel(mCurLevelSelect);
     }
 
     private void MovePrev() {

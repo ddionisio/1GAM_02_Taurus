@@ -25,9 +25,9 @@ public class PlayerController : MonoBehaviour {
         }
 
         //open ui thing
-        if(UIModalManager.instance.ModalGetTop() != Modals.gameover) {
+        /*if(UIModalManager.instance.ModalGetTop() != Modals.gameover) {
             UIModalManager.instance.ModalOpen(Modals.gameover);
-        }
+        }*/
     }
 
     public void Undo() {

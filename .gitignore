@@ -22,3 +22,8 @@ PathologicalGames.meta
 *.pidb
 
 *.suo
+/Taurus/Assets/Ouya
+/Taurus/Assets/Ouya.meta
+/Taurus/Assets/Plugins/Android
+/Taurus/Assets/Plugins/Android.meta
+/Taurus/*.apk

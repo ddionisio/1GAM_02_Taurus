@@ -79,9 +79,17 @@ public abstract class Actor : MonoBehaviour {
     protected virtual void OnInputAct(InputAction input, bool down) {
     }
 
+    protected virtual void OnMouseHover(Dir dir) {
+    }
+
+    protected virtual void OnMouseClick(Dir dir) {
+    }
+
     protected virtual void OnDestroy() {
         if(inputListen && ActionManager.instance != null) {
             ActionManager.instance.actCallback -= OnInputAct;
+            ActionManager.instance.actHoverCallback -= OnMouseHover;
+            ActionManager.instance.actClickCallback -= OnMouseClick;
         }
     }
 
@@ -91,8 +99,11 @@ public abstract class Actor : MonoBehaviour {
 
     protected virtual void Start() {
         //add as listener in action manager
-        if(inputListen)
+        if(inputListen) {
             ActionManager.instance.actCallback += OnInputAct;
+            ActionManager.instance.actHoverCallback += OnMouseHover;
+            ActionManager.instance.actClickCallback += OnMouseClick;
+        }
     }
 }
 
@@ -100,9 +111,13 @@ public class ActionManager : MonoBehaviour {
     public const int maxStack = 128;
 
     public delegate void InputCallback(InputAction input, bool down);
+    public delegate void InputDirCallback(Dir dir);
     public delegate void ActAddCallback(Actor actor, Act act, Dir dir, object dat);
 
     public event InputCallback actCallback;
+    public event InputDirCallback actHoverCallback;
+    public event InputDirCallback actClickCallback;
+
     public event ActAddCallback actAddCallback;
     public event ActAddCallback actUndoCallback;
 
@@ -132,6 +147,65 @@ public class ActionManager : MonoBehaviour {
 
     public int undoCount { get { return mActs.Count; } }
     public int inputDownCounter { get { return mInputDownCounter; } }
+
+    public void InputHover(Dir dir) {
+        if(actHoverCallback != null)
+            actHoverCallback(dir);
+    }
+
+    //by-passing callbacks for acts essentially, so that act list is processed properly
+    //use for firing block
+    public void InputClickFirePrep() {
+        if(mCurActProcess == null)
+            mCurActProcess = new List<ActData>();
+
+        mInputDownCounter++;
+    }
+
+    public void InputClickFireFinish() {
+        mInputDownCounter--;
+
+        if(mInputDownCounter <= 0) {
+            if(mCurActProcess != null) {
+                if(mCurActProcess.Count > 0) {
+                    if(mActs.Count == maxStack) {
+                        mActs.RemoveAt(0);
+                    }
+
+                    mActs.Add(mCurActProcess);
+                }
+
+                mCurActProcess = null;
+            }
+        }
+    }
+
+    public void InputClick(Dir dir) {
+        if(mCurActProcess == null)
+            mCurActProcess = new List<ActData>();
+
+        mInputDownCounter++;
+
+        if(actClickCallback != null) {
+            actClickCallback(dir);
+        }
+
+        mInputDownCounter--;
+
+        if(mInputDownCounter <= 0) {
+            if(mCurActProcess != null) {
+                if(mCurActProcess.Count > 0) {
+                    if(mActs.Count == maxStack) {
+                        mActs.RemoveAt(0);
+                    }
+
+                    mActs.Add(mCurActProcess);
+                }
+
+                mCurActProcess = null;
+            }
+        }
+    }
 
     //this will notify listeners about an act performed via input
     public void InputAct(InputAction input, bool down) {
@@ -187,6 +261,26 @@ public class ActionManager : MonoBehaviour {
                 mActs.RemoveAt(mActs.Count - 1);
 
                 Debug.Log("num act lists: " + mActs.Count);
+            }
+        }
+    }
+
+    public void RemoveLastAct(Actor actor) {
+        if(mCurActProcess != null) {
+            for(int i = mCurActProcess.Count - 1; i >= 0; i--) {
+                if(mCurActProcess[i].actor == actor) {
+                    mCurActProcess.RemoveAt(i);
+                    break;
+                }
+            }
+        }
+        else if(mActs.Count > 0) {
+            List<ActData> acts = mActs[mActs.Count - 1];
+            for(int i = acts.Count - 1; i >= 0; i--) {
+                if(acts[i].actor == actor) {
+                    acts.RemoveAt(i);
+                    break;
+                }
             }
         }
     }

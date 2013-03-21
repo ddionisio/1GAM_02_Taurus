@@ -7,6 +7,8 @@ public class UISlot : MonoBehaviour {
     public int slot = 0;
     public string countFormat = "{0:000}%";
 
+    public GameObject delete;
+
     private bool mStarted = false;
 
     public void RefreshLabels() {
@@ -25,12 +27,16 @@ public class UISlot : MonoBehaviour {
 
             countLabel.text = string.Format(countFormat, percent);
             countLabel.gameObject.SetActive(true);
+
+            delete.SetActive(true);
         }
         else {
             StopAllCoroutines();
             StartCoroutine(SetNameDelay(null));
 
             countLabel.gameObject.SetActive(false);
+
+            delete.SetActive(false);
         }
     }
 
@@ -43,6 +49,8 @@ public class UISlot : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mStarted = true;
+
+        UIEventListener.Get(delete).onClick = OnDeleteClick;
 
         RefreshLabels();
 	}
@@ -60,5 +68,24 @@ public class UISlot : MonoBehaviour {
         }
 
         yield break;
+    }
+
+    void OnDeleteClick(GameObject go) {
+        if(UserSlotData.IsSlotAvailable(slot)) {
+            string title = GameLocalize.GetText("eraseSlotTitle");
+            title = string.Format(title, nameLabel.text);
+
+            UIModalConfirm.Open(title, null, OnDeleteConfirm);
+        }
+    }
+
+    void OnDeleteConfirm(bool yes) {
+        if(yes) {
+            UserSlotData.DeleteSlot(slot);
+            UserSlotData.SetSlotValueInt(slot, LevelConfig.levelCountKey, 0);
+            UserSlotData.SetSlotValueInt(slot, LevelConfig.secretCountKey, 0);
+
+            RefreshLabels();
+        }
     }
 }

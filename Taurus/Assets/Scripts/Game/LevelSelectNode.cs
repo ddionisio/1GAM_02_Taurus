@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class LevelSelectNode : MonoBehaviour {
+    public delegate void OnClickCall();
+
     public enum State {
         locked,
         unlocked,
@@ -18,6 +20,10 @@ public class LevelSelectNode : MonoBehaviour {
     public GameObject cursorRight;
 
     public Color lockedColor;
+
+    public OnClickCall cursorLeftOnClick;
+    public OnClickCall cursorRightOnClick;
+    public OnClickCall levelOnClick;
     
     private State mCurState;
 
@@ -72,17 +78,37 @@ public class LevelSelectNode : MonoBehaviour {
     }
 
     void Awake() {
+        UIEventListener.Get(image.gameObject).onClick = OnLevelClick;
+
         if(highlight != null)
             highlight.SetActive(false);
         if(secret != null)
             secret.SetActive(false);
-        if(cursorLeft != null)
+        if(cursorLeft != null) {
             cursorLeft.SetActive(false);
-        if(cursorRight != null)
+            UIEventListener.Get(cursorLeft).onClick = OnLeftClick;
+        }
+        if(cursorRight != null) {
             cursorRight.SetActive(false);
+            UIEventListener.Get(cursorRight).onClick = OnRightClick;
+        }
 
         if(complete != null)
             mCompleteSprites = complete.GetComponentsInChildren<tk2dBaseSprite>();
     }
 
+    void OnLeftClick(GameObject go) {
+        if(cursorLeftOnClick != null)
+            cursorLeftOnClick();
+    }
+
+    void OnRightClick(GameObject go) {
+        if(cursorRightOnClick != null)
+            cursorRightOnClick();
+    }
+
+    void OnLevelClick(GameObject go) {
+        if(levelOnClick != null)
+            levelOnClick();
+    }
 }

@@ -54,7 +54,10 @@ public abstract class ActorMove : Actor {
     }
 
     public Vector3 GetTilePos(Dir dir) {
-        Vector3 newPos = transform.position;
+        return GetTilePos(transform.position, dir);
+    }
+
+    public Vector3 GetTilePos(Vector3 pos, Dir dir) {
 
         tk2dTileMap map = TileInfo.instance.map;
 
@@ -63,23 +66,23 @@ public abstract class ActorMove : Actor {
 
         switch(dir) {
             case Dir.North:
-                newPos.y += amtY;
+                pos.y += amtY;
                 break;
 
             case Dir.South:
-                newPos.y -= amtY;
+                pos.y -= amtY;
                 break;
 
             case Dir.East:
-                newPos.x += amtX;
+                pos.x += amtX;
                 break;
 
             case Dir.West:
-                newPos.x -= amtX;
+                pos.x -= amtX;
                 break;
         }
 
-        return newPos;
+        return pos;
     }
 
     /// <summary>
@@ -90,6 +93,11 @@ public abstract class ActorMove : Actor {
             transform.position = GetTilePos(dir);
             tile.Align();
         }
+    }
+
+    public void ForceMoveDir(Dir dir) {
+        mCurDir = dir;
+        DoCurMove();
     }
 
     public void ProcessDir(Dir dir) {
@@ -104,6 +112,23 @@ public abstract class ActorMove : Actor {
         else if(mCurState != State.Move && mCurState != State.PauseMove) {
             DoCurMove();
         }
+    }
+
+    public bool CheckSolid(Dir dir, Vector3 posOverride) {
+        bool ret = false;
+
+        if(tile != null) {
+            tk2dRuntime.TileMap.TileInfo ti = tile.GetTileInfo(mCurDir);
+            if(!ignoreWalls && ti != null && ti.intVal == (int)TileType.Wall)
+                ret = true;
+            else {
+                Vector2 checkPos = GetTilePos(posOverride, dir);
+
+                ret = solidCheck.value == 0 ? false : Physics.Raycast(new Vector3(checkPos.x, checkPos.y, -1000), Vector3.forward, Mathf.Infinity, solidCheck.value);
+            }
+        }
+
+        return ret;
     }
 
     public bool CheckSolid(Dir dir) {
@@ -216,32 +241,16 @@ public abstract class ActorMove : Actor {
                 break;
 
             case State.Move:
-                mCurMoveTime += Time.deltaTime;
-                if(mCurMoveTime >= moveDelay) {
-                    transform.position = new Vector3(mMoveEndPos.x, mMoveEndPos.y, transform.position.z);
+                if(CheckSolid(mCurDir, mMoveStartPos)) {
+                    //suddenly there's something in the way
+                    ActionManager.instance.RemoveLastAct(this);
 
-                    if(mMoveActive) {
-                        if(tile != null)
-                            tile.Set(mNextCol, mNextRow);
+                    transform.position = new Vector3(mMoveStartPos.x, mMoveStartPos.y, transform.position.z);
 
-                        DoCurMove();
-                    }
-                    else {
-                        if(tile != null)
-                            tile.Set(mNextCol, mNextRow);
+                    if(tile != null)
+                        tile.Align();
 
-                        mCurState = State.None;
-                    }
-
-                    //check if we are standing on a slow tile
-                    if(onSlowObject != null) {
-                        tk2dRuntime.TileMap.TileInfo dat = tile.tileData;
-                        if(dat != null && dat.intVal == (int)TileType.Slow)
-                            onSlowObject.SetActive(mSlowCounter < slowMaxCount);
-                        else {
-                            onSlowObject.SetActive(false);
-                        }
-                    }
+                    mCurState = State.None;
 
                     OnMoveCellFinish();
 
@@ -251,8 +260,44 @@ public abstract class ActorMove : Actor {
                     ProcessAct(Act.MoveEnd, mCurDir, mMoveDat, false);
                 }
                 else {
-                    Vector2 curPos = Vector2.Lerp(mMoveStartPos, mMoveEndPos, mCurMoveTime / moveDelay);
-                    transform.position = new Vector3(curPos.x, curPos.y, transform.position.z);
+                    mCurMoveTime += Time.deltaTime;
+                    if(mCurMoveTime >= moveDelay) {
+                        transform.position = new Vector3(mMoveEndPos.x, mMoveEndPos.y, transform.position.z);
+
+                        if(mMoveActive) {
+                            if(tile != null)
+                                tile.Set(mNextCol, mNextRow);
+
+                            DoCurMove();
+                        }
+                        else {
+                            if(tile != null)
+                                tile.Set(mNextCol, mNextRow);
+
+                            mCurState = State.None;
+                        }
+
+                        //check if we are standing on a slow tile
+                        if(onSlowObject != null) {
+                            tk2dRuntime.TileMap.TileInfo dat = tile.tileData;
+                            if(dat != null && dat.intVal == (int)TileType.Slow)
+                                onSlowObject.SetActive(mSlowCounter < slowMaxCount);
+                            else {
+                                onSlowObject.SetActive(false);
+                            }
+                        }
+
+                        OnMoveCellFinish();
+
+                        if(moveFinishCallback != null)
+                            moveFinishCallback(this);
+
+                        ProcessAct(Act.MoveEnd, mCurDir, mMoveDat, false);
+                    }
+                    else {
+                        Vector2 curPos = Vector2.Lerp(mMoveStartPos, mMoveEndPos, mCurMoveTime / moveDelay);
+                        transform.position = new Vector3(curPos.x, curPos.y, transform.position.z);
+                    }
                 }
                 break;
 

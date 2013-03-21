@@ -47,12 +47,6 @@ public class Block : Actor {
         }
     }
 
-    /// <summary>
-    /// Called by ActionManager when input of act and dir occurs. Actor will act accordingly and call ActionManager.ActAdd if needed.
-    /// </summary>
-    protected override void OnInputAct(InputAction input, bool down) {
-    }
-
     protected override void Awake() {
         base.Awake();
 

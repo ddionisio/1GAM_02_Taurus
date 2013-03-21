@@ -56,6 +56,30 @@
 		"text":"NO"
 	},
 	{
+		"key":"credits",
+		"text":"CREDITS"
+	},
+	{
+		"key":"help",
+		"text":"HELP"
+	},
+	{
+		"key":"options",
+		"text":"OPTIONS"
+	},
+	{
+		"key":"start",
+		"text":"START"
+	},
+	{
+		"key":"menu_btn",
+		"text":"MENU (ESC)"
+	},
+	{
+		"key":"undo_btn",
+		"text":"UNDO (Z)"
+	},
+	{
 		"key":"creditsTitle",
 		"text":"CREDITS"
 	},

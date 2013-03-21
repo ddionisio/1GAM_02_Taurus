@@ -29,6 +29,7 @@ public class Player : ActorMove {
     public bool secretTouched { get { return mSecretTouched; } }
     public bool dead { get { return mDead; } }
     public bool crying { get { return mCrying; } }
+    public bool blockInFront { get { return teleBlockHighlighterObject != null && teleBlockHighlighterObject.activeSelf; } }
 
     public bool onGoal {
         get {
@@ -101,12 +102,70 @@ public class Player : ActorMove {
         }
     }
 
+    public void ApplyProperDir(ref Dir dir) {
+        if(oppositeVert) {
+            if(dir == Dir.North)
+                dir = Dir.South;
+            else if(dir == Dir.South)
+                dir = Dir.North;
+        }
+
+        if(opposite) {
+            if(dir == Dir.East)
+                dir = Dir.West;
+            else if(dir == Dir.West)
+                dir = Dir.East;
+        }
+    }
+
+    protected override void OnMouseHover(Dir dir) {
+        if(!mDead && !mCrying) {
+            ApplyProperDir(ref dir);
+
+            SetCurDir(dir);
+            ProcessAct(Act.Face, dir, null, false);
+            HighlightBlockInFront();
+        }
+    }
+
+    protected override void OnMouseClick(Dir dir) {
+        if(!mDead && !mCrying) {
+            ApplyProperDir(ref dir);
+
+            SetCurDir(dir);
+            HighlightBlockInFront();
+
+            if(!blockInFront) {
+                ForceMoveDir(dir);
+            }
+        }
+    }
+
+    public void DoFire() {
+        Transform bTrans;
+        bTrans = GetBlockInFront();
+        if(bTrans != null) {
+            Block b = bTrans.GetComponent<Block>();
+            if(b != null) {
+                StopMove();
+
+                b.Teleport();
+
+                ProcessAct(Act.Fire, curDir, null, true);
+
+                SoundPlayerGlobal.instance.Play(soundTele);
+
+                if(teleBlockHighlighterObject != null)
+                    teleBlockHighlighterObject.SetActive(false);
+            }
+        }
+    }
+
     protected override void OnInputAct(InputAction input, bool down) {
         moveActive = down;
 
         if(!mDead && !mCrying && down) {
             bool checkBlock = false;
-            Transform bTrans;
 
             switch(input) {
                 case InputAction.Up:
@@ -130,22 +189,7 @@ public class Player : ActorMove {
                     break;
 
                 case InputAction.Fire:
-                    bTrans = GetBlockInFront();
-                    if(bTrans != null) {
-                        Block b = bTrans.GetComponent<Block>();
-                        if(b != null) {
-                            StopMove();
-
-                            b.Teleport();
-
-                            ProcessAct(Act.Fire, curDir, null, true);
-
-                            SoundPlayerGlobal.instance.Play(soundTele);
-
-                            if(teleBlockHighlighterObject != null)
-                                teleBlockHighlighterObject.SetActive(false);
-                        }
-                    }
+                    DoFire();
                     break;
             }
 

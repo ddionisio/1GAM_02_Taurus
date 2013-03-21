@@ -12,6 +12,8 @@ public class NGUIPage : MonoBehaviour, IComparer<GameObject> {
     public UIButton prevButton;
     public UIButton nextButton;
 
+    public GameObject endButton;
+
     public Transform pagesHolder;
 
     public OnPageEnd pageEndCallback;
@@ -39,6 +41,9 @@ public class NGUIPage : MonoBehaviour, IComparer<GameObject> {
 
         if(nextButton != null)
             UIEventListener.Get(nextButton.gameObject).onClick += NextClick;
+
+        if(endButton != null)
+            UIEventListener.Get(endButton.gameObject).onClick += EndClick;
     }
         
     // Use this for initialization
@@ -101,6 +106,12 @@ public class NGUIPage : MonoBehaviour, IComparer<GameObject> {
             }
         }
         else if(mCurPageInd == endInd && pageEndCallback != null) {
+            pageEndCallback();
+        }
+    }
+
+    void EndClick(GameObject go) {
+        if(pageEndCallback != null) {
             pageEndCallback();
         }
     }
