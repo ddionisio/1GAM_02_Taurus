@@ -158,11 +158,11 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         if(input != null) {
             if(activate) {
                 input.AddButtonCall(InputAction.MenuEnter, OnInputEnter);
-                input.AddButtonCall(InputAction.MenuEscape, OnInputExit);
+                input.AddButtonCall(InputAction.Menu, OnInputExit);
             }
             else {
                 input.RemoveButtonCall(InputAction.MenuEnter, OnInputEnter);
-                input.RemoveButtonCall(InputAction.MenuEscape, OnInputExit);
+                input.RemoveButtonCall(InputAction.Menu, OnInputExit);
             }
         }
 

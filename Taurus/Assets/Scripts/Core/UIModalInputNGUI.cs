@@ -78,11 +78,11 @@ public class UIModalInputNGUI : MonoBehaviour {
                     float y = input.GetAxis(axisY);
                     if(y < -axisThreshold) {
                         nextTime = time + axisDelay;
-                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.UpArrow);
+                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.DownArrow);
                     }
                     else if(y > axisThreshold) {
                         nextTime = time + axisDelay;
-                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.DownArrow);
+                        UICamera.Notify(UICamera.selectedObject, "OnKey", KeyCode.UpArrow);
                     }
                 }
             }

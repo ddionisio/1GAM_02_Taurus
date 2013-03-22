@@ -1,0 +1,97 @@
+[
+	{
+		"action":"Up",
+		"control":"Button",
+		"keys" : [
+			{ "map":"UP" }
+		]
+	},
+	{
+		"action":"Down",
+		"control":"Button",
+		"keys" : [
+			{ "map":"DOWN" }
+		]
+	},
+	{
+		"action":"Left",
+		"control":"Button",
+		"keys" : [
+			{ "map":"LEFT" }
+		]
+	},
+	{
+		"action":"Right",
+		"control":"Button",
+		"keys" : [
+			{ "map":"RIGHT" }
+		]
+	},
+	
+	{
+		"action":"Fire",
+		"control":"Button",
+		"keys" : [
+			{ "map":"O" }
+		]
+	},
+	
+	{
+		"action":"Undo",
+		"control":"Button",
+		"keys" : [
+			{ "map":"A" }
+		]
+	},
+	
+	{
+		"action":"Menu",
+		"control":"Button",
+		"keys" : [
+			{ "map":"U" },
+			{ "map":"SYSTEM" }
+		]
+	},
+	
+	{
+		"action":"MenuHorizontal",
+		"control":"Axis",
+		"deadZone":0.19,
+		"keys" : [
+			{ "map":"DPADX" },
+			{ "map":"LX" }
+		]
+	},
+	{
+		"action":"MenuVertical",
+		"control":"Axis",
+		"deadZone":0.19,
+		"keys" : [
+			{ "map":"DPADY" },
+			{ "map":"LY" }
+		]
+	},
+	
+	{
+		"action":"MenuEnter",
+		"control":"Button",
+		"keys" : [
+			{ "map":"O" }
+		]
+	},
+	{
+		"action":"MenuEscape",
+		"control":"Button",
+		"keys" : [
+			{ "map":"A" },
+			{ "map":"U" }
+		]
+	},
+	{
+		"action":"MenuDelete",
+		"control":"Button",
+		"keys" : [
+			{ "map":"Y" }
+		]
+	}
+]

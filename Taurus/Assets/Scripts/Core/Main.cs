@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Main : MonoBehaviour {
+    public GamePlatform platform = GamePlatform.Default;
+
     public string initScene = "main"; //initial scene where the main initializes, goes to startScene afterwards
     public string startScene = "start"; //the scene to load to once initScene is finish
 
@@ -51,9 +53,6 @@ public class Main : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
 
-        //TODO: determine platform
-        GamePlatform.current = GamePlatform.Type.Default;
-
         userSettings = new UserSettings();
 
         sceneManager = GetComponentInChildren<SceneManager>();
@@ -63,7 +62,7 @@ public class Main : MonoBehaviour {
         //load the string table
         GameLocalize l = GetComponentInChildren<GameLocalize>();
         if(l != null) {
-            l.Load(userSettings.language);
+            l.Load(userSettings.language, platform);
         }
     }
 

@@ -7,7 +7,7 @@ public class GameLocalize : MonoBehaviour {
 
     [System.Serializable]
     public class TableDataPlatform {
-        public GamePlatform.Type platform;
+        public GamePlatform platform;
         public TextAsset file;
     }
 
@@ -85,7 +85,7 @@ public class GameLocalize : MonoBehaviour {
     /// <summary>
     /// Make sure to call this during Main's initialization based on user settings for language.
     /// </summary>
-    public void Load(GameLanguage language) {
+    public void Load(GameLanguage language, GamePlatform platformType) {
         int langInd = (int)language;
 
         TableData dat = tables[langInd];
@@ -106,7 +106,7 @@ public class GameLocalize : MonoBehaviour {
         //append platform specific entries
         TableDataPlatform platform = null;
         foreach(TableDataPlatform platformDat in dat.platforms) {
-            if(platformDat.platform == GamePlatform.current) {
+            if(platformDat.platform == platformType) {
                 platform = platformDat;
                 break;
             }
