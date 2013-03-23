@@ -31,6 +31,7 @@ public abstract class ActorMove : Actor {
     private bool mMoveActive;
     private State mCurState = State.None;
     private Dir mCurDir = Dir.South;
+    private Dir mNextDir = Dir.NumDir;
     private float mCurMoveTime = 0.0f;
     private Vector2 mMoveStartPos;
     private Vector2 mMoveEndPos;
@@ -51,6 +52,7 @@ public abstract class ActorMove : Actor {
         }
 
         mCurState = State.None;
+        mNextDir = Dir.NumDir;
     }
 
     public Vector3 GetTilePos(Dir dir) {
@@ -106,7 +108,7 @@ public abstract class ActorMove : Actor {
                 DoFace(dir);
             }
             else {
-                mCurDir = dir;
+                mNextDir = dir;
             }
         }
         else if(mCurState != State.Move && mCurState != State.PauseMove) {
@@ -237,11 +239,12 @@ public abstract class ActorMove : Actor {
                 }
                 else {
                     mCurState = State.None;
+                    mNextDir = Dir.NumDir;
                 }
                 break;
 
             case State.Move:
-                if(CheckSolid(mCurDir, mMoveStartPos)) {
+                if(mMoveStartPos != mMoveEndPos && CheckSolid(mCurDir, mMoveStartPos)) {
                     //suddenly there's something in the way
                     ActionManager.instance.RemoveLastAct(this);
 
@@ -251,6 +254,7 @@ public abstract class ActorMove : Actor {
                         tile.Align();
 
                     mCurState = State.None;
+                    mNextDir = Dir.NumDir;
 
                     OnMoveCellFinish();
 
@@ -268,6 +272,9 @@ public abstract class ActorMove : Actor {
                             if(tile != null)
                                 tile.Set(mNextCol, mNextRow);
 
+                            if(mNextDir != Dir.NumDir)
+                                mCurDir = mNextDir;
+
                             DoCurMove();
                         }
                         else {
@@ -275,6 +282,8 @@ public abstract class ActorMove : Actor {
                                 tile.Set(mNextCol, mNextRow);
 
                             mCurState = State.None;
+
+                            mNextDir = Dir.NumDir;
                         }
 
                         //check if we are standing on a slow tile
@@ -312,6 +321,7 @@ public abstract class ActorMove : Actor {
                     }
                     else {
                         mCurState = State.None;
+                        mNextDir = Dir.NumDir;
                     }
                 }
                 break;
@@ -344,6 +354,7 @@ public abstract class ActorMove : Actor {
                 ProcessAct(Act.Face, mCurDir, null, false);
 
                 mCurState = State.None;
+                mNextDir = Dir.NumDir;
                 //sound?
             }
             else {

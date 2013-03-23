@@ -1,0 +1,30 @@
+[
+	{
+		"key":"helpMovement",
+		"text":"MOVEMENT: Use the D-Pad."
+	},
+	{
+		"key":"helpUndo",
+		"text":"UNDO: Press the [FF0000]A[-] button."
+	},
+	{
+		"key":"helpFire",
+		"text":"SWITCH BLOCK: Press the [00ff00]O[-] button."
+	},
+	{
+		"key":"eraseSlotInst",
+		"text":"Press the [FFFF00]Y[-] button to erase the selected slot."
+	},
+	{
+		"key":"menu_btn",
+		"text":"MENU"
+	},
+	{
+		"key":"undo_btn",
+		"text":"UNDO"
+	},
+	{
+		"key":"victory_inst",
+		"text":"PRESS THE [00ff00]O[-] BUTTON TO CONTINUE"
+	}
+]

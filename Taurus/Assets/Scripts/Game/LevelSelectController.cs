@@ -17,6 +17,8 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
     public GameObject selector;
     public float moveDelay;
 
+    public GameObject navigator;
+
     private State mState = State.None;
     private Vector2 mStartPos;
     private Vector2 mEndPos;
@@ -145,12 +147,18 @@ public class LevelSelectController : MonoBehaviour,  IComparer<LevelSelectNode> 
         InputSetup(false);
 
         gameCameraInput.enabled = false;
+
+        if(navigator != null)
+            navigator.SetActive(false);
     }
 
     void OnUIModalInactive() {
         InputSetup(true);
 
         gameCameraInput.enabled = true;
+
+        if(navigator != null)
+            navigator.SetActive(true);
     }
 
     void InputSetup(bool activate) {

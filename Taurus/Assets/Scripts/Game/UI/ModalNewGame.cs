@@ -18,7 +18,9 @@ public class ModalNewGame : UIController {
             uiCam.useKeyboard = true;
             uiCam.submitKey0 = KeyCode.Return;
             uiCam.submitKey1 = KeyCode.KeypadEnter;
+
             UICamera.selectedObject = input.gameObject;
+            input.text = "";
         }
         else {
             uiCam.useKeyboard = false;
@@ -31,10 +33,6 @@ public class ModalNewGame : UIController {
     }
 
     protected override void OnClose() {
-    }
-
-    void OnEnable() {
-        input.text = "";
     }
 
     void OnSubmit(string inputString) {
@@ -58,6 +56,7 @@ public class ModalNewGame : UIController {
                 Main.instance.sceneManager.LoadScene(Scenes.levelSelect);
         }
         else {
+            UIModalManager.instance.ModalCloseTop();
             //error dialog?
         }
     }

@@ -25,7 +25,7 @@ public class UIModalActiveSelectNGUI : MonoBehaviour {
     }
 
     void UIActive(bool active) {
-        if(active) {
+        if(active && select.activeInHierarchy) {
             UICamera.selectedObject = select;
         }
     }

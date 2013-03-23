@@ -58,12 +58,6 @@ public class InputManagerOuya : InputManager {
         return ret;
     }
 
-    protected override State ProcessButton(Key key) {
-        State ret = State.None;
-
-        return ret;
-    }
-
     protected override bool ProcessButtonDown(Key key) {
         if(key.map == InputKeyMap.None)
             return base.ProcessButtonDown(key);
@@ -102,7 +96,7 @@ public class InputManagerOuya : InputManager {
         }
     }
 
-    protected override void Update() {
+    protected override void FixedUpdate() {
         foreach(BindData bindData in mBinds) {
             if(bindData != null && bindData.keys != null) {
                 switch(bindData.control) {

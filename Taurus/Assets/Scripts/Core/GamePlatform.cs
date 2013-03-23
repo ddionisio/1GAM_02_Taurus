@@ -1,4 +1,6 @@
 ﻿public enum GamePlatform {
     Default,
-    Ouya
+    Ouya,
+
+    NumPlatforms
 }

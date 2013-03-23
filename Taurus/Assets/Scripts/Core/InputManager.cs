@@ -74,10 +74,14 @@ public class InputManager : MonoBehaviour {
 
         public event OnButton callback;
 
+        public bool down;
+
         public BindData(Bind bind) {
             control = bind.control;
             deadZone = bind.deadZone;
             keys = bind.keys;
+
+            down = false;
         }
 
         public void ClearCallback() {
@@ -108,16 +112,13 @@ public class InputManager : MonoBehaviour {
     }
 
     public bool IsDown(InputAction action) {
-        bool ret = false;
-
         foreach(Key key in mBinds[(int)action].keys) {
             if(ProcessButtonDown(key)) {
-                ret = true;
-                break;
+                return true;
             }
         }
 
-        return ret;
+        return false;
     }
 
     public int GetIndex(InputAction action) {
@@ -157,29 +158,6 @@ public class InputManager : MonoBehaviour {
         return 0.0f;
     }
 
-    protected virtual State ProcessButton(Key key) {
-        State ret = State.None;
-
-        if(key.input.Length > 0) {
-            if(Input.GetButtonDown(key.input)) {
-                ret = State.Pressed;
-            }
-            else if(Input.GetButtonUp(key.input)) {
-                ret = State.Released;
-            }
-        }
-        else if(key.code != KeyCode.None) {
-            if(Input.GetKeyDown(key.code)) {
-                ret = State.Pressed;
-            }
-            else if(Input.GetKeyUp(key.code)) {
-                ret = State.Released;
-            }
-        }
-
-        return ret;
-    }
-
     protected virtual bool ProcessButtonDown(Key key) {
         return
             key.input.Length > 0 ? Input.GetButton(key.input) :
@@ -208,7 +186,7 @@ public class InputManager : MonoBehaviour {
         }
     }
 
-    protected virtual void Update() {
+    protected virtual void FixedUpdate() {
         foreach(BindData bindData in mBinds) {
             if(bindData != null && bindData.keys != null) {
                 switch(bindData.control) {
@@ -228,14 +206,31 @@ public class InputManager : MonoBehaviour {
                         bindData.info.state = State.None;
 
                         foreach(Key key in bindData.keys) {
-                            State state = ProcessButton(key);
-                            if(state != State.None) {
-                                bindData.info.axis = state == State.Pressed ? key.GetAxisValue() : 0.0f;
-                                bindData.info.state = state;
-                                bindData.info.index = key.index;
+                            if(ProcessButtonDown(key)) {
+                                if(!bindData.down) {
+                                    bindData.down = true;
 
-                                bindData.Call();
-                                break;
+                                    bindData.info.axis = key.GetAxisValue();
+                                    bindData.info.state = State.Pressed;
+                                    bindData.info.index = key.index;
+
+                                    bindData.Call();
+
+                                    break;
+                                }
+                            }
+                            else {
+                                if(bindData.down) {
+                                    bindData.down = false;
+
+                                    bindData.info.axis = 0.0f;
+                                    bindData.info.state = State.Released;
+                                    bindData.info.index = key.index;
+
+                                    bindData.Call();
+
+                                    break;
+                                }
                             }
                         }
                         break;

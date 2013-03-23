@@ -40,6 +40,10 @@
 		"text":"ERASE \"{0}\""
 	},
 	{
+		"key":"eraseSlotInst",
+		"text":"Press DELETE to erase the selected slot."
+	},
+	{
 		"key":"restart",
 		"text":"RESTART"
 	},

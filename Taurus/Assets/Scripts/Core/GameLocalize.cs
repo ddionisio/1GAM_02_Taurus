@@ -113,7 +113,7 @@ public class GameLocalize : MonoBehaviour {
         }
 
         if(platform != null) {
-            List<Entry> platformEntries = fastJSON.JSON.Instance.ToObject<List<Entry>>(dat.file.text);
+            List<Entry> platformEntries = fastJSON.JSON.Instance.ToObject<List<Entry>>(platform.file.text);
 
             foreach(Entry platformEntry in platformEntries) {
                 if(mTable.ContainsKey(platformEntry.key)) {

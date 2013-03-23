@@ -27,3 +27,5 @@ PathologicalGames.meta
 /Taurus/Assets/Plugins/Android
 /Taurus/Assets/Plugins/Android.meta
 /Taurus/*.apk
+/Taurus/keystore
+/Taurus/key.der
