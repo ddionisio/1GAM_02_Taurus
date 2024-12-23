@@ -1,0 +1,3426 @@
+Initialize engine version: 4.2.2f1 (54f0fc09defb)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvldumd.dll 24.21.13.9924]
+    Renderer: NVIDIA GeForce GTX 1080
+    Vendor:   NVIDIA
+    VRAM:     3072 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 DF24=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Lab\1GAM_02_Taurus\Taurus\Builds\Window\Abbigale_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Lab\1GAM_02_Taurus\Taurus\Builds\Window\Abbigale_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Lab\1GAM_02_Taurus\Taurus\Builds\Window\Abbigale_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Lab\1GAM_02_Taurus\Taurus\Builds\Window\Abbigale_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.187 seconds
+desktop: 1920x1080 144Hz; virtual: 3600x1080 at 0,0
+<RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 The system cannot find the file specified.
+
+ 
+(Filename:  Line: 54)
+
+<RI> Input initialized.
+Platform assembly: D:\Lab\1GAM_02_Taurus\Taurus\Builds\Window\Abbigale_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 0.141056 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1575.
+Total: 0.729344 ms (FindLiveObjects: 0.039936 ms CreateObjectMapping: 0.014080 ms MarkObjects: 0.385792 ms  DeleteObjects: 0.004352 ms)
+
+creating slot: 1 name: bonk
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 1.471489 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3049.
+Total: 0.785152 ms (FindLiveObjects: 0.081920 ms CreateObjectMapping: 0.018688 ms MarkObjects: 0.389376 ms  DeleteObjects: 0.017408 ms)
+
+UnloadTime: 1.401345 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 1608.
+Total: 0.804608 ms (FindLiveObjects: 0.039424 ms CreateObjectMapping: 0.014848 ms MarkObjects: 0.411392 ms  DeleteObjects: 0.054528 ms)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 1.164289 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1329.
+Total: 0.742656 ms (FindLiveObjects: 0.031232 ms CreateObjectMapping: 0.017152 ms MarkObjects: 0.412416 ms  DeleteObjects: 0.007168 ms)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+secret!
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+secret undo
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 9
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 8
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+secret!
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+secret made
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.871424 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1331.
+Total: 0.716288 ms (FindLiveObjects: 0.031232 ms CreateObjectMapping: 0.014848 ms MarkObjects: 0.392192 ms  DeleteObjects: 0.007936 ms)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.596736 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1430.
+Total: 0.753408 ms (FindLiveObjects: 0.034816 ms CreateObjectMapping: 0.016128 ms MarkObjects: 0.424192 ms  DeleteObjects: 0.008192 ms)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: East count: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.937472 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1400.
+Total: 0.763392 ms (FindLiveObjects: 0.033280 ms CreateObjectMapping: 0.034048 ms MarkObjects: 0.420096 ms  DeleteObjects: 0.007424 ms)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: North count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: North count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: West count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 17
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: East count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: South count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 18
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.643328 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1363.
+Total: 0.779264 ms (FindLiveObjects: 0.032512 ms CreateObjectMapping: 0.020224 ms MarkObjects: 0.430080 ms  DeleteObjects: 0.021760 ms)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Teleport dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Fire dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Teleport dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Fire dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Teleport dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Fire dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Teleport dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Fire dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.613376 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1383.
+Total: 0.759552 ms (FindLiveObjects: 0.032768 ms CreateObjectMapping: 0.017152 ms MarkObjects: 0.420864 ms  DeleteObjects: 0.007680 ms)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: West count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: West count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Teleport dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Fire dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.610304 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1462.
+Total: 0.818432 ms (FindLiveObjects: 0.032768 ms CreateObjectMapping: 0.017920 ms MarkObjects: 0.485120 ms  DeleteObjects: 0.008448 ms)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Teleport dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Fire dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: West count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 9
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Teleport dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Fire dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 9
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 11
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: East count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 11
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+victory
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.641024 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1447.
+Total: 0.767744 ms (FindLiveObjects: 0.032768 ms CreateObjectMapping: 0.022784 ms MarkObjects: 0.433152 ms  DeleteObjects: 0.007168 ms)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: West count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: East count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: East count: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 11
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: North count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: South count: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 14
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 13
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 12
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 11
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 10
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 9
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 8
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: East count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: West count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: East count: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 7
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 12
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num undo acts: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+num act lists: 11
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: East count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: East count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 0.631296 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 3029.
+Total: 0.830208 ms (FindLiveObjects: 0.069632 ms CreateObjectMapping: 0.022528 ms MarkObjects: 0.418304 ms  DeleteObjects: 0.043520 ms)
+
+UnloadTime: 1.328641 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 1890.
+Total: 0.963072 ms (FindLiveObjects: 0.042496 ms CreateObjectMapping: 0.026624 ms MarkObjects: 0.422656 ms  DeleteObjects: 0.210176 ms)
+
+UnloadTime: 0.660736 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3033.
+Total: 0.856320 ms (FindLiveObjects: 0.070656 ms CreateObjectMapping: 0.029440 ms MarkObjects: 0.407040 ms  DeleteObjects: 0.020480 ms)
+
+UnloadTime: 1.381377 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 1722.
+Total: 0.852224 ms (FindLiveObjects: 0.041728 ms CreateObjectMapping: 0.024832 ms MarkObjects: 0.447232 ms  DeleteObjects: 0.052224 ms)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: North count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 0
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: South count: 1
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: West count: 2
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+process: Move dir: East count: 3
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+dead
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Die dir: East count: 4
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Cry dir: West count: 5
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+stack process: Kill dir: South count: 6
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+main disable
+ 
+(Filename: C:/BuildAgent/work/ea95e74f6e5f192d/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
